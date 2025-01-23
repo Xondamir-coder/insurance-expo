@@ -1,0 +1,93 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.overflow-hidden {
+	overflow: hidden;
+}
+
+// text utils
+.text-16 {
+	$fs: clamp(14px, 1.1vw, 16px);
+	@include text-style($fs);
+}
+.text-14 {
+	$fs: clamp(12px, 1vw, 14px);
+	@include text-style($fs);
+}
+.text-20 {
+	$fs: clamp(14px, 1.3vw, 20px);
+	@include text-style($fs);
+}
+.text-17 {
+	$fs: clamp(14px, 1.2vw, 17px);
+	@include text-style($fs);
+}
+.text-dark-slate-blue-14 {
+	$fs: 14px;
+	@include text-style($fs, $clr-dark-slate-blue);
+}
+.text-white-17 {
+	$fs: clamp(14px, 1.2vw, 17px);
+	@include text-style($fs, #fff);
+}
+
+// title utils
+.title-32 {
+	$fs: clamp(18px, 3vw, 32px);
+	@include title-style($fs);
+}
+.title-42 {
+	$fs: clamp(24px, 3.5vw, 42px);
+}
+.title-48 {
+	$fs: clamp(18px, 3.5vw, 48px);
+	@include title-style($fs);
+}
+.title-20 {
+	$fs: clamp(14px, 2vw, 20px);
+	@include title-style($fs, 700);
+}
+.title-20-16 {
+	$fs: clamp(16px, 2vw, 20px);
+	@include title-style($fs, 700);
+}
+.title-charcoal-gray-32 {
+	$fs: clamp(18px, 3vw, 32px);
+	@include title-style($fs, 900, $clr-charcoal-gray);
+}
+.title-charcoal-gray-20-17 {
+	$fs: clamp(17px, 2vw, 20px);
+	@include title-style($fs, 700, $clr-charcoal-gray);
+}
+.title-charcoal-gray-20-16 {
+	$fs: clamp(16px, 2vw, 20px);
+	@include title-style($fs, 700, $clr-charcoal-gray);
+}
+.title-charcoal-gray-20-14 {
+	$fs: clamp(14px, 2vw, 20px);
+	@include title-style($fs, 700, $clr-charcoal-gray);
+}
+.title-charcoal-gray-24-20 {
+	$fs: clamp(20px, 2vw, 24px);
+	@include title-style($fs, 700, $clr-charcoal-gray);
+}
+.title-charcoal-gray-17-14 {
+	$fs: clamp(14px, 1vw, 17px);
+	@include title-style($fs, 700, $clr-charcoal-gray, auto);
+}
+
+// others
+
+.btn-green {
+	font-weight: 500;
+	background-color: $clr-dark-teal;
+	color: #fff;
+	transition: background-color 0.3s, color 0.3s;
+	&:hover {
+		background-color: #fff;
+		color: $clr-dark-teal;
+		[class*='icon-'] {
+			fill: $clr-dark-teal;
+		}
+	}
+}
