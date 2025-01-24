@@ -15,7 +15,7 @@
 	@include text-style($fs);
 }
 .text-20 {
-	$fs: clamp(14px, 1.3vw, 20px);
+	$fs: clamp(14px, 1.1vw, 20px);
 	@include text-style($fs);
 }
 .text-17 {
@@ -37,10 +37,10 @@
 	@include title-style($fs);
 }
 .title-42 {
-	$fs: clamp(24px, 3.5vw, 42px);
+	$fs: clamp(24px, 2.5vw, 42px);
 }
 .title-48 {
-	$fs: clamp(18px, 3.5vw, 48px);
+	$fs: clamp(18px, 2.5vw, 48px);
 	@include title-style($fs);
 }
 .title-20 {

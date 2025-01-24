@@ -110,11 +110,13 @@ const links = getLinks();
 		@include flex-center;
 	}
 	&__right {
-		align-self: stretch;
+		// align-self: stretch;
 		display: flex;
+		align-items: center;
 		gap: clamp(10px, 1.2vw, 20px);
 		& > * {
 			animation: 0.5s 0.3s backwards;
+			height: 50px;
 			&:first-child {
 				animation-name: slide-from-left;
 			}
@@ -123,6 +125,7 @@ const links = getLinks();
 			}
 			@media only screen and (max-width: 1260px) {
 				animation-delay: 0s;
+				height: auto;
 			}
 		}
 		@media only screen and (max-width: 1260px) {

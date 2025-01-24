@@ -48,7 +48,7 @@ const props = defineProps({
 		align-items: center;
 
 		font-size: 14px;
-		color: $clr-grey;
+		color: #687588;
 		animation: slide-from-top 0.5s ease-in-out backwards;
 
 		@for $index from 1 to 4 {
@@ -60,7 +60,7 @@ const props = defineProps({
 			}
 		}
 		&:hover .breadcrumbs__label {
-			color: $clr-yellow;
+			color: $clr-dark-teal;
 		}
 		&:last-child {
 			.breadcrumbs__divider {
