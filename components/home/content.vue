@@ -29,6 +29,9 @@ defineProps({
 .content {
 	@include flex-gap(clamp(16px, 1.5vw, 20px));
 	padding-right: clamp(14px, 1.9vw, 36px);
+	transition-property: transform, opacity;
+	transition-duration: var(--section-transition-duration);
+	transition-delay: var(--section-transition-delay);
 
 	&__text {
 		animation: slide-from-left 0.3s 0.3s backwards;

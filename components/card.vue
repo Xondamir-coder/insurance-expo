@@ -29,6 +29,21 @@ defineProps({
 	display: flex;
 	flex-direction: column;
 	gap: clamp(10px, 0.8vw, 12px);
+	&__date {
+		background: #ffffff;
+		border: 1px solid #0000001a;
+		align-self: flex-end;
+		justify-self: flex-start;
+		font-size: 14px;
+		border-radius: 8px;
+		padding-block: 8px;
+		padding-inline: 10px;
+		display: flex;
+		align-items: center;
+		font-weight: 500;
+		gap: 8px;
+		margin: 16px;
+	}
 	&__content {
 		@include flex-gap(12px);
 		border-radius: clamp(16px, 1.2vw, 20px);
