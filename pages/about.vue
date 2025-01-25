@@ -22,7 +22,7 @@ const breadcrumbs = [
 const currentYear = new Date().getFullYear(); // Get the current year dynamically
 
 useHead({
-	title: `Your Gateway to a Secure Future! - Expo Insurance ${currentYear}`,
+	title: `About - Expo Insurance ${currentYear}`,
 	meta: [
 		{
 			name: 'description',
