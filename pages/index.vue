@@ -46,7 +46,60 @@ onMounted(() => {
 });
 
 useHead({
+	title: 'Expo Insurance',
 	meta: [
+		// Basic Metadata
+		{
+			name: 'description',
+			content:
+				'Your trusted partner for innovative financial solutions and seamless banking experiences.'
+		},
+		{
+			name: 'author',
+			content: 'Spacelabs | https://spacelabs.studio'
+		},
+		{
+			name: 'keywords',
+			content:
+				'banking, financial solutions, secure banking, personal banking, business banking'
+		},
+		// Social Media Sharing (Open Graph)
+		{
+			property: 'og:title',
+			content: 'Expo Insurance'
+		},
+		{
+			property: 'og:description',
+			content:
+				'Partner with Expo Insurance for secure and seamless banking services tailored to your personal and business needs.'
+		},
+		{
+			property: 'og:url',
+			content: 'https://insurexpo.uz'
+		},
+		{
+			property: 'og:type',
+			content: 'website'
+		},
+		// Twitter Card Metadata
+		{
+			name: 'twitter:card',
+			content: 'summary_large_image'
+		},
+		{
+			name: 'twitter:title',
+			content: 'Expo Insurance'
+		},
+		{
+			name: 'twitter:description',
+			content:
+				'Your trusted partner for innovative financial solutions and seamless banking experiences.'
+		},
+		// Accessibility & SEO
+		{
+			name: 'robots',
+			content: 'index, follow'
+		},
 		{ property: 'og:image', content: 'https://insurexpo.uz/images/home.jpg' }, // Replace with the actual OG image URL
 		{ name: 'twitter:image', content: 'https://insurexpo.uz/images/home.jpg' } // Replace with the actual image URL
 	]
