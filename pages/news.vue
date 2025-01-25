@@ -83,7 +83,7 @@ useHead({
 			name: 'description',
 			content: `Stay updated with the latest news and announcements from Expo Insurance ${currentYear}. Explore innovative services and updates in the insurance industry.`
 		},
-		{ property: 'og:title', content: `News | Expo Insurance ${currentYear}` },
+		{ property: 'og:title', content: `News - Expo Insurance ${currentYear}` },
 		{
 			property: 'og:description',
 			content: `Stay updated with the latest news and announcements from Expo Insurance ${currentYear}. Explore innovative services and updates in the insurance industry.`
@@ -91,7 +91,7 @@ useHead({
 		{ property: 'og:url', content: 'https://insurexpo.uz/news' },
 		{ property: 'og:type', content: 'website' },
 		{ name: 'twitter:card', content: 'summary_large_image' },
-		{ name: 'twitter:title', content: `News | Expo Insurance ${currentYear}` },
+		{ name: 'twitter:title', content: `News - Expo Insurance ${currentYear}` },
 		{
 			name: 'twitter:description',
 			content: `Stay updated with the latest news and announcements from Expo Insurance ${currentYear}. Explore innovative services and updates in the insurance industry.`
