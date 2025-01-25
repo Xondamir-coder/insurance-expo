@@ -77,6 +77,7 @@ const links = getLinks();
 	padding-block: clamp(16px, 2vw, 20px);
 	display: flex;
 	justify-content: space-between;
+	padding-inline: $padding-inline;
 	&__hamburger {
 		border-radius: 42px;
 		width: 42px;

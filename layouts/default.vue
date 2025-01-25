@@ -2,6 +2,7 @@
 	<div class="layout">
 		<Header />
 		<slot />
+		<Footer v-if="$route.path !== '/'" />
 	</div>
 </template>
 
@@ -9,7 +10,6 @@
 
 <style lang="scss" scoped>
 .layout {
-	padding-inline: clamp(16px, 3.7vw, 70px);
 	display: flex;
 	flex-direction: column;
 	// min-height: 100vh;

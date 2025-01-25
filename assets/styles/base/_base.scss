@@ -19,6 +19,7 @@ a {
 	color: inherit;
 }
 main {
+	padding-inline: $padding-inline;
 	padding-bottom: clamp(30px, 4.2vw, 80px);
 	padding-top: clamp(8px, 0.8vw, 17px);
 }
