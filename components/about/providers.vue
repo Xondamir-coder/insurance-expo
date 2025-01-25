@@ -40,8 +40,8 @@ onMounted(() => {
 		scrollTriggerOptions: { start: 'top 90%' }
 	});
 	GSAPanimation(`${parentContainer}__item`, {
-		animProps: { y: 100 },
-		scrollTriggerOptions: { stagger: 0.1, trigger: `${parentContainer}__list` }
+		animProps: { y: 100, stagger: 0.1 },
+		scrollTriggerOptions: { trigger: `${parentContainer}__list` }
 	});
 });
 </script>

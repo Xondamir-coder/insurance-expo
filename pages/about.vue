@@ -22,7 +22,7 @@ const breadcrumbs = [
 const currentYear = new Date().getFullYear(); // Get the current year dynamically
 
 useHead({
-	title: `Expo Insurance ${currentYear} - Your Gateway to a Secure Future!`,
+	title: `Your Gateway to a Secure Future! - Expo Insurance ${currentYear}`,
 	meta: [
 		{
 			name: 'description',
@@ -44,10 +44,6 @@ useHead({
 			property: 'og:description',
 			content: `Join Expo Insurance ${currentYear} to discover groundbreaking trends and connect with top leaders from the insurance and fintech industries.`
 		},
-		// {
-		// 	property: 'og:image',
-		// 	content: 'https://insurexpo.uz/images/og-image.jpg' // Replace with the correct URL for the featured image
-		// },
 		{
 			property: 'og:url',
 			content: `https://insurexpo.uz/about` // Replace with the actual URL of the page
@@ -68,10 +64,6 @@ useHead({
 			name: 'twitter:description',
 			content: `Discover leading companies and innovative services at Expo Insurance ${currentYear}. Explore insurance trends, solutions, and innovations.`
 		}
-		// {
-		// 	name: 'twitter:image',
-		// 	content: 'https://insurexpo.uz/images/twitter-image.jpg' // Replace with the correct URL for the image
-		// }
 	],
 	link: [
 		{
