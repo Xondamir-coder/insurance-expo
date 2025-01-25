@@ -93,17 +93,7 @@ const banks = [
 			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 		}
 		@media only screen and (max-width: $bp-lg) {
-			overflow-x: auto;
-			grid-template-columns: initial;
-			grid-auto-flow: column;
-			grid-auto-columns: 239px;
-			scroll-snap-type: x mandatory;
-			& > * {
-				scroll-snap-align: start;
-			}
-			&::-webkit-scrollbar {
-				display: none;
-			}
+			@include grid-scroll(239px);
 		}
 	}
 }

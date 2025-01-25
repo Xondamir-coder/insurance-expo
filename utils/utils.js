@@ -23,3 +23,43 @@ export const getLinks = () => {
 	];
 	return links;
 };
+
+export const defaultScrollTrigger = (trigger, options) => ({
+	scrollTrigger: {
+		trigger,
+
+		// Default values
+		start: '10% bottom',
+		end: 'center bottom',
+		scrub: 1,
+
+		// You can override any ScrollTrigger options here
+		...options
+	}
+});
+
+export const GSAPanimation = (trigger, { method = 'from', animProps, scrollTriggerOptions }) => {
+	const { $gsap } = useNuxtApp();
+	if (!$gsap) {
+		console.error('GSAP instance not found in Nuxt app');
+		return;
+	}
+
+	const validMethods = ['from', 'to'];
+	if (!validMethods.includes(method)) {
+		throw new Error(`Invalid GSAP method: ${method}`);
+	}
+
+	if (!trigger) {
+		throw new Error('Trigger is required for GSAP animation');
+	}
+
+	$gsap[method](trigger, {
+		// Default values
+		opacity: 0,
+
+		// You can override any GSAP options here
+		...animProps,
+		...defaultScrollTrigger(trigger, scrollTriggerOptions)
+	});
+};

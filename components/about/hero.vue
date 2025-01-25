@@ -31,6 +31,7 @@
 </template>
 
 <script setup>
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import img from '~/assets/images/cap-boy.jpg';
 const images = Array(10).fill(img);
 
@@ -50,6 +51,10 @@ useSwiper(listRef, {
 		}
 	}
 });
+
+setTimeout(() => {
+	ScrollTrigger.refresh();
+}, 50);
 </script>
 
 <style scoped lang="scss">
@@ -84,6 +89,7 @@ useSwiper(listRef, {
 	}
 }
 .hero {
+	// to get closer to breadcrumbs
 	background: #eaebed4d;
 	border: 1px solid #eaebed;
 	border-radius: clamp(16px, 1.5vw, 30px);
@@ -114,7 +120,6 @@ useSwiper(listRef, {
 			}
 		}
 	}
-
 	&__top {
 		display: flex;
 		flex-direction: column;
@@ -134,7 +139,6 @@ useSwiper(listRef, {
 			}
 		}
 	}
-
 	&__slide {
 		overflow: hidden;
 		display: flex;

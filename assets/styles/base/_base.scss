@@ -18,6 +18,14 @@ a {
 	text-decoration: none;
 	color: inherit;
 }
+main {
+	padding-bottom: clamp(30px, 4.2vw, 80px);
+	padding-top: clamp(8px, 0.8vw, 17px);
+}
+img {
+	width: 100%;
+	object-fit: cover;
+}
 ul {
 	list-style: none;
 }
