@@ -50,10 +50,10 @@
 					© {{ new Date().getFullYear() }} Expo - All rights reserved
 				</p>
 				<div class="section__bottom-links">
-					<NuxtLink to="/terms" class="section__bottom-link">
+					<NuxtLink to="/terms-of-service" class="section__bottom-link">
 						<span>Terms of service</span>
 					</NuxtLink>
-					<NuxtLink to="/policy" class="section__bottom-link">
+					<NuxtLink to="/privacy-policy" class="section__bottom-link">
 						<span>Privacy policy</span>
 					</NuxtLink>
 				</div>

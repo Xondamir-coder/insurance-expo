@@ -73,10 +73,10 @@
 				&copy; {{ new Date().getFullYear() }} Expo - All rights reserved
 			</p>
 			<div class="footer__bottom-links">
-				<NuxtLink to="/terms" class="footer__bottom-link">
+				<NuxtLink to="/terms-of-service" class="footer__bottom-link">
 					<span>Terms of service</span>
 				</NuxtLink>
-				<NuxtLink to="/policy" class="footer__bottom-link">
+				<NuxtLink to="/privacy-policy" class="footer__bottom-link">
 					<span>Privacy policy</span>
 				</NuxtLink>
 			</div>

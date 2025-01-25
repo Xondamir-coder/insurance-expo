@@ -29,6 +29,35 @@ const card = {
 	img
 };
 const cards = Array(12).fill(card);
+
+const currentYear = new Date().getFullYear();
+
+useHead({
+	title: `Events - Expo Insurance ${currentYear}`,
+	meta: [
+		{
+			name: 'description',
+			content:
+				'Join Expo Insurance events to connect with industry leaders, discover innovations, and shape the future of the insurance industry.'
+		},
+		{ property: 'og:title', content: `Events - Expo Insurance ${currentYear}` },
+		{
+			property: 'og:description',
+			content:
+				'Join Expo Insurance events to connect with industry leaders, discover innovations, and shape the future of the insurance industry.'
+		},
+		{ property: 'og:url', content: 'https://insurexpo.uz/events' },
+		{ property: 'og:type', content: 'website' },
+		{ name: 'twitter:card', content: 'summary_large_image' },
+		{ name: 'twitter:title', content: `Events - Expo Insurance ${currentYear}` },
+		{
+			name: 'twitter:description',
+			content:
+				'Join Expo Insurance events to connect with industry leaders, discover innovations, and shape the future of the insurance industry.'
+		}
+	],
+	link: [{ rel: 'canonical', href: 'https://insurexpo.uz/events' }]
+});
 </script>
 
 <style lang="scss" scoped>

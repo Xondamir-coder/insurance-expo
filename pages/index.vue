@@ -16,6 +16,7 @@
 </template>
 
 <script setup>
+import bannerImg from '~/assets/images/home-section-1.jpg';
 import HomeSection1 from '~/components/home/section-1.vue';
 import HomeSection2 from '~/components/home/section-2.vue';
 import HomeSection3 from '~/components/home/section-3.vue';
@@ -42,6 +43,13 @@ onMounted(() => {
 		if (e.key === 'ArrowRight' && currentSection.value < sections.length - 1)
 			changeSection(currentSection.value + 1);
 	});
+});
+
+useHead({
+	meta: [
+		{ property: 'og:image', content: 'https://insurexpo.uz/images/home.jpg' }, // Replace with the actual OG image URL
+		{ name: 'twitter:image', content: 'https://insurexpo.uz/images/home.jpg' } // Replace with the actual image URL
+	]
 });
 </script>
 
