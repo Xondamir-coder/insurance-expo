@@ -186,6 +186,22 @@ onUnmounted(() => {
 		opacity: 1;
 	}
 }
+@keyframes rotate-bg {
+	from {
+		--angle: 92.56deg;
+	}
+	to {
+		--angle: -92.56deg;
+	}
+}
+@keyframes rotate-pattern {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(90deg);
+	}
+}
 .insurance {
 	display: grid;
 	grid-template-areas:
@@ -204,6 +220,7 @@ onUnmounted(() => {
 			'time';
 	}
 	&__pattern {
+		animation: rotate-pattern 1.5s forwards 0.3s;
 		position: absolute;
 		right: -30%;
 		top: 0;
@@ -358,13 +375,7 @@ onUnmounted(() => {
 		background: linear-gradient(var(--angle), #008b5f 4.36%, #044430 95.17%);
 		transition: --angle 1s;
 		color: #fff;
-		animation: slide-from-left 0.6s 0.3s backwards;
-		&:hover {
-			--angle: -92.56deg;
-			.insurance__pattern {
-				transform: rotate(90deg);
-			}
-		}
+		animation: rotate-bg 1.5s forwards 0.3s;
 
 		&-container {
 			display: flex;

@@ -52,12 +52,6 @@ onMounted(() => {
 				animProps: { y: 0, opacity: 1 }
 			});
 		});
-	} else {
-		GSAPanimation(`${parentId} .bank`, {
-			animProps: { scale: 1, opacity: 1, stagger: 0.1 },
-			scrollTriggerOptions: { scrub: false },
-			method: 'to'
-		});
 	}
 });
 

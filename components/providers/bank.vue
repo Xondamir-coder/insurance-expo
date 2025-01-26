@@ -45,10 +45,17 @@ defineProps({
 </script>
 
 <style lang="scss" scoped>
+@keyframes scale-up {
+	from {
+		transform: scale(0.8);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
 .bank {
-	transform: scale(0.8);
-	opacity: 0;
-
 	display: flex;
 	flex-direction: column;
 	gap: clamp(20px, 1.3vw, 24px);
@@ -57,6 +64,14 @@ defineProps({
 	padding: clamp(16px, 1.1vw, 20px);
 	border-bottom: 4px solid transparent;
 	transition: border-color 0.3s, box-shadow 0.3s;
+	@media only screen and (min-width: $bp-md) {
+		animation: scale-up 0.5s backwards;
+		@for $index from 1 through 20 {
+			&:nth-child(#{$index}) {
+				animation-delay: 0.1s * $index;
+			}
+		}
+	}
 	@media only screen and (max-width: $bp-md) {
 		transform: translateY(50px);
 	}
