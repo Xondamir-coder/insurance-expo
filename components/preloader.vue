@@ -891,14 +891,22 @@ const props = defineProps({
 });
 const emits = defineEmits(['inactive']);
 
+const toggleElements = () => {
+	const main = document.querySelector('main');
+	const header = document.querySelector('header');
+	main.classList.add('dis-none');
+	header.classList.add('dis-none');
+
+	setTimeout(() => {
+		main.classList.remove('dis-none');
+		header.classList.remove('dis-none');
+	}, SLOT_ANIMATION_DELAY * 1000);
+};
 const checkProgress = () => {
+	// start this toggling process when the preloader is at 100%, for SEO purposes
 	if (Math.round(progress.value) === 100 && !animationStarted) {
 		animationStarted = true;
-		const main = document.querySelector('main');
-		main.classList.add('dis-none');
-		setTimeout(() => {
-			main.classList.remove('dis-none');
-		}, SLOT_ANIMATION_DELAY * 1000);
+		toggleElements();
 	}
 };
 const removePreloader = () => {
