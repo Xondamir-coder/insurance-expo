@@ -2,7 +2,7 @@
 	<section class="providers" id="about-providers">
 		<SectionTop
 			:is-second="true"
-			text="Expo Insurance 2025 is proud to showcase a diverse range of leading insurance
+			text="Insurance Expo 2025 is proud to showcase a diverse range of leading insurance
 				providers from around the globe. Discover innovative solutions tailored to your
 				personal and business needs"
 			title="Meet Our Trusted Insurance Providers"

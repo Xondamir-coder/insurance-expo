@@ -23,8 +23,8 @@ const breadcrumbs = [
 	}
 ];
 const card = {
-	title: 'Expo Insurance 2025: A Space for New Opportunities',
-	text: 'Discover leading companies and innovative services at the international insurance exhibition. Explore the latest updates and opportunities in the insurance industry all in one place. Expo Insurance 2025 ',
+	title: 'Insurance Expo 2025: A Space for New Opportunities',
+	text: 'Discover leading companies and innovative services at the international insurance exhibition. Explore the latest updates and opportunities in the insurance industry all in one place. Insurance Expo 2025 ',
 	date: '12-16 March 03:36',
 	img
 };
@@ -33,27 +33,27 @@ const cards = Array(12).fill(card);
 const currentYear = new Date().getFullYear();
 
 useHead({
-	title: `Events - Expo Insurance ${currentYear}`,
+	title: `Events - Insurance Expo ${currentYear}`,
 	meta: [
 		{
 			name: 'description',
 			content:
-				'Join Expo Insurance events to connect with industry leaders, discover innovations, and shape the future of the insurance industry.'
+				'Join Insurance Expo events to connect with industry leaders, discover innovations, and shape the future of the insurance industry.'
 		},
-		{ property: 'og:title', content: `Events - Expo Insurance ${currentYear}` },
+		{ property: 'og:title', content: `Events - Insurance Expo ${currentYear}` },
 		{
 			property: 'og:description',
 			content:
-				'Join Expo Insurance events to connect with industry leaders, discover innovations, and shape the future of the insurance industry.'
+				'Join Insurance Expo events to connect with industry leaders, discover innovations, and shape the future of the insurance industry.'
 		},
 		{ property: 'og:url', content: 'https://insurexpo.uz/events' },
 		{ property: 'og:type', content: 'website' },
 		{ name: 'twitter:card', content: 'summary_large_image' },
-		{ name: 'twitter:title', content: `Events - Expo Insurance ${currentYear}` },
+		{ name: 'twitter:title', content: `Events - Insurance Expo ${currentYear}` },
 		{
 			name: 'twitter:description',
 			content:
-				'Join Expo Insurance events to connect with industry leaders, discover innovations, and shape the future of the insurance industry.'
+				'Join Insurance Expo events to connect with industry leaders, discover innovations, and shape the future of the insurance industry.'
 		}
 	],
 	link: [{ rel: 'canonical', href: 'https://insurexpo.uz/events' }]

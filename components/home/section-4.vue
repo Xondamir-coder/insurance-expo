@@ -34,8 +34,8 @@
 import img from '~/assets/images/home-section-4.jpg';
 
 const PROTO_OBJ = {
-	title: 'Expo Insurance 2025: A Space for New Opportunities',
-	text: 'Discover leading companies and innovative services at the international insurance exhibition. Explore the latest updates and opportunities in the insurance industry all in one place. Expo Insurance 2025 ',
+	title: 'Insurance Expo 2025: A Space for New Opportunities',
+	text: 'Discover leading companies and innovative services at the international insurance exhibition. Explore the latest updates and opportunities in the insurance industry all in one place. Insurance Expo 2025 ',
 	img: img,
 	date: '12-16 March 2025'
 };

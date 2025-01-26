@@ -2,8 +2,8 @@
 	<section class="insurance">
 		<div class="insurance__hero">
 			<HomeContent
-				title="Expo Insurance 2025 is your gateway to a secure future!"
-				label="Expo Insurance"
+				title="Insurance Expo 2025 is your gateway to a secure future!"
+				label="Insurance Expo"
 				:texts="[
 					'Discover leading companies and innovative services at the international insurance exhibition. Explore the latest updates and opportunities in the insurance industry all in one place.'
 				]" />
@@ -62,13 +62,13 @@
 			<div class="insurance__content-wrapper">
 				<div class="insurance__box">
 					<h3 class="title-charcoal-gray-20-14">
-						Expo Insurance 2025: <br />
+						Insurance Expo 2025: <br />
 						A Space for New Opportunities
 					</h3>
 					<p class="text-14">
 						Discover leading companies and innovative services at the international
 						insurance exhibition. Explore the latest updates and opportunities in the
-						insurance industry all in one place. Expo Insurance 2025 is your gateway to
+						insurance industry all in one place. Insurance Expo 2025 is your gateway to
 						a secure future!
 					</p>
 				</div>

@@ -61,8 +61,8 @@ const types = [
 	}
 ];
 const card = {
-	title: 'Expo Insurance 2025: A Space for New Opportunities',
-	text: 'Discover leading companies and innovative services at the international insurance exhibition. Explore the latest updates and opportunities in the insurance industry all in one place. Expo Insurance 2025 ',
+	title: 'Insurance Expo 2025: A Space for New Opportunities',
+	text: 'Discover leading companies and innovative services at the international insurance exhibition. Explore the latest updates and opportunities in the insurance industry all in one place. Insurance Expo 2025 ',
 	date: '12-16 March 03:36',
 	img
 };
@@ -77,24 +77,24 @@ const changePage = page => (currentPage.value = page);
 const currentYear = new Date().getFullYear();
 
 useHead({
-	title: `News - Expo Insurance ${currentYear}`,
+	title: `News - Insurance Expo ${currentYear}`,
 	meta: [
 		{
 			name: 'description',
-			content: `Stay updated with the latest news and announcements from Expo Insurance ${currentYear}. Explore innovative services and updates in the insurance industry.`
+			content: `Stay updated with the latest news and announcements from Insurance Expo ${currentYear}. Explore innovative services and updates in the insurance industry.`
 		},
-		{ property: 'og:title', content: `News - Expo Insurance ${currentYear}` },
+		{ property: 'og:title', content: `News - Insurance Expo ${currentYear}` },
 		{
 			property: 'og:description',
-			content: `Stay updated with the latest news and announcements from Expo Insurance ${currentYear}. Explore innovative services and updates in the insurance industry.`
+			content: `Stay updated with the latest news and announcements from Insurance Expo ${currentYear}. Explore innovative services and updates in the insurance industry.`
 		},
 		{ property: 'og:url', content: 'https://insurexpo.uz/news' },
 		{ property: 'og:type', content: 'website' },
 		{ name: 'twitter:card', content: 'summary_large_image' },
-		{ name: 'twitter:title', content: `News - Expo Insurance ${currentYear}` },
+		{ name: 'twitter:title', content: `News - Insurance Expo ${currentYear}` },
 		{
 			name: 'twitter:description',
-			content: `Stay updated with the latest news and announcements from Expo Insurance ${currentYear}. Explore innovative services and updates in the insurance industry.`
+			content: `Stay updated with the latest news and announcements from Insurance Expo ${currentYear}. Explore innovative services and updates in the insurance industry.`
 		}
 	],
 	link: [{ rel: 'canonical', href: 'https://insurexpo.uz/news' }]

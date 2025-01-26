@@ -23,7 +23,7 @@ const content = [
 	{
 		title: 'Use of the Website',
 		subtitle:
-			'The Expo Insurance Exhibition is a premier international event uniting banking institutions from Uzbekistan and around the globe under one roof. As a dynamic platform for collaboration, innovation, and growth, the exhibition serves as a gateway to the future of banking and financial services.',
+			'The Insurance Expo Exhibition is a premier international event uniting banking institutions from Uzbekistan and around the globe under one roof. As a dynamic platform for collaboration, innovation, and growth, the exhibition serves as a gateway to the future of banking and financial services.',
 		texts: [
 			'You must be at least [Insert Age, e.g., 18 years] to use this website.',
 			'You agree to use the website only for lawful purposes and in a way that does not infringe the rights of, restrict, or inhibit the use of this website by any third party.',
@@ -77,33 +77,33 @@ const content = [
 ];
 
 useHead({
-	title: `Terms of Service - Expo Insurance ${new Date().getFullYear()}`,
+	title: `Terms of Service - Insurance Expo ${new Date().getFullYear()}`,
 	meta: [
 		{
 			name: 'description',
 			content:
-				'Review the terms of service for using the Expo Insurance website. Learn about your rights, responsibilities, and the conditions of use.'
+				'Review the terms of service for using the Insurance Expo website. Learn about your rights, responsibilities, and the conditions of use.'
 		},
 		{
 			property: 'og:title',
-			content: `Terms of Service - Expo Insurance ${new Date().getFullYear()}`
+			content: `Terms of Service - Insurance Expo ${new Date().getFullYear()}`
 		},
 		{
 			property: 'og:description',
 			content:
-				'Review the terms of service for using the Expo Insurance website. Learn about your rights, responsibilities, and the conditions of use.'
+				'Review the terms of service for using the Insurance Expo website. Learn about your rights, responsibilities, and the conditions of use.'
 		},
 		{ property: 'og:url', content: 'https://insurexpo.uz/terms-of-service' },
 		{ property: 'og:type', content: 'website' },
 		{ name: 'twitter:card', content: 'summary_large_image' },
 		{
 			name: 'twitter:title',
-			content: `Terms of Service - Expo Insurance ${new Date().getFullYear()}`
+			content: `Terms of Service - Insurance Expo ${new Date().getFullYear()}`
 		},
 		{
 			name: 'twitter:description',
 			content:
-				'Review the terms of service for using the Expo Insurance website. Learn about your rights, responsibilities, and the conditions of use.'
+				'Review the terms of service for using the Insurance Expo website. Learn about your rights, responsibilities, and the conditions of use.'
 		}
 	],
 	link: [{ rel: 'canonical', href: 'https://insurexpo.uz/terms-of-service' }]

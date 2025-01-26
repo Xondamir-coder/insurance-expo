@@ -22,15 +22,15 @@ const breadcrumbs = [
 const currentYear = new Date().getFullYear(); // Get the current year dynamically
 
 useHead({
-	title: `About - Expo Insurance ${currentYear}`,
+	title: `About - Insurance Expo ${currentYear}`,
 	meta: [
 		{
 			name: 'description',
-			content: `Discover leading companies and innovative services at Expo Insurance ${currentYear}. This transformative event connects leaders in the insurance industry to explore trends, innovations, and solutions for a secure future.`
+			content: `Discover leading companies and innovative services at Insurance Expo ${currentYear}. This transformative event connects leaders in the insurance industry to explore trends, innovations, and solutions for a secure future.`
 		},
 		{
 			name: 'keywords',
-			content: `Expo Insurance, Insurance ${currentYear}, insurance event, fintech, insurance innovations, secure future, digital transformation`
+			content: `Insurance Expo, Insurance ${currentYear}, insurance event, fintech, insurance innovations, secure future, digital transformation`
 		},
 		{
 			name: 'author',
@@ -38,11 +38,11 @@ useHead({
 		},
 		{
 			property: 'og:title',
-			content: `Expo Insurance ${currentYear} - Your Gateway to a Secure Future!`
+			content: `Insurance Expo ${currentYear} - Your Gateway to a Secure Future!`
 		},
 		{
 			property: 'og:description',
-			content: `Join Expo Insurance ${currentYear} to discover groundbreaking trends and connect with top leaders from the insurance and fintech industries.`
+			content: `Join Insurance Expo ${currentYear} to discover groundbreaking trends and connect with top leaders from the insurance and fintech industries.`
 		},
 		{
 			property: 'og:url',
@@ -58,11 +58,11 @@ useHead({
 		},
 		{
 			name: 'twitter:title',
-			content: `Expo Insurance ${currentYear} - Your Gateway to a Secure Future!`
+			content: `Insurance Expo ${currentYear} - Your Gateway to a Secure Future!`
 		},
 		{
 			name: 'twitter:description',
-			content: `Discover leading companies and innovative services at Expo Insurance ${currentYear}. Explore insurance trends, solutions, and innovations.`
+			content: `Discover leading companies and innovative services at Insurance Expo ${currentYear}. Explore insurance trends, solutions, and innovations.`
 		}
 	],
 	link: [

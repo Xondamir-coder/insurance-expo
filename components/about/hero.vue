@@ -2,7 +2,7 @@
 	<section class="hero">
 		<div class="hero__top">
 			<SectionLabel label="Discover leading companies and innovative services at" />
-			<h1 class="title-48">Expo Insurance 2025 is your gateway to a secure future!</h1>
+			<h1 class="title-48">Insurance Expo 2025 is your gateway to a secure future!</h1>
 		</div>
 		<swiper-container :init="false" ref="listRef" class="hero__slider">
 			<swiper-slide v-for="image in images" :key="image" class="hero__slide">
@@ -11,7 +11,7 @@
 		</swiper-container>
 		<div class="text-20 hero__texts">
 			<p>
-				The Expo Insurance 2025 is not just an event—it’s a transformative experience that
+				The Insurance Expo 2025 is not just an event—it’s a transformative experience that
 				connects people, ideas, and innovations to redefine the future of the insurance
 				industry. This global platform brings together leaders from the insurance sector,
 				emerging fintech innovators, and everyday individuals who are eager to learn how
@@ -20,7 +20,7 @@
 			</p>
 			<p>
 				The insurance industry is undergoing rapid evolution, driven by digital
-				transformation, emerging risks, and changing consumer needs. Expo Insurance 2025 is
+				transformation, emerging risks, and changing consumer needs. Insurance Expo 2025 is
 				designed to address these shifts, offering a space where knowledge meets innovation.
 				It serves as the ultimate destination for discovering new trends, exploring
 				groundbreaking products, and building connections with key players in the insurance

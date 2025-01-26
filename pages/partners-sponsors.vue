@@ -4,7 +4,7 @@
 		<div class="partners__wrapper">
 			<SectionTop
 				title="Partners & Sponsors"
-				text="At Expo Insurance 2025, we are proud to collaborate with industry leaders and innovators who share our vision of advancing the insurance sector." />
+				text="At Insurance Expo 2025, we are proud to collaborate with industry leaders and innovators who share our vision of advancing the insurance sector." />
 			<div class="partners__list">
 				<div class="partners__item" v-for="(bank, i) in banks" :key="i">
 					<component :is="bank" class="partners__bank" />
@@ -65,27 +65,27 @@ const banks = [
 const currentYear = new Date().getFullYear();
 
 useHead({
-	title: `Partners & Sponsors - Expo Insurance ${currentYear}`,
+	title: `Partners & Sponsors - Insurance Expo ${currentYear}`,
 	meta: [
 		{
 			name: 'description',
 			content:
-				'Explore the partners and sponsors of Expo Insurance 2025. Collaborating with industry leaders and innovators to advance the insurance sector.'
+				'Explore the partners and sponsors of Insurance Expo 2025. Collaborating with industry leaders and innovators to advance the insurance sector.'
 		},
-		{ property: 'og:title', content: `Partners & Sponsors - Expo Insurance ${currentYear}` },
+		{ property: 'og:title', content: `Partners & Sponsors - Insurance Expo ${currentYear}` },
 		{
 			property: 'og:description',
 			content:
-				'Explore the partners and sponsors of Expo Insurance 2025. Collaborating with industry leaders and innovators to advance the insurance sector.'
+				'Explore the partners and sponsors of Insurance Expo 2025. Collaborating with industry leaders and innovators to advance the insurance sector.'
 		},
 		{ property: 'og:url', content: 'https://insurexpo.uz/partners-sponsors' },
 		{ property: 'og:type', content: 'website' },
 		{ name: 'twitter:card', content: 'summary_large_image' },
-		{ name: 'twitter:title', content: `Partners & Sponsors - Expo Insurance ${currentYear}` },
+		{ name: 'twitter:title', content: `Partners & Sponsors - Insurance Expo ${currentYear}` },
 		{
 			name: 'twitter:description',
 			content:
-				'Explore the partners and sponsors of Expo Insurance 2025. Collaborating with industry leaders and innovators to advance the insurance sector.'
+				'Explore the partners and sponsors of Insurance Expo 2025. Collaborating with industry leaders and innovators to advance the insurance sector.'
 		}
 	],
 	link: [{ rel: 'canonical', href: 'https://insurexpo.uz/partners-sponsors' }]

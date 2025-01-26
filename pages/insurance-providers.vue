@@ -3,7 +3,7 @@
 		<Breadcrumbs :breadcrumbs="breadcrumbs" />
 		<SectionTop
 			title="Meet Our Trusted Insurance Providers"
-			text="Expo Insurance 2025 is proud to showcase a diverse range of leading insurance providers from around the globe. Discover innovative solutions tailored to your personal and business needs" />
+			text="Insurance Expo 2025 is proud to showcase a diverse range of leading insurance providers from around the globe. Discover innovative solutions tailored to your personal and business needs" />
 		<div class="providers__wrapper">
 			<div class="providers__list">
 				<ProvidersBank v-for="(bank, i) in banks" :bank :key="i" />
@@ -58,27 +58,27 @@ onMounted(() => {
 const currentYear = new Date().getFullYear();
 
 useHead({
-	title: `Trusted Insurance Providers - Expo Insurance ${currentYear}`,
+	title: `Trusted Insurance Providers - Insurance Expo ${currentYear}`,
 	meta: [
 		{
 			name: 'description',
-			content: `Discover leading insurance companies and innovative services at Expo Insurance ${currentYear}. Explore trusted providers with 20+ years of experience and 200+ branch networks tailored to your needs.`
+			content: `Discover leading insurance companies and innovative services at Insurance Expo ${currentYear}. Explore trusted providers with 20+ years of experience and 200+ branch networks tailored to your needs.`
 		},
 		{
 			name: 'keywords',
-			content: `insurance providers, trusted insurance companies, Expo Insurance ${currentYear}, life insurance, branch network, financial services, insurance solutions`
+			content: `insurance providers, trusted insurance companies, Insurance Expo ${currentYear}, life insurance, branch network, financial services, insurance solutions`
 		},
 		{
 			name: 'author',
-			content: 'Expo Insurance Team'
+			content: 'Insurance Expo Team'
 		},
 		{
 			property: 'og:title',
-			content: `Trusted Insurance Providers - Expo Insurance ${currentYear}`
+			content: `Trusted Insurance Providers - Insurance Expo ${currentYear}`
 		},
 		{
 			property: 'og:description',
-			content: `Discover trusted insurance providers at Expo Insurance ${currentYear}, offering 20+ years of experience and tailored solutions for individuals and businesses.`
+			content: `Discover trusted insurance providers at Insurance Expo ${currentYear}, offering 20+ years of experience and tailored solutions for individuals and businesses.`
 		},
 		{
 			property: 'og:url',
@@ -94,11 +94,11 @@ useHead({
 		},
 		{
 			name: 'twitter:title',
-			content: `Trusted Insurance Providers - Expo Insurance ${currentYear}`
+			content: `Trusted Insurance Providers - Insurance Expo ${currentYear}`
 		},
 		{
 			name: 'twitter:description',
-			content: `Explore trusted insurance companies and innovative services at Expo Insurance ${currentYear}. Tailored solutions for all your needs.`
+			content: `Explore trusted insurance companies and innovative services at Insurance Expo ${currentYear}. Tailored solutions for all your needs.`
 		}
 	],
 	link: [

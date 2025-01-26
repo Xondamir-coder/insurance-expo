@@ -2,10 +2,10 @@
 	<section class="section">
 		<HomeContent
 			class="section__content"
-			title="Expo Insurance 2025: Step into the Future of Insurance"
+			title="Insurance Expo 2025: Step into the Future of Insurance"
 			label="Our mission"
 			:texts="[
-				'Expo Insurance 2025 is the international exhibition showcasing the latest innovations and opportunities in the insurance industry. Discover leading companies and cutting-edge services, and explore secure solutions for the future'
+				'Insurance Expo 2025 is the international exhibition showcasing the latest innovations and opportunities in the insurance industry. Discover leading companies and cutting-edge services, and explore secure solutions for the future'
 			]" />
 		<div class="section__list">
 			<div class="section__item big">
@@ -37,7 +37,7 @@
 					Advancing the Industry Through Knowledge Sharing
 				</h4>
 				<p class="text-16">
-					Expo Insurance 2025 enables professionals to expand their knowledge and stay
+					Insurance Expo 2025 enables professionals to expand their knowledge and stay
 					updated on industry trends through seminars and discussions
 				</p>
 			</div>
@@ -47,7 +47,7 @@
 				</h4>
 				<p class="text-16">
 					We aim to promote innovative solutions that ensure stability and sustainability
-					within the insurance industry, shaping a secure future through Expo Insurance
+					within the insurance industry, shaping a secure future through Insurance Expo
 					2025
 				</p>
 			</div>

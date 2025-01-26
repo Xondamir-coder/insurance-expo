@@ -46,7 +46,7 @@ onMounted(() => {
 });
 
 useHead({
-	title: 'Expo Insurance',
+	title: 'Insurance Expo',
 	meta: [
 		// Basic Metadata
 		{
@@ -66,12 +66,12 @@ useHead({
 		// Social Media Sharing (Open Graph)
 		{
 			property: 'og:title',
-			content: 'Expo Insurance'
+			content: 'Insurance Expo'
 		},
 		{
 			property: 'og:description',
 			content:
-				'Partner with Expo Insurance for secure and seamless banking services tailored to your personal and business needs.'
+				'Partner with Insurance Expo for secure and seamless banking services tailored to your personal and business needs.'
 		},
 		{
 			property: 'og:url',
@@ -88,7 +88,7 @@ useHead({
 		},
 		{
 			name: 'twitter:title',
-			content: 'Expo Insurance'
+			content: 'Insurance Expo'
 		},
 		{
 			name: 'twitter:description',

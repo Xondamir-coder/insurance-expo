@@ -5,7 +5,7 @@
 			title="United for the Advancement of the Insurance Industry"
 			label="Partners & Sponsors"
 			:texts="[
-				'Expo Insurance 2025 is proudly supported by leading partners and trusted sponsors. Their contributions play a vital role in showcasing the latest innovations and creating new opportunities in the insurance industry. Together, we are driving progress and success. Join us and become a part of this transformative platform!'
+				'Insurance Expo 2025 is proudly supported by leading partners and trusted sponsors. Their contributions play a vital role in showcasing the latest innovations and creating new opportunities in the insurance industry. Together, we are driving progress and success. Join us and become a part of this transformative platform!'
 			]" />
 		<div class="section__list">
 			<div class="section__item" v-for="bank in banks" :key="bank">
