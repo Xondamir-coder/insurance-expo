@@ -94,14 +94,7 @@ useHead({
 			name: 'twitter:description',
 			content:
 				'Your trusted partner for innovative financial solutions and seamless banking experiences.'
-		},
-		// Accessibility & SEO
-		{
-			name: 'robots',
-			content: 'index, follow'
-		},
-		{ property: 'og:image', content: 'https://insurexpo.uz/images/home.jpg' }, // Replace with the actual OG image URL
-		{ name: 'twitter:image', content: 'https://insurexpo.uz/images/home.jpg' } // Replace with the actual image URL
+		}
 	]
 });
 </script>
