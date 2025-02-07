@@ -78,6 +78,7 @@ const currentYear = new Date().getFullYear();
 
 useHead({
 	title: `News - Insurance Expo ${currentYear}`,
+	titleTemplate: `%s`,
 	meta: [
 		{
 			name: 'description',

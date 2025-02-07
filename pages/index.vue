@@ -47,6 +47,7 @@ onMounted(() => {
 
 useHead({
 	title: 'Insurance Expo',
+	titleTemplate: `%s`,
 	meta: [
 		// Basic Metadata
 		{

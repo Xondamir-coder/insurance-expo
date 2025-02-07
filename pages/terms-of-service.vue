@@ -78,6 +78,7 @@ const content = [
 
 useHead({
 	title: `Terms of Service - Insurance Expo ${new Date().getFullYear()}`,
+	titleTemplate: `%s`,
 	meta: [
 		{
 			name: 'description',

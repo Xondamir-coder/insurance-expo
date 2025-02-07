@@ -13,7 +13,6 @@ export default defineNuxtConfig({
 			}
 		}
 	},
-
 	css: [
 		'~/assets/styles/main.scss' // Replace with the path to your SCSS file
 	],

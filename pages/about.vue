@@ -23,6 +23,7 @@ const currentYear = new Date().getFullYear(); // Get the current year dynamicall
 
 useHead({
 	title: `About - Insurance Expo ${currentYear}`,
+	titleTemplate: `%s`,
 	meta: [
 		{
 			name: 'description',

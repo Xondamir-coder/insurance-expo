@@ -66,6 +66,7 @@ const currentYear = new Date().getFullYear();
 
 useHead({
 	title: `Partners & Sponsors - Insurance Expo ${currentYear}`,
+	titleTemplate: `%s`,
 	meta: [
 		{
 			name: 'description',

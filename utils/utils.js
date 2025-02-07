@@ -23,6 +23,11 @@ export const getLinks = () => {
 	];
 	return links;
 };
+export const getLangs = () => [
+	{ code: 'uz', label: 'Uzbek' },
+	{ code: 'en', label: 'English' },
+	{ code: 'ru', label: 'Russian' }
+];
 
 export const defaultScrollTrigger = (trigger, options) => ({
 	scrollTrigger: {

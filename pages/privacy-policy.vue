@@ -77,6 +77,7 @@ const content = [
 
 useHead({
 	title: `Privacy Policy - Insurance Expo ${new Date().getFullYear()}`,
+	titleTemplate: `%s`,
 	meta: [
 		{
 			name: 'description',
