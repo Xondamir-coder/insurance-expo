@@ -1,8 +1,9 @@
 <template>
 	<header class="header">
 		<div class="header__left">
-			<button class="header__hamburger">
-				<IconsMenu class="icon-menu" />
+			<button class="header__hamburger" aria-label="Toggle menu" @click="toggleMenu">
+				<IconsMenu class="icon-menu" :class="{ active: !isMenuActive }" />
+				<IconsCross class="icon-menu" :class="{ active: isMenuActive }" />
 			</button>
 			<NuxtLink to="/">
 				<Logo class="header__logo" />
@@ -44,6 +45,7 @@
 			<NuxtLink to="/contact" class="btn-green header__button">Contact Us</NuxtLink>
 		</div>
 	</header>
+	<Menu :class="{ active: isMenuActive }" @close="toggleMenu" />
 </template>
 
 <script setup>
@@ -55,6 +57,7 @@ const links = getLinks();
 const langs = getLangs();
 const isLangDropdownActive = ref(false);
 const activeLangCode = ref('en');
+const isMenuActive = ref(false);
 
 const iconLangs = langs.map(lang => {
 	const icon = lang.code === 'en' ? IconsUsa : lang.code === 'uz' ? IconsUzb : IconsRus;
@@ -64,6 +67,9 @@ const iconLangs = langs.map(lang => {
 	};
 });
 
+const toggleMenu = () => {
+	isMenuActive.value = !isMenuActive.value;
+};
 const toggleDropdown = () => {
 	isLangDropdownActive.value = !isLangDropdownActive.value;
 };
@@ -127,13 +133,25 @@ onMounted(() => {
 	display: flex;
 	justify-content: space-between;
 	padding-inline: $padding-inline;
+	position: sticky;
+	top: 0;
+	background-color: #fff;
+	z-index: 50;
 	&__hamburger {
 		border-radius: 42px;
 		width: 42px;
 		aspect-ratio: 1;
 		background: #eaebed3d;
 		border: 1px solid #eaebed;
-		@include flex-center;
+		display: grid;
+		place-items: center;
+		& > * {
+			grid-area: 1/1/2/2;
+			transition: transform 0.3s;
+			&:not(.active) {
+				transform: scale(0);
+			}
+		}
 		@media only screen and (min-width: 1260px) {
 			display: none;
 		}
