@@ -3,15 +3,15 @@ pages:
   stage: deploy
   before_script:
     - npm -v
-    - pm2 status
+    # - pm2 status
   script:
     - cp -r -u * /var/www/insurexpo.uz
     - cd /var/www/insurexpo.uz
     - ls -la
     # - pm2 restart insurexpo
     # - pm2 delete insurexpo
-    - NODE_OPTIONS="--max-old-space-size=1024" npm run build
-    - pm2 restart insurexpo
+    # - NODE_OPTIONS="--max-old-space-size=1024" npm run build
+    # - pm2 restart insurexpo
   # - pm2 start .output/server/index.mjs --name insurexpo
   artifacts:
     paths:
