@@ -1,33 +1,33 @@
 @use '../abstracts/variables' as *;
 
 .icon-globe {
-	width: clamp(20px, 2vw, 24px);
-	transition: fill 0.3s;
-	fill: $clr-dark-teal;
+  width: max(20px, 2.4rem);
+  transition: fill 0.3s;
+  fill: $clr-dark-teal;
 }
 .icon-menu {
-	fill: $clr-dark-teal;
-	transition: fill 0.3s;
+  fill: $clr-dark-teal;
+  transition: fill 0.3s;
 }
 .icon-hash {
-	width: clamp(20px, 1.5vw, 28px);
+  width: max(20px, 2.8rem);
 }
 .icon-location {
-	width: clamp(20px, 1.5vw, 24px);
+  width: max(20px, 2.4rem);
 }
 .icon-play {
-	width: 40%;
-	fill: #fff;
-	transition: fill 0.3s;
+  width: 40%;
+  fill: #fff;
+  transition: fill 0.3s;
 }
 .icon-arrow {
-	width: clamp(16px, 1.4vw, 24px);
-	transition: fill 0.3s;
-	fill: $clr-dark-charcoal;
-	&--reverse {
-		transform: rotate(180deg);
-	}
+  width: max(16px, 2.4rem);
+  transition: fill 0.3s;
+  fill: $clr-dark-charcoal;
+  &--reverse {
+    transform: rotate(180deg);
+  }
 }
 .icon {
-	width: clamp(20px, 1.3vw, 24px);
+  width: max(20px, 2.4rem);
 }

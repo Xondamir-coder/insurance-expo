@@ -9,7 +9,6 @@ $clr-deep-brown: #6c542d;
 $clr-rich-brown: #48381e;
 $clr-dark-brown: #241c0f;
 $clr-almost-black: #120e07;
-
 $clr-light-green: #ccffef;
 $clr-pale-green: #99ffdf;
 $clr-soft-green: #66ffcf;
@@ -20,7 +19,6 @@ $clr-rich-teal: #009969;
 $clr-dark-green: #006646;
 $clr-deep-green: #003323;
 $clr-almost-black-green: #001a11;
-
 $clr-dark-slate: #2c3a47;
 $clr-bright-teal-alt: #008b5e;
 $clr-deep-slate: #11171c;
@@ -44,4 +42,4 @@ $bp-xxl: 1400px;
 $font-base: 'AA Stetica';
 
 // Others
-$padding-inline: clamp(16px, 3.7vw, 70px);
+$padding-inline: max(16px, 7rem);

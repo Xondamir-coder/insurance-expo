@@ -2,102 +2,102 @@
 @use '../abstracts/mixins' as *;
 
 .overflow-hidden {
-	overflow: hidden;
+  overflow: hidden;
 }
 .dis-none {
-	display: none !important;
+  display: none !important;
 }
 
 // text utils
 .text-16 {
-	$fs: clamp(14px, 1vw, 16px);
-	@include text-style($fs);
+  $fs: max(14px, 1.6rem);
+  @include text-style($fs);
 }
 .text-14 {
-	$fs: clamp(12px, 0.8vw, 14px);
-	@include text-style($fs);
+  $fs: max(12px, 1.4rem);
+  @include text-style($fs);
 }
 .text-20 {
-	$fs: clamp(14px, 1.1vw, 20px);
-	@include text-style($fs);
+  $fs: max(14px, 2rem);
+  @include text-style($fs);
 }
 .text-17 {
-	$fs: clamp(14px, 0.8vw, 17px);
-	@include text-style($fs);
+  $fs: max(14px, 1.7rem);
+  @include text-style($fs);
 }
 .text-dark-slate-blue-14 {
-	$fs: 14px;
-	@include text-style($fs, $clr-dark-slate-blue);
+  $fs: 14px;
+  @include text-style($fs, $clr-dark-slate-blue);
 }
 .text-white-17 {
-	$fs: clamp(14px, 0.8vw, 17px);
-	@include text-style($fs, #fff);
+  $fs: max(14px, 1.7rem);
+  @include text-style($fs, #fff);
 }
 
 // title utils
 .title-32 {
-	$fs: clamp(18px, 1.7vw, 32px);
-	@include title-style($fs);
+  $fs: max(18px, 3.2rem);
+  @include title-style($fs);
 }
 .title-42 {
-	$fs: clamp(24px, 2.2vw, 42px);
-	@include title-style($fs);
+  $fs: max(24px, 4.2rem);
+  @include title-style($fs);
 }
 .title-48 {
-	$fs: clamp(18px, 2.5vw, 48px);
-	@include title-style($fs);
+  $fs: max(18px, 4.8rem);
+  @include title-style($fs);
 }
 .title-20 {
-	$fs: clamp(14px, 1.1vw, 20px);
-	@include title-style($fs, 700);
+  $fs: max(14px, 2rem);
+  @include title-style($fs, 700);
 }
 .title-20-16 {
-	$fs: clamp(16px, 1.1vw, 20px);
-	@include title-style($fs, 700);
+  $fs: max(16px, 2rem);
+  @include title-style($fs, 700);
 }
 .title-charcoal-gray-32 {
-	$fs: clamp(18px, 1.7vw, 32px);
-	@include title-style($fs, 900, $clr-charcoal-gray);
+  $fs: max(18px, 3.2rem);
+  @include title-style($fs, 900, $clr-charcoal-gray);
 }
 .title-charcoal-gray-20-17 {
-	$fs: clamp(17px, 1.1vw, 20px);
-	@include title-style($fs, 700, $clr-charcoal-gray);
+  $fs: max(17px, 2rem);
+  @include title-style($fs, 700, $clr-charcoal-gray);
 }
 .title-charcoal-gray-20-16 {
-	$fs: clamp(16px, 1.1vw, 20px);
-	@include title-style($fs, 700, $clr-charcoal-gray);
+  $fs: max(16px, 2rem);
+  @include title-style($fs, 700, $clr-charcoal-gray);
 }
 .title-charcoal-gray-20-14 {
-	$fs: clamp(14px, 1.1vw, 20px);
-	@include title-style($fs, 700, $clr-charcoal-gray);
+  $fs: max(14px, 2rem);
+  @include title-style($fs, 700, $clr-charcoal-gray);
 }
 .title-charcoal-gray-24-20 {
-	$fs: clamp(20px, 1.3vw, 24px);
-	@include title-style($fs, 700, $clr-charcoal-gray);
+  $fs: max(20px, 2.4rem);
+  @include title-style($fs, 700, $clr-charcoal-gray);
 }
 .title-charcoal-gray-17-14 {
-	$fs: clamp(14px, 0.9vw, 17px);
-	@include title-style($fs, 700, $clr-charcoal-gray, auto);
+  $fs: max(14px, 1.7rem);
+  @include title-style($fs, 700, $clr-charcoal-gray, initial);
 }
 
 // others
 
 .btn-green {
-	font-weight: 500;
-	background-color: $clr-dark-teal;
-	color: #fff;
-	transition: background-color 0.3s, color 0.3s;
-	&:hover {
-		background-color: #fff;
-		color: $clr-dark-teal;
-		[class*='icon-'] {
-			fill: $clr-dark-teal;
-		}
-	}
+  font-weight: 500;
+  background-color: $clr-dark-teal;
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+  &:hover {
+    background-color: #fff;
+    color: $clr-dark-teal;
+    [class*='icon-'] {
+      fill: $clr-dark-teal;
+    }
+  }
 }
 .fill-dark-teal {
-	fill: $clr-dark-teal;
+  fill: $clr-dark-teal;
 }
 .align-self-center {
-	align-self: center;
+  align-self: center;
 }
