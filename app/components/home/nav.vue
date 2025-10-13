@@ -72,6 +72,10 @@ const buttons = [
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   gap: max(10px, 2rem);
+  scrollbar-width: 0;
+  &::-webkit-scrollbar {
+    display: none;
+  }
   @media only screen and (max-width: $bp-lg) {
     position: fixed;
     bottom: 16px;
@@ -79,9 +83,6 @@ const buttons = [
     width: 100%;
     z-index: 10;
     padding-right: 20px;
-    &::-webkit-scrollbar {
-      display: none;
-    }
   }
   @media only screen and (min-width: $bp-lg) {
     &:has(.nav__button:hover) .nav__button:not(:hover) {

@@ -3,8 +3,8 @@
     <div class="section__top">
       <HomeLabel
         class="section__label"
-        title="Uniting the Insurance Industry to Build a Secure and Sustainable Future"
-        label="Our mission"
+        :title="$t('home.section-4.content.title')"
+        :label="$t('home.section-4.content.label')"
       />
       <div class="section__buttons">
         <button class="section__button section__button--prev">
@@ -15,11 +15,13 @@
         </button>
       </div>
     </div>
-    <swiper-container class="section__slider" ref="listRef" init="false">
-      <swiper-slide v-for="item in items" :key="item.title" class="section__slide">
-        <Card :data="item" />
-      </swiper-slide>
-    </swiper-container>
+    <ClientOnly>
+      <swiper-container class="section__slider" ref="listRef" init="false">
+        <swiper-slide v-for="item in items" :key="item.title" class="section__slide">
+          <Card :data="item" />
+        </swiper-slide>
+      </swiper-container>
+    </ClientOnly>
     <div class="section__buttons">
       <button class="section__button section__button--prev">
         <IconsArrowLeft class="icon-arrow" />
@@ -43,6 +45,7 @@ const items = Array(PROTO_COUNT).fill(PROTO_OBJ);
 const listRef = ref();
 
 useSwiper(listRef, {
+  spaceBetween: 22,
   grabCursor: true,
   slidesPerView: 'auto',
   navigation: {
@@ -50,12 +53,8 @@ useSwiper(listRef, {
     nextEl: '.section__button--next'
   },
   breakpoints: {
-    0: {
-      spaceBetween: 12
-    },
-    768: {
-      spaceBetween: 32
-    }
+    0: { spaceBetween: 12 },
+    1280: { spaceBetween: 32 }
   }
 });
 </script>
@@ -64,36 +63,16 @@ useSwiper(listRef, {
 .section {
   display: flex;
   flex-direction: column;
-  gap: clamp(16px, 1.7vw, 32px);
+  gap: max(16px, 3.2rem);
   overflow: hidden;
-  .section__label,
-  .section__slide {
-    transition-delay: var(--section-transition-delay);
-    transition-duration: var(--section-transition-duration);
-    transition-property: opacity, transform;
-  }
-  &:not(.active) {
-    .section__label {
-      transform: translateX(-25%);
-      opacity: 0;
-    }
-    .section__slide {
-      transform: translateY(100px);
-      opacity: 0;
+  &__label {
+    @media screen and (min-width: $bp-lg) {
+      max-width: 43.5%;
     }
   }
   &__slide {
-    max-width: 421px;
-    min-width: 340px;
-  }
-  &__label {
-    max-width: 62ch;
-  }
-  &__list {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: clamp(340px, 30vw, 421px);
-    gap: clamp(16px, 2vw, 32px);
+    max-width: 42.1rem;
+    min-width: 328px;
   }
   &__top {
     display: flex;
@@ -117,14 +96,22 @@ useSwiper(listRef, {
   }
   &__buttons {
     display: flex;
-    gap: 1vw;
+    gap: 16px;
   }
   &__button {
-    width: clamp(40px, 3vw, 56px);
+    width: max(40px, 5.6rem);
+    height: max(40px, 5.6rem);
     border-radius: 50%;
     border: 1px solid #2c3a4733;
-    aspect-ratio: 1;
+    transition: all 0.5s;
     @include flex-center;
+    svg {
+      fill: inherit;
+    }
+    &:hover {
+      background-color: #008b5f;
+      fill: #fff;
+    }
   }
 }
 </style>

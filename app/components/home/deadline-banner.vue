@@ -59,6 +59,14 @@ const timeUnits = computed(() => [
 </script>
 
 <style lang="scss" scoped>
+@keyframes rotate-pattern {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
 .deadline-banner {
   overflow: hidden;
   position: relative;
@@ -69,10 +77,9 @@ const timeUnits = computed(() => [
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(var(--angle), #008b5f 4.36%, #044430 95.17%);
-  transition: --angle 1s;
+  background: linear-gradient(-90deg, #008b5f 4.36%, #044430 95.17%);
   color: #fff;
-  animation: rotate-bg 1.5s forwards 0.3s;
+  animation: slide-from-bottom-20 1s 0.2s backwards;
   &__pattern {
     animation: rotate-pattern 1.5s forwards 0.3s;
     position: absolute;

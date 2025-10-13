@@ -1,26 +1,21 @@
 <template>
-  <section class="section-1">
-    <div class="section-1__container">
-      <HomeContent
-        title="Insurance Expo 2025 is your gateway to a secure future!"
-        label="Insurance Expo"
-        :texts="[
-          'Discover leading companies and innovative services at the international insurance exhibition. Explore the latest updates and opportunities in the insurance industry all in one place.'
-        ]"
-      />
-      <div class="section-1__umbrella-container">
-        <div class="section-1__location">
-          <div class="section-1__location-icontainer">
+  <section class="section">
+    <div class="section__container">
+      <HomeContent class="section__content" :title="$t('home.section-1.content.title')"
+      :label="$t('home.section-1.content.label')"" :texts="[ $t('home.section-1.content.text') ]" />
+      <div class="section__umbrella-container">
+        <div class="section__location">
+          <div class="section__location-icontainer">
             <IconsLocation class="icon-location" />
           </div>
-          <div class="section-1__location-content">
-            <strong class="section-1__location-out">
+          <div class="section__location-content">
+            <strong class="section__location-out">
               {{ formattedDate }}
             </strong>
-            <span>Tashkent</span>
+            <span>{{ $t('tashkent') }}</span>
           </div>
         </div>
-        <MyPicture src="umbrella.png" alt="umbrella" class="section-1__umbrella" />
+        <MyPicture src="umbrella.png" alt="umbrella" class="section__umbrella" />
       </div>
     </div>
     <HomeDeadlineBanner :deadline />
@@ -42,58 +37,7 @@ const formattedDate = computed(() =>
 </script>
 
 <style lang="scss" scoped>
-@property --angle {
-  syntax: '<angle>';
-  initial-value: 92.56deg;
-  inherits: false;
-}
-@keyframes slide-from-left {
-  from {
-    transform: translateX(-20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes slide-from-right {
-  from {
-    transform: translateX(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes slide-from-top {
-  from {
-    transform: translateY(-30px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes rotate-bg {
-  from {
-    --angle: -92.56deg;
-  }
-  to {
-    --angle: 92.56deg;
-  }
-}
-@keyframes rotate-pattern {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(90deg);
-  }
-}
-.section-1 {
+.section {
   display: grid;
   grid-template-areas:
     'hero content'
@@ -110,26 +54,32 @@ const formattedDate = computed(() =>
       'hero'
       'time';
   }
-  &__umbrella-container {
-    display: grid;
-    align-items: flex-end;
-    row-gap: 10px;
-
-    @media only screen and (min-width: $bp-lg) {
-      grid-template-columns: 1fr 1.3fr;
-    }
-    @media only screen and (max-width: $bp-lg) {
-      padding-right: max(14px, 3.6rem);
-    }
-    & > * {
-      animation: backwards 0.3s 0.4s;
-      &:first-child {
-        animation-name: slide-from-left;
+  &__umbrella {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 52%;
+    &-container {
+      display: flex;
+      align-items: flex-end;
+      row-gap: 10px;
+      position: relative;
+      @media only screen and (max-width: $bp-lg) {
+        padding-right: max(14px, 3.6rem);
       }
-      &:last-child {
-        animation-name: slide-from-right;
+      & > * {
+        animation: backwards 1s 0.4s;
+        &:first-child {
+          animation-name: slide-from-left-20;
+        }
+        &:last-child {
+          animation-name: slide-from-right-20;
+        }
       }
     }
+  }
+  &__content {
+    z-index: 3;
   }
   &__container {
     grid-area: hero;

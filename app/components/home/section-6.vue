@@ -2,8 +2,8 @@
   <section class="section">
     <div class="section__box">
       <HomeContent
-        title="Discover the future of Insurance technology in one place!"
-        label="Contacts"
+        :title="$t('home.section-6.content.title')"
+        :label="$t('home.section-6.content.label')"
       />
       <button class="btn-green section__button">
         <span>Get started</span>
@@ -82,9 +82,8 @@ const linkRows = [
 .section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  row-gap: clamp(16px, 1.5vw, 20px);
-  column-gap: clamp(20px, 2vw, 32px);
-  padding-bottom: 40px;
+  row-gap: max(16px, 2rem);
+  column-gap: max(20px, 3.2rem);
   grid-template-areas:
     'content map'
     'links map';
@@ -96,34 +95,12 @@ const linkRows = [
       'links';
     grid-auto-rows: max-content;
   }
-  &__box,
-  &__wrapper,
-  &__right {
-    transition-duration: var(--section-transition-duration);
-    transition-delay: var(--section-transition-delay);
-    transition-property: transform, opacity;
-  }
-  &:not(.active) {
-    .section__box {
-      transform: translateX(-50px);
-      opacity: 0;
-    }
-    .section__wrapper {
-      transform: translateY(50px);
-      opacity: 0;
-    }
-    .section__right {
-      transform: translateY(-50px);
-      opacity: 0;
-    }
-  }
   &__bottom {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: space-between;
-    font-size: 14px;
-    padding-block: clamp(16px, 2vw, 30px);
+    padding-block: max(16px, 3rem);
     border-top: 1px solid #e9eaec;
     @media only screen and (max-width: $bp-sm) {
       justify-content: center;
@@ -138,17 +115,6 @@ const linkRows = [
       transition: color 0.3s;
       &:hover {
         color: $clr-dark-teal;
-      }
-      &:not(:last-child)::after {
-        content: '';
-        position: absolute;
-        right: -2px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 4px;
-        height: 4px;
-        border-radius: 50%;
-        background: rgba(#000000, 0.6);
       }
     }
   }
@@ -181,8 +147,8 @@ const linkRows = [
   &__detail {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    font-size: 18px;
+    gap: 8px;
+    font-size: max(1.8rem, 16px);
     font-weight: 400;
   }
   &__links {
@@ -215,7 +181,7 @@ const linkRows = [
     color: rgba(#000, 0.8);
   }
   &__icon {
-    width: clamp(20px, 1.8vw, 24px);
+    width: max(20px, 2.4rem);
     fill: #000;
     transition: fill 0.3s;
   }
@@ -237,7 +203,7 @@ const linkRows = [
   &__box {
     display: flex;
     flex-direction: column;
-    gap: clamp(16px, 1.7vw, 24px);
+    gap: max(16px, 2.4rem);
     align-items: flex-start;
     grid-area: content;
     @media only screen and (min-width: $bp-xl) {
@@ -250,9 +216,9 @@ const linkRows = [
     display: flex;
     align-items: center;
     gap: 10px;
-    padding-inline: 30px;
-    padding-block: 15px;
-    border-radius: 58px;
+    padding-inline: max(3rem, 30px);
+    padding-block: max(1.5rem, 14px);
+    border-radius: max(5.8rem, 58px);
     &:hover {
       .icon-arrow {
         fill: $clr-dark-teal;

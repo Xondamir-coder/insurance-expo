@@ -1,6 +1,13 @@
 {
+  "tashkent": "Tashkent",
+
   "home": {
     "section-1": {
+      "content": {
+        "label": "Insurance Expo",
+        "title": "Insurance Expo 2025 is your gateway to a secure future!",
+        "text": "Discover leading companies and innovative services at the international insurance exhibition. Explore the latest updates and opportunities in the insurance industry all in one place"
+      },
       "cards": [
         {
           "title": "Expo Insurance 2025: A Space for New Opportunities",
@@ -19,6 +26,78 @@
           "text": "Insurance Expo 2025 is designed to bring together banks, financial institutions, fintech companies, and industry experts to foster collaboration and exchange ideas."
         }
       ]
+    },
+    "section-2": {
+      "content": {
+        "title": "Insurance Expo 2025: Step into the Future of Insurance",
+        "label": "About the Event",
+        "texts": [
+          "Insurance Expo 2025 is the international exhibition showcasing the latest innovations and opportunities in the insurance industry. Discover leading companies and cutting-edge services, and explore secure solutions for the futureInsurance Expo 2025 is the international exhibition showcasing the latest innovations and opportunities in the insurance industry. Discover leading companies and cutting-edge services, and explore secure solutions for the future",
+          "Insurance Expo 2025 is the international exhibition showcasing the latest innovations and opportunities in the insurance industry. Discover leading companies and cutting-edge services, and explore secure solutions for the future"
+        ]
+      },
+      "cards": [
+        {
+          "number": "20k+",
+          "label": "Visitors"
+        },
+        {
+          "number": "200+",
+          "label": "Exibitors"
+        },
+        {
+          "number": "50+ ",
+          "label": "Countries"
+        },
+        {
+          "number": "50+ ",
+          "label": "Countries"
+        }
+      ]
+    },
+    "section-3": {
+      "content": {
+        "label": "Our mission",
+        "title": "Expo Insurance 2025: Step into the Future of Insurance",
+        "text": "Expo Insurance 2025 is the international exhibition showcasing the latest innovations and opportunities in the insurance industry. Discover leading companies and cutting-edge services, and explore secure solutions for the future"
+      },
+      "cards": [
+        {
+          "title": "Promoting Innovation and Implementing New Technologies",
+          "text": "Our mission is to identify the latest technologies and innovations in the insurance sector and develop new solutions based on them. "
+        },
+        {
+          "title": "Fostering Collaboration and Creating New Business Opportunities",
+          "text": "We strive to connect the leading companies and experts in the industry to foster collaboration and create new business opportunities"
+        },
+        {
+          "title": "Advancing the Industry Through Knowledge Sharing",
+          "text": "Expo Insurance 2025 enables professionals to expand their knowledge and stay updated on industry trends through seminars and discussions"
+        },
+        {
+          "title": "Developing the Insurance Industry for a Secure Future",
+          "text": "We aim to promote innovative solutions that ensure stability and sustainability within the insurance industry, shaping a secure future through Expo Insurance 2025"
+        }
+      ]
+    },
+    "section-4": {
+      "content": {
+        "title": "Uniting the Insurance Industry to Build a Secure and Sustainable Future",
+        "label": "Our mission"
+      }
+    },
+    "section-5": {
+      "content": {
+        "title": "United for the Advancement of the Insurance Industry",
+        "label": "Partners & Sponsors",
+        "text": "Insurance Expo 2025 is proudly supported by leading partners and trusted sponsors. Their contributions play a vital role in showcasing the latest innovations and creating new opportunities in the insurance industry. Together, we are driving progress and success. Join us and become a part of this transformative platform!"
+      }
+    },
+    "section-6": {
+      "content": {
+        "title": "Discover the future of Insurance technology in one place!",
+        "label": "Contacts"
+      }
     }
   }
 }

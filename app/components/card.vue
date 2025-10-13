@@ -26,9 +26,9 @@ defineProps({
 
 <style lang="scss" scoped>
 .card {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(10px, 0.8vw, 12px);
+  gap: max(10px, 1.2rem);
+  display: grid;
+  grid-auto-rows: 1fr;
   &:hover &__content {
     border-color: #006646;
   }
@@ -52,17 +52,18 @@ defineProps({
   }
   &__content {
     @include flex-gap(12px);
-    border-radius: clamp(16px, 1.2vw, 20px);
-    padding: clamp(14px, 1.2vw, 20px);
-    padding-bottom: clamp(46px, 2.8vw, 54px);
+    flex-basis: 70%;
+    border-radius: max(16px, 2rem);
+    padding: max(14px, 2rem);
     background: #fafafa;
     border: 1px solid #e9eaec;
     border-bottom: 6px solid #e9eaec;
     transition: border-color 0.3s;
   }
   &__top {
+    flex-basis: 50%;
     display: grid;
-    border-radius: clamp(16px, 1.2vw, 20px);
+    border-radius: max(16px, 2rem);
     overflow: hidden;
     transition: box-shadow 0.3s;
     & > * {

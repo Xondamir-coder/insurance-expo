@@ -24,10 +24,6 @@ defineProps({
 
   &__text {
     animation: slide-from-left-20 0.3s backwards 0.3s;
-
-    @media only screen and (min-width: $bp-lg) {
-      max-width: 80%;
-    }
   }
 }
 </style>

@@ -1,7 +1,12 @@
 <template>
   <main class="home">
     <div class="home__container">
-      <HomeSection1 />
+      <!-- <HomeSection1 /> -->
+      <!-- <HomeSection2 /> -->
+      <!-- <HomeSection3 /> -->
+      <!-- <HomeSection4 /> -->
+      <!-- <HomeSection5 /> -->
+      <HomeSection6 />
     </div>
     <HomeNav />
   </main>

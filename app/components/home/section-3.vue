@@ -2,14 +2,12 @@
   <section class="section">
     <HomeContent
       class="section__content"
-      title="Insurance Expo 2025: Step into the Future of Insurance"
-      label="Our mission"
-      :texts="[
-        'Insurance Expo 2025 is the international exhibition showcasing the latest innovations and opportunities in the insurance industry. Discover leading companies and cutting-edge services, and explore secure solutions for the future'
-      ]"
+      :title="$t('home.section-3.content.title')"
+      :label="$t('home.section-3.content.label')"
+      :texts="[$t('home.section-3.content.text')]"
     />
     <div class="section__list">
-      <div class="section__item big">
+      <div class="section__item">
         <div class="section__item-content">
           <h3 class="section__title">Promoting Innovation and Implementing New Technologies</h3>
           <p class="text-white-17">
@@ -19,7 +17,7 @@
         </div>
         <MyPicture src="home-section-3.png" alt="security banner" class="section__image" />
       </div>
-      <div class="section__item long">
+      <div class="section__item">
         <h4 class="title-charcoal-gray-20-16">
           Fostering Collaboration and Creating New Business Opportunities
         </h4>
@@ -53,60 +51,20 @@
 <style lang="scss" scoped>
 .section {
   display: grid;
-  grid-template-areas: 'content list';
-  grid-template-columns: 1fr 1.41fr;
-  row-gap: clamp(16px, 1.5vw, 20px);
-  column-gap: clamp(20px, 2vw, 32px);
-  @media only screen and (max-width: $bp-lg) {
-    grid-template-areas:
-      'content'
-      'list';
-    grid-template-columns: 1fr;
-    grid-auto-rows: max-content;
-  }
-  .section__content,
-  .section__item {
-    transition: opacity var(--section-transition-duration) var(--section-transition-delay),
-      transform var(--section-transition-duration) var(--section-transition-delay);
-  }
-  .section__item.small-2 {
-    transition-delay: calc(0.1s + var(--section-transition-delay));
-  }
-  &:not(.active) {
-    .section__content {
-      transform: translateX(-100px);
-      opacity: 0;
-    }
-    .section__item.big {
-      opacity: 0;
-      transform: translateX(100px);
-    }
-    .section__item.long {
-      opacity: 0;
-      transform: translateY(100px);
-    }
-
-    .section__item.small-1,
-    .section__item.small-2 {
-      opacity: 0;
-      transform: translateX(100px);
-    }
-  }
+  grid-template-columns: 1fr 1.54fr;
+  row-gap: max(16px, 2rem);
+  column-gap: max(20px, 9rem);
   &__content {
-    grid-area: content;
-    & > *:nth-child(2) {
-      max-width: 100%;
-    }
   }
   &__title {
     text-transform: uppercase;
     font-weight: 800;
-    font-size: clamp(16px, 1.5vw, 24px);
+    font-size: max(16px, 2.4rem);
     line-height: 1.35;
   }
   &__item {
     border-radius: 20px;
-    padding: clamp(14px, 2vw, 30px);
+    padding: max(14px, 3rem);
     overflow: hidden;
     color: #fff;
     background: #fafafa;
@@ -114,61 +72,34 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 17px;
-    &.big {
-      grid-area: big;
+    &:nth-child(2) {
+      grid-row: span 2;
+    }
+    &:first-child {
+      grid-column: span 2;
       border-color: $clr-dark-teal;
       background: linear-gradient(90deg, #008b5e 0%, #08ad78 100%);
       display: grid;
       grid-template-columns: 1fr 300px;
-      gap: 10px;
       position: relative;
       @media only screen and (max-width: $bp-lg) {
         grid-template-columns: 1fr;
       }
-
       .section__item-content {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        gap: 30px;
-        @media only screen and (max-width: $bp-lg) {
-          gap: 196px;
-        }
       }
-    }
-    &.long {
-      grid-area: long;
-    }
-    &.small-1 {
-      grid-area: small-1;
-    }
-    &.small-2 {
-      grid-area: small-2;
     }
   }
   &__list {
-    grid-area: list;
     display: grid;
-    grid-template-areas:
-      'big big'
-      'long small-1'
-      'long small-2';
-    grid-auto-rows: 1.7fr 1fr 1fr;
-    grid-auto-columns: 1fr 1.25fr;
-    gap: clamp(16px, 1.5vw, 20px);
-    @media only screen and (max-width: $bp-lg) {
-      grid-template-areas:
-        'big'
-        'long'
-        'small-1'
-        'small-2';
-      grid-auto-rows: auto;
-      grid-auto-columns: auto;
-    }
+    grid-template-columns: 1fr 1.32fr;
+    grid-auto-rows: 1fr 0.8fr 0.8fr;
+    gap: max(16px, 2rem);
   }
   &__image {
-    width: clamp(100px, 20vw, 350px);
+    width: max(100px, 35rem);
     object-fit: cover;
     transform: translateY(25%);
     position: absolute;

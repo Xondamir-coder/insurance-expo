@@ -1,15 +1,13 @@
 <template>
   <div class="image-card-carousel">
-    <div class="image-card-carousel__images">
-      <Transition name="picture">
-        <MyPicture
-          :key="currentIndex"
-          :src="content[currentIndex].image"
-          alt="banner"
-          class="image-card-carousel__image"
-        />
-      </Transition>
-    </div>
+    <Transition name="picture">
+      <MyPicture
+        :key="currentIndex"
+        :src="content[currentIndex].image"
+        alt="banner"
+        class="image-card-carousel__image"
+      />
+    </Transition>
     <div class="image-card-carousel__wrapper">
       <div class="image-card-carousel__container">
         <Transition name="box">
@@ -76,12 +74,14 @@ onUnmounted(() => {
 
 <style scoped lang="scss">
 .image-card-carousel {
-  animation: slide-from-bottom-20 1s backwards;
-  grid-area: content;
-  display: grid;
-  border-radius: max(16px, 2rem);
   overflow: hidden;
+  grid-area: content;
+  display: flex;
   align-items: flex-end;
+  position: relative;
+  border-radius: max(16px, 2rem);
+  animation: slide-from-bottom-20 1s 0.3s backwards;
+
   &__container {
     display: grid;
     align-items: flex-end;
@@ -130,15 +130,9 @@ onUnmounted(() => {
   }
   &__image {
     width: 100%;
-    height: 100%;
     object-fit: cover;
-  }
-  &__images {
-    height: 100%;
-    display: grid;
-    & > * {
-      grid-area: 1/1/2/2;
-    }
+    position: absolute;
+    inset: 0;
   }
   &-wrapper {
     z-index: 5;
@@ -148,9 +142,6 @@ onUnmounted(() => {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 10px;
-  }
-  & > * {
-    grid-area: 1/1/2/2;
   }
 }
 .picture-enter-active,
