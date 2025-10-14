@@ -1,8 +1,12 @@
 <template>
   <section class="section">
     <div class="section__container">
-      <HomeContent class="section__content" :title="$t('home.section-1.content.title')"
-      :label="$t('home.section-1.content.label')"" :texts="[ $t('home.section-1.content.text') ]" />
+      <HomeContent
+        class="section__content"
+        :title="$t('home.section-1.content.title')"
+        :label="$t('home.section-1.content.label')"
+        :texts="[$t('home.section-1.content.text')]"
+      />
       <div class="section__umbrella-container">
         <div class="section__location">
           <div class="section__location-icontainer">
@@ -47,8 +51,8 @@ const formattedDate = computed(() =>
   row-gap: max(16px, 2rem);
   column-gap: max(20px, 3.2rem);
   @media only screen and (max-width: $bp-lg) {
+    grid-auto-rows: 1fr max-content max-content;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
     grid-template-areas:
       'content'
       'hero'
@@ -59,13 +63,19 @@ const formattedDate = computed(() =>
     right: 0;
     bottom: 0;
     width: 52%;
+    @media only screen and (max-width: $bp-md) {
+      position: static;
+      width: 100%;
+    }
     &-container {
       display: flex;
-      align-items: flex-end;
       row-gap: 10px;
       position: relative;
       @media only screen and (max-width: $bp-lg) {
         padding-right: max(14px, 3.6rem);
+      }
+      @media only screen and (max-width: $bp-md) {
+        flex-direction: column;
       }
       & > * {
         animation: backwards 1s 0.4s;
@@ -86,6 +96,7 @@ const formattedDate = computed(() =>
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 10px;
     background-color: rgba($clr-light-gray, 0.3);
     border: 1px solid $clr-light-gray;
     border-radius: max(16px, 3rem);

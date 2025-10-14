@@ -16,9 +16,9 @@
       </div>
     </div>
     <ClientOnly>
-      <swiper-container class="section__slider" ref="listRef" init="false">
+      <swiper-container ref="listRef" class="section__slider" init="false">
         <swiper-slide v-for="item in items" :key="item.title" class="section__slide">
-          <Card :data="item" />
+          <HomeCard :data="item" />
         </swiper-slide>
       </swiper-container>
     </ClientOnly>
@@ -73,6 +73,12 @@ useSwiper(listRef, {
   &__slide {
     max-width: 42.1rem;
     min-width: 328px;
+    animation: slide-from-bottom-20 0.6s backwards;
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+        animation-delay: $i * 0.1s + 0.2s;
+      }
+    }
   }
   &__top {
     display: flex;

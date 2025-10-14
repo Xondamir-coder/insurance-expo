@@ -11,7 +11,7 @@
     <div class="image-card-carousel__wrapper">
       <div class="image-card-carousel__container">
         <Transition name="box">
-          <div class="image-card-carousel__box" :key="currentIndex">
+          <div :key="currentIndex" class="image-card-carousel__box">
             <h3 class="title-charcoal-gray-20-14">
               {{ $rt(content[currentIndex].title) }}
             </h3>
@@ -21,10 +21,11 @@
           </div>
         </Transition>
       </div>
-      <div class="image-card-carousel__dots" v-if="images.length > 1">
+      <div v-if="images.length > 1" class="image-card-carousel__dots">
         <button
-          class="image-card-carousel__dot"
           v-for="val in images.length"
+          :key="val"
+          class="image-card-carousel__dot"
           :class="{ active: currentIndex === val - 1 }"
           @click="changeContent(val)"
         />
@@ -81,6 +82,9 @@ onUnmounted(() => {
   position: relative;
   border-radius: max(16px, 2rem);
   animation: slide-from-bottom-20 1s 0.3s backwards;
+  @media screen and (max-width: $bp-sm) {
+    aspect-ratio: 328/343;
+  }
 
   &__container {
     display: grid;
@@ -98,6 +102,11 @@ onUnmounted(() => {
     justify-content: space-between;
     align-items: flex-end;
     margin: max(2rem, 10px);
+    @media screen and (max-width: $bp-md) {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
   }
   &__dot {
     background-color: $clr-light-gray;
@@ -117,10 +126,6 @@ onUnmounted(() => {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 42px;
-    @media only screen and (max-width: $bp-lg) {
-      grid-auto-columns: 1fr;
-      flex-grow: 1;
-    }
   }
   &__box {
     @include flex-gap(max(10px, 2rem));

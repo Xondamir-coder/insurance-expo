@@ -20,7 +20,10 @@
 
 <script setup>
 defineProps({
-  data: Object
+  data: {
+    required: true,
+    type: Object
+  }
 });
 </script>
 

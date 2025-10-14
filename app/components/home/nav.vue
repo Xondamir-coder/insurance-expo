@@ -1,16 +1,16 @@
 <template>
   <div class="nav">
     <button
-      class="nav__button"
       v-for="(button, i) in buttons"
-      :key="button.label"
-      :class="{ active: i === currentSection }"
+      :key="i"
+      class="nav__button"
+      :class="{ active: i === currentIndex }"
       @click="emits('change', i)"
     >
       <div class="nav__button-icontainer">
         <component :is="button.icon" class="nav__button-icon" />
       </div>
-      <span>{{ button.label }}</span>
+      <span>{{ $rt(button.label) }}</span>
     </button>
   </div>
 </template>
@@ -23,37 +23,23 @@ import IconsTel from '~/components/icons/tel.vue';
 import IconsHome from '~/components/icons/home.vue';
 import IconsFaq from '~/components/icons/faq.vue';
 
-const props = defineProps({
-  currentSection: Number
+defineProps({
+  currentIndex: {
+    required: true,
+    type: Number
+  }
 });
 const emits = defineEmits(['change']);
 
-const buttons = [
-  {
-    icon: IconsHome,
-    label: 'Main page'
-  },
-  {
-    icon: IconsFaq,
-    label: 'About the Event'
-  },
-  {
-    icon: IconsMission,
-    label: 'Our mission'
-  },
-  {
-    icon: IconsMonth,
-    label: 'Upcoming events'
-  },
-  {
-    icon: IconsBriefcase,
-    label: 'Partners & Sponsors'
-  },
-  {
-    icon: IconsTel,
-    label: 'Contacts'
-  }
-];
+const { tm } = useI18n();
+
+const icons = [IconsHome, IconsFaq, IconsMission, IconsMonth, IconsBriefcase, IconsTel];
+const buttons = computed(() =>
+  icons.map((icon, index) => ({
+    icon,
+    label: tm('home.nav')[index]
+  }))
+);
 </script>
 
 <style lang="scss" scoped>

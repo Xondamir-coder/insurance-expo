@@ -1,10 +1,10 @@
 <template>
   <Transition name="fade">
-    <div class="preloader" v-if="isActive">
-      <Pattern class="preloader__pattern" />
+    <div v-if="isActive" class="preloader">
+      <SvgPattern class="preloader__pattern" />
       <div class="preloader__wrapper">
         <div class="preloader__content">
-         <PreloaderLogo class="preloader__logo"/>
+          <SvgPreloaderLogo class="preloader__logo" />
           <h2 class="preloader__title">{{ Math.round(progress) }}%</h2>
         </div>
         <svg
@@ -36,7 +36,7 @@ const progress = ref(0);
 let animationStarted = false;
 const LOADING_TIME = 3; // 3 seconds
 const SLOT_ANIMATION_DELAY = 0.35;
-const props = defineProps({
+defineProps({
   isActive: Boolean
 });
 const emits = defineEmits(['inactive']);
@@ -44,11 +44,11 @@ const emits = defineEmits(['inactive']);
 const toggleElements = () => {
   const main = document.querySelector('main');
   const header = document.querySelector('header');
-  main.classList.add('dis-none');
+  main?.classList.add('dis-none');
   header.classList.add('dis-none');
 
   setTimeout(() => {
-    main.classList.remove('dis-none');
+    main?.classList.remove('dis-none');
     header.classList.remove('dis-none');
   }, SLOT_ANIMATION_DELAY * 1000);
 };

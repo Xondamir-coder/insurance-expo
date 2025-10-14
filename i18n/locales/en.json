@@ -1,5 +1,24 @@
 {
   "tashkent": "Tashkent",
+  "link": "Link",
+  "services": "Services",
+  "contacts": "Contacts",
+  "contact-us": "Contact us",
+
+  "nav": {
+    "about": "About",
+    "organizer": "Organizer",
+    "venue": "Venue",
+    "mission": "Mission",
+    "participants": "Participants",
+    "speakers": "Speakers",
+    "partners": "Partners",
+    "sponsors": "Sponsors",
+    "media": "Media",
+    "media-library": "Media Library",
+    "media-accreditation": "Media Accreditation",
+    "for-visitors": "For visitors"
+  },
 
   "home": {
     "section-1": {
@@ -98,6 +117,14 @@
         "title": "Discover the future of Insurance technology in one place!",
         "label": "Contacts"
       }
-    }
+    },
+    "nav": [
+      "Main page",
+      "About the Event",
+      "Our mission",
+      "Upcoming events",
+      "Partners & Sponsors",
+      "Contacts"
+    ]
   }
 }

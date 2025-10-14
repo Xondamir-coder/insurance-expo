@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <HomeLabel :title="title" :label="label" />
-    <p class="text-16 content__text" v-for="text in texts" :key="text">
+    <p v-for="text in texts" :key="text" class="text-16 content__text">
       {{ text }}
     </p>
   </div>
@@ -9,9 +9,18 @@
 
 <script setup>
 defineProps({
-  label: String,
-  title: String,
-  texts: Array
+  label: {
+    required: true,
+    type: String
+  },
+  title: {
+    required: true,
+    type: String
+  },
+  texts: {
+    required: true,
+    type: Array
+  }
 });
 </script>
 
@@ -23,7 +32,7 @@ defineProps({
   padding-right: max(14px, 3.6rem);
 
   &__text {
-    animation: slide-from-left-20 0.3s backwards 0.3s;
+    animation: slide-from-left-20 0.6s backwards 0.3s;
   }
 }
 </style>

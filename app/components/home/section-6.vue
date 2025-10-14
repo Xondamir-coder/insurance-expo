@@ -12,24 +12,29 @@
     </div>
     <div class="section__wrapper">
       <div class="section__details">
-        <div class="section__detail" v-for="item in linkRows" :key="item.label">
+        <div v-for="item in allLinks" :key="item.label" class="section__detail">
           <h4 class="section__label">{{ item.label }}</h4>
           <div class="section__links">
-            <NuxtLink v-for="link in item.links" :key="link.to" :to="link.to" class="section__link">
+            <NuxtLink
+              v-for="link in item.links"
+              :key="link.to"
+              :to="$localePath(link.to)"
+              class="section__link"
+            >
               {{ link.label }}
             </NuxtLink>
           </div>
         </div>
         <div class="section__detail">
-          <h4 class="section__label">Contacts</h4>
+          <h4 class="section__label">{{ $t('contacts') }}</h4>
           <div class="section__links">
-            <a class="section__cta" href="tel:+777 123 88 71">
+            <a class="section__cta" :href="`tel:${TEL_NUMBER}`">
               <IconsTel class="section__icon" />
-              <span>+777 123 88 71</span>
+              <span>{{ TEL_NUMBER }}</span>
             </a>
-            <a class="section__cta" href="mailto:Example@gmail.com">
+            <a class="section__cta" :href="`mailto:${GMAIL}`">
               <IconsMail class="section__icon" />
-              <span>Example@gmail.com</span>
+              <span>{{ GMAIL }}</span>
             </a>
           </div>
         </div>
@@ -55,27 +60,13 @@
       </div>
     </div>
     <div class="section__right">
-      <MyPicture src="map.png" alt="map" class="section__image" />
+      <MyPicture src="map.jpg" alt="map" class="section__image" />
     </div>
   </section>
 </template>
 
 <script setup>
-const links = getLinks();
-const services = Array(6).fill({
-  to: '/service',
-  label: 'Service name'
-});
-const linkRows = [
-  {
-    label: 'Link',
-    links: links
-  },
-  {
-    label: 'Services',
-    links: services
-  }
-];
+const { allLinks } = useLinks();
 </script>
 
 <style lang="scss" scoped>
@@ -188,7 +179,7 @@ const linkRows = [
   &__image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    animation: slide-from-bottom-20 0.6s backwards 0.3s;
   }
   &__wrapper {
     grid-area: links;
@@ -196,6 +187,14 @@ const linkRows = [
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    & > * {
+      animation: slide-from-bottom-20 0.6s backwards;
+      @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+          animation-delay: $i * 0.1s + 0.2s;
+        }
+      }
+    }
     @media only screen and (max-width: $bp-lg) {
       gap: 16px;
     }
@@ -219,6 +218,7 @@ const linkRows = [
     padding-inline: max(3rem, 30px);
     padding-block: max(1.5rem, 14px);
     border-radius: max(5.8rem, 58px);
+    animation: slide-from-bottom-10 0.6s 0.2s backwards;
     &:hover {
       .icon-arrow {
         fill: $clr-dark-teal;

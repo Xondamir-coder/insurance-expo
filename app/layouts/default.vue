@@ -1,18 +1,15 @@
 <template>
-  <div class="layout overflow-hidden" :style="layoutStyle">
-    <Preloader :is-active="isPreloaderActive" @inactive="isPreloaderActive = false" />
-    <Cookie />
-    <Header />
+  <div class="layout">
+    <AppPreloader :is-active="isPreloaderActive" @inactive="isPreloaderActive = false" />
+    <AppCookie />
+    <AppHeader />
+    <AppMenu />
     <slot />
-    <Footer v-if="route.path !== '/'" />
+    <AppFooter />
   </div>
 </template>
 
 <script setup>
-const route = useRoute();
-const layoutStyle = computed(() => ({
-  backgroundColor: route.path === '/' ? '#fff' : ''
-}));
 const isPreloaderActive = ref(true);
 </script>
 

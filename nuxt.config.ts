@@ -33,7 +33,7 @@ export default defineNuxtConfig({
       ]
     }
   },
-  modules: ['nuxt-swiper', '@nuxtjs/seo', '@nuxtjs/i18n'],
+  modules: ['nuxt-swiper', '@nuxtjs/seo', '@nuxtjs/i18n', '@nuxt/eslint'],
   i18n: {
     defaultLocale: 'en',
     baseUrl: 'https://insurexpo.uz',
@@ -46,16 +46,19 @@ export default defineNuxtConfig({
       {
         code: 'en',
         language: 'en-US',
+        name: 'English',
         file: 'en.json'
       },
       {
         code: 'ru',
         language: 'ru-RU',
+        name: 'Русский',
         file: 'ru.json'
       },
       {
         code: 'uz',
         language: 'uz-UZ',
+        name: "O'zbekcha",
         file: 'uz.json'
       }
     ]

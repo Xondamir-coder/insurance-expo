@@ -7,7 +7,7 @@
       :texts="[$t('home.section-5.content.text')]"
     />
     <div class="section__list">
-      <div class="section__item" v-for="bank in banks" :key="bank">
+      <div v-for="bank in banks" :key="bank" class="section__item">
         <component :is="bank" class="section__bank" />
       </div>
     </div>
@@ -15,17 +15,17 @@
 </template>
 
 <script setup>
-import BanksAgro from '~/components/banks/agro.vue';
-import BanksAsaka from '~/components/banks/asaka.vue';
-import BanksDavr from '~/components/banks/davr.vue';
-import BanksHamkor from '~/components/banks/hamkor.vue';
-import BanksIpak from '~/components/banks/ipak.vue';
-import BanksKapital from '~/components/banks/kapital.vue';
-import BanksMarkaziy from '~/components/banks/markaziy.vue';
-import BanksQqb from '~/components/banks/qqb.vue';
-import BanksSqb from '~/components/banks/sqb.vue';
-import BanksTbc from '~/components/banks/tbc.vue';
-import BanksTrast from '~/components/banks/trast.vue';
+import BanksAgro from '~/components/svg/banks/agro.vue';
+import BanksAsaka from '~/components/svg/banks/asaka.vue';
+import BanksDavr from '~/components/svg/banks/davr.vue';
+import BanksHamkor from '~/components/svg/banks/hamkor.vue';
+import BanksIpak from '~/components/svg/banks/ipak.vue';
+import BanksKapital from '~/components/svg/banks/kapital.vue';
+import BanksMarkaziy from '~/components/svg/banks/markaziy.vue';
+import BanksQqb from '~/components/svg/banks/qqb.vue';
+import BanksSqb from '~/components/svg/banks/sqb.vue';
+import BanksTbc from '~/components/svg/banks/tbc.vue';
+import BanksTrast from '~/components/svg/banks/trast.vue';
 
 const banks = [
   BanksAgro,
@@ -55,17 +55,15 @@ const banks = [
     align-self: flex-start;
   }
   &__item {
+    @include flex-center;
     background: #f8f8f8;
     border: 1px solid #2c3a471a;
     border-radius: 20px;
     aspect-ratio: 1;
-    transition-property: opacity, transform;
-    transition-duration: var(--section-transition-duration);
-    transition-delay: var(--section-transition-delay);
-    @include flex-center;
-    @for $index from 1 through 30 {
-      &:nth-child(#{$index}) {
-        transition-delay: calc(0.1s * #{$index} + var(--section-transition-delay));
+    animation: slide-from-top-20 0.6s backwards;
+    @for $i from 1 through 20 {
+      &:nth-child(#{$i}) {
+        animation-delay: $i * 0.05s + 0.25s;
       }
     }
   }

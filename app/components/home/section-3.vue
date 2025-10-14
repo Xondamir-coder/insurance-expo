@@ -7,40 +7,19 @@
       :texts="[$t('home.section-3.content.text')]"
     />
     <div class="section__list">
-      <div class="section__item">
+      <div v-for="(card, index) in $tm('home.section-3.cards')" :key="index" class="section__item">
         <div class="section__item-content">
-          <h3 class="section__title">Promoting Innovation and Implementing New Technologies</h3>
-          <p class="text-white-17">
-            Our mission is to identify the latest technologies and innovations in the insurance
-            sector and develop new solutions based on them.
+          <h3 class="section__title">{{ $rt(card.title) }}</h3>
+          <p class="section__text">
+            {{ $rt(card.text) }}
           </p>
         </div>
-        <MyPicture src="home-section-3.png" alt="security banner" class="section__image" />
-      </div>
-      <div class="section__item">
-        <h4 class="title-charcoal-gray-20-16">
-          Fostering Collaboration and Creating New Business Opportunities
-        </h4>
-        <p class="text-16">
-          We strive to connect the leading companies and experts in the industry to foster
-          collaboration and create new business opportunities
-        </p>
-      </div>
-      <div class="section__item small-1">
-        <h4 class="title-charcoal-gray-20-16">Advancing the Industry Through Knowledge Sharing</h4>
-        <p class="text-16">
-          Insurance Expo 2025 enables professionals to expand their knowledge and stay updated on
-          industry trends through seminars and discussions
-        </p>
-      </div>
-      <div class="section__item small-2">
-        <h4 class="title-charcoal-gray-20-16">
-          Developing the Insurance Industry for a Secure Future
-        </h4>
-        <p class="text-16">
-          We aim to promote innovative solutions that ensure stability and sustainability within the
-          insurance industry, shaping a secure future through Insurance Expo 2025
-        </p>
+        <MyPicture
+          v-if="index === 0"
+          src="home-section-3.png"
+          alt="security banner"
+          class="section__image"
+        />
       </div>
     </div>
   </section>
@@ -54,13 +33,21 @@
   grid-template-columns: 1fr 1.54fr;
   row-gap: max(16px, 2rem);
   column-gap: max(20px, 9rem);
-  &__content {
+  @media screen and (max-width: 1100px) {
+    grid-template-columns: 1fr;
+    grid-auto-rows: max-content 1fr;
   }
   &__title {
-    text-transform: uppercase;
-    font-weight: 800;
-    font-size: max(16px, 2.4rem);
+    color: #11171c;
+    font-weight: 700;
+    font-size: max(16px, 2rem);
     line-height: 1.35;
+    text-transform: uppercase;
+  }
+  &__text {
+    font-size: max(14px, 1.6rem);
+    line-height: 1.45;
+    color: #56616c;
   }
   &__item {
     border-radius: 20px;
@@ -70,47 +57,73 @@
     background: #fafafa;
     border: 1px solid #e9eaec;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    animation: 0.6s backwards;
+
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}) {
+        @if ($i == 1) {
+          animation-name: slide-from-top-20;
+        }
+        @if ($i == 2) {
+          animation-name: slide-from-bottom-20;
+        }
+        @if (($i == 3) or ($i == 4)) {
+          animation-name: slide-from-right-20;
+        }
+
+        animation-delay: ($i * 0.1s) + 0.2s;
+      }
+    }
+    &-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @media screen and (max-width: 512px) {
+        gap: 20px;
+      }
+    }
     &:nth-child(2) {
-      grid-row: span 2;
+      @media screen and (min-width: 768px) {
+        grid-row: span 2;
+      }
     }
     &:first-child {
-      grid-column: span 2;
+      @media screen and (min-width: 768px) {
+        grid-column: span 2;
+      }
+      position: relative;
       border-color: $clr-dark-teal;
       background: linear-gradient(90deg, #008b5e 0%, #08ad78 100%);
-      display: grid;
-      grid-template-columns: 1fr 300px;
-      position: relative;
-      @media only screen and (max-width: $bp-lg) {
-        grid-template-columns: 1fr;
+      .section__text {
+        color: #fff;
       }
-      .section__item-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+      .section__title {
+        font-size: max(2.4rem, 16px);
+        font-weight: 800;
+        color: #fff;
+      }
+      & > *:first-child {
+        @media screen and (min-width: 500px) {
+          max-width: 55%;
+        }
       }
     }
   }
   &__list {
     display: grid;
-    grid-template-columns: 1fr 1.32fr;
-    grid-auto-rows: 1fr 0.8fr 0.8fr;
     gap: max(16px, 2rem);
+    @media screen and (min-width: 768px) {
+      grid-template-columns: 1fr 1.32fr;
+      grid-auto-rows: 1fr 0.75fr 0.75fr;
+    }
   }
   &__image {
-    width: max(100px, 35rem);
-    object-fit: cover;
-    transform: translateY(25%);
+    width: max(100px, 30%);
     position: absolute;
     right: 0;
-    bottom: 0;
-
-    @media only screen and (max-width: $bp-lg) {
-      width: 150px;
-      left: 60%;
-      top: 45%;
-      transform: translate(-50%, -50%);
+    top: 0;
+    @media screen and (max-width: 500px) {
+      display: none;
     }
   }
 }

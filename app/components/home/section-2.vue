@@ -7,16 +7,16 @@
       :texts="$tm('home.section-2.content.texts').map(text => $rt(text))"
     />
     <div class="section__container">
-      <video class="section__video" muted ref="videoRef" @click="toggleVideo">
-        <source src="/videos/home.mp4" type="video/mp4" />
+      <video ref="videoRef" class="section__video" muted @click="toggleVideo">
+        <source src="/videos/home.mp4" type="video/mp4" >
       </video>
-      <button class="section__play" @click="toggleVideo" :class="{ hidden: isVideoPlaying }">
+      <button class="section__play" :class="{ hidden: isVideoPlaying }" @click="toggleVideo">
         <IconsPlay class="icon-play" />
       </button>
       <span class="section__progress"> {{ formattedTime }} </span>
     </div>
     <div class="section__data">
-      <div class="section__box" v-for="(card, i) in cards" :key="i">
+      <div v-for="(card, i) in cards" :key="i" class="section__box">
         <h3 class="title-charcoal-gray-24-20">{{ $rt(card.number) }}</h3>
         <div class="section__box-wrapper">
           <component :is="card.icon" class="section__box-icon" />
@@ -48,7 +48,8 @@ const cards = computed(() =>
 
 const toggleVideo = () => {
   if (!videoRef.value) return;
-  isVideoPlaying.value ? videoRef.value.pause() : videoRef.value.play();
+  if (isVideoPlaying.value) videoRef.value.pause();
+  else videoRef.value.play();
   isVideoPlaying.value = !isVideoPlaying.value;
 };
 
@@ -148,6 +149,7 @@ onUnmounted(() => {
     overflow: hidden;
     border-radius: max(16px, 3rem);
     display: grid;
+    animation: slide-from-bottom-20 0.6s backwards 0.1s;
     & > * {
       grid-area: 1/1/2/2;
     }
@@ -160,6 +162,13 @@ onUnmounted(() => {
     grid-area: data;
     display: flex;
     gap: max(16px, 2.3rem);
+    & > * {
+      @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+          animation: slide-from-bottom-20 0.6s backwards ($i * 0.1s) + 0.2s;
+        }
+      }
+    }
     @media only screen and (max-width: $bp-lg) {
       overflow-x: auto;
       scroll-snap-type: x mandatory;

@@ -10,8 +10,14 @@
 
 <script setup>
 defineProps({
-  label: String,
-  title: String
+  label: {
+    required: true,
+    type: String
+  },
+  title: {
+    required: true,
+    type: String
+  }
 });
 </script>
 <style scoped lang="scss">
