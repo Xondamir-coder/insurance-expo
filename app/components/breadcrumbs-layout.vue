@@ -6,18 +6,12 @@
 </template>
 
 <script setup>
-const { t } = useI18n();
-
-const breadcrumbs = computed(() => [
-  {
-    to: '/',
-    label: t('nav.home')
-  },
-  {
-    to: '/mission',
-    label: t('nav.mission')
+defineProps({
+  breadcrumbs: {
+    required: true,
+    type: Array
   }
-]);
+});
 </script>
 
 <style lang="scss" scoped>

@@ -11,10 +11,12 @@
   font-weight: 500;
   background-color: $clr-dark-teal;
   color: #fff;
-  transition: background-color 0.3s, color 0.3s;
+  fill: #fff;
+  transition: background-color 0.3s, color 0.3s, fill 0.3s;
   &:hover {
     background-color: #fff;
     color: $clr-dark-teal;
+    fill: $clr-dark-teal;
     [class*='icon-'] {
       fill: $clr-dark-teal;
     }

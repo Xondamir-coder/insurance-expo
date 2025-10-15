@@ -1,5 +1,5 @@
 <template>
-  <BreadcrumbsLayout>
+  <BreadcrumbsLayout :breadcrumbs>
     <div class="mission">
       <section class="hero">
         <PageHeader :title="$t('mission.title')" :subtitle="$t('mission.subtitle')" />
@@ -55,7 +55,18 @@ import IconsGlobe from '~/components/icons/globe.vue';
 import IconsUsers from '~/components/icons/users.vue';
 import IconsChat from '~/components/icons/chat.vue';
 
-const { tm } = useI18n();
+const { tm, t } = useI18n();
+
+const breadcrumbs = computed(() => [
+  {
+    to: '/',
+    label: t('nav.home')
+  },
+  {
+    to: '/mission',
+    label: t('nav.mission')
+  }
+]);
 
 const infoIcons = [IconsUsers, IconsChat, IconsGlobe];
 const teamImages = ['team-1.jpg', 'team-2.jpg', 'team-3.jpg', 'team-4.jpg'];

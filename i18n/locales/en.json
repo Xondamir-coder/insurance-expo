@@ -4,6 +4,7 @@
   "services": "Services",
   "contacts": "Contacts",
   "contact-us": "Contact us",
+  "view-maps": "View on Google Maps",
 
   "nav": {
     "home": "Home",
@@ -173,6 +174,46 @@
         {
           "title": "Nozima Muhammedova",
           "text": "Digital direktor"
+        }
+      ]
+    }
+  },
+
+  "venue": {
+    "hero": {
+      "title": "Expo Insurance 2025 is your gateway to a secure future!",
+      "subtitle": "The International Expo will be held at the UzExpoCenter in Tashkent, Uzbekistan. The venue is a modern exhibition complex equipped with world-class facilities, providing an ideal environment for networking, showcasing innovations, and holding business meetings"
+    },
+    "texts": [
+      "Experience the energy of innovation at the Epo Expo Center, located on Mustaqillik ko‘chasi 45, Tashkent — a modern and dynamic venue designed to host international exhibitions, conferences, and networking events.",
+      "Everything you need — from spacious halls to modern facilities — is right here at the heart of Tashkent."
+    ],
+    "visit": {
+      "title": "Plan Your Visit",
+      "list": [
+        {
+          "title": "Opening Hours",
+          "subtitle": "Plan your visit and make the most of every inspiring moment.",
+          "bullets": ["10:00 – 18:00 (daily)"],
+          "text": "Join us from 15–17 September 2025"
+        },
+        {
+          "title": "How to Get There",
+          "subtitle": "Getting here is easy!",
+          "bullets": [
+            "Take a taxi or ride-hailing service from anywhere in the city.",
+            "Metro: Expo Station (Line 2)"
+          ],
+          "text": "Parking and shuttle services will also be available during the event days"
+        },
+        {
+          "title": "Accommodation",
+          "subtitle": "Stay close, stay connected",
+          "bullets": [
+            "Hilton Tashkent City – elegant comfort in the city center",
+            "Hyatt Regency Tashkent – premium stay with modern style"
+          ],
+          "text": "Parking and shuttle services will also be available during the event days"
         }
       ]
     }

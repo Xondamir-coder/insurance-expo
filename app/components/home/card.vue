@@ -3,7 +3,7 @@
     <div class="card__top">
       <MyPicture :src="data.img" alt="banner" class="card__image" />
       <div class="card__date">
-        <IconsCalendar />
+        <IconsCalendar class="icon" />
         <span>{{ data.date }}</span>
       </div>
     </div>
