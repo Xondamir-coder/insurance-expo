@@ -20,6 +20,7 @@
   grid-auto-columns: $grid-width;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  scrollbar-width: 0;
   &::-webkit-scrollbar {
     display: none;
   }

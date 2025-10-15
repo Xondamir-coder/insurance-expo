@@ -1,67 +1,65 @@
 <template>
   <BreadcrumbsLayout :breadcrumbs>
-    <div class="venue">
-      <section class="hero">
-        <MyPicture src="venue-hero.png" alt="people" class="hero__image" />
-        <PageHeader
-          :title="$t('venue.hero.title')"
-          :subtitle="$t('venue.hero.subtitle')"
-          class="hero__content"
-        />
-      </section>
-      <section class="texts">
-        <p v-for="text in $tm('venue.texts')" :key="$rt(text)" class="text-medium">
-          {{ $rt(text) }}
-        </p>
-      </section>
-      <section class="visit">
-        <div class="visit__top">
-          <h2 class="title-42">
-            {{ $t('venue.visit.title') }}
-          </h2>
-          <button class="visit__button btn-green">
-            <IconsPin class="icon" />
-            <span>{{ $t('view-maps') }}</span>
-          </button>
-        </div>
-        <ul class="visit__list">
-          <li v-for="(item, index) in visitList" :key="index" class="visit__item">
-            <div class="visit__item-top">
-              <h3 class="visit__item-title">{{ $rt(item.title) }}</h3>
-              <p>{{ $rt(item.subtitle) }}</p>
-            </div>
-            <div class="visit__item-bottom">
-              <ul class="visit__item-bullets">
-                <li
-                  v-for="(bullet, bulletIndex) in item.bullets"
-                  :key="bulletIndex"
-                  class="visit__item-bullet"
-                >
-                  <div class="visit__item-icon-container">
-                    <component :is="bullet.icon" class="visit__item-icon" />
-                  </div>
-                  <p>{{ $rt(bullet.text) }}</p>
-                </li>
-              </ul>
-              <p>{{ $rt(item.text) }}</p>
-            </div>
-          </li>
-        </ul>
-        <div class="visit__map">
-          <MyPicture src="visit-map.jpg" alt="map" class="visit__map-image" />
-          <div class="visit__map-container">
-            <div class="visit__map-box">
-              <SvgLogoSmall class="visit__map-box-logo" />
-            </div>
-            <div class="visit__map-dot" />
-          </div>
-        </div>
+    <section class="hero">
+      <MyPicture src="venue-hero.png" alt="people" class="hero__image" />
+      <PageHeader
+        :title="$t('venue.hero.title')"
+        :subtitle="$t('venue.hero.subtitle')"
+        class="hero__content"
+      />
+    </section>
+    <section class="texts">
+      <p v-for="text in $tm('venue.texts')" :key="$rt(text)" class="text-medium">
+        {{ $rt(text) }}
+      </p>
+    </section>
+    <section class="visit">
+      <div class="visit__top">
+        <h2 class="title-42">
+          {{ $t('venue.visit.title') }}
+        </h2>
         <button class="visit__button btn-green">
           <IconsPin class="icon" />
           <span>{{ $t('view-maps') }}</span>
         </button>
-      </section>
-    </div>
+      </div>
+      <ul class="visit__list">
+        <li v-for="(item, index) in visitList" :key="index" class="visit__item">
+          <div class="visit__item-top">
+            <h3 class="visit__item-title">{{ $rt(item.title) }}</h3>
+            <p>{{ $rt(item.subtitle) }}</p>
+          </div>
+          <div class="visit__item-bottom">
+            <ul class="visit__item-bullets">
+              <li
+                v-for="(bullet, bulletIndex) in item.bullets"
+                :key="bulletIndex"
+                class="visit__item-bullet"
+              >
+                <div class="visit__item-icon-container">
+                  <component :is="bullet.icon" class="visit__item-icon" />
+                </div>
+                <p>{{ $rt(bullet.text) }}</p>
+              </li>
+            </ul>
+            <p>{{ $rt(item.text) }}</p>
+          </div>
+        </li>
+      </ul>
+      <div class="visit__map">
+        <MyPicture src="visit-map.jpg" alt="map" class="visit__map-image" />
+        <div class="visit__map-container">
+          <div class="visit__map-box">
+            <SvgLogoSmall class="visit__map-box-logo" />
+          </div>
+          <div class="visit__map-dot" />
+        </div>
+      </div>
+      <button class="visit__button btn-green">
+        <IconsPin class="icon" />
+        <span>{{ $t('view-maps') }}</span>
+      </button>
+    </section>
   </BreadcrumbsLayout>
 </template>
 
@@ -229,11 +227,18 @@ const breadcrumbs = computed(() => [
   aspect-ratio: 1780/680;
   display: flex;
   justify-content: center;
+  @media screen and (max-width: $bp-md) {
+    flex-direction: column;
+    justify-content: stretch;
+    gap: 20px;
+  }
   &__content {
     align-self: flex-end;
     margin-bottom: 6rem;
     & > * {
-      color: #fff;
+      @media screen and (min-width: $bp-md) {
+        color: #fff;
+      }
     }
   }
   &__image {
@@ -241,11 +246,13 @@ const breadcrumbs = computed(() => [
     inset: 0;
     width: 100%;
     z-index: -1;
+    @media screen and (max-width: $bp-md) {
+      position: static;
+      order: 1;
+      aspect-ratio: 328/220;
+      border-radius: 12px;
+      z-index: initial;
+    }
   }
-}
-.venue {
-  display: flex;
-  flex-direction: column;
-  gap: max(8rem, 32px);
 }
 </style>

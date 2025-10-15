@@ -217,5 +217,70 @@
         }
       ]
     }
+  },
+
+  "organizer": {
+    "title": "About the Organizer",
+    "subtitle": "Expo Bank is organized by Epo Bank Association, a leading financial organization in Uzbekistan dedicated to driving innovation, collaboration, and growth in the banking and fintech sector.",
+    "hero": {
+      "title": "Mission",
+      "text": "Our mission is to create a platform where banks, financial institutions, startups, educators, and government bodies come together to share knowledge, explore new technologies, and shape the future of finance."
+    },
+    "vision": {
+      "title": "Our Vision & Role",
+      "subtitle": "The Expo Bank is made possible with the support of strategic partners, sponsors, and government institutions. Together, we ensure that Expo Insurance 2025 becomes a truly impactful and transformative event that advances the insurance and financial industries in Uzbekistan and beyond",
+      "list": [
+        {
+          "title": "Largest in Uzbekistan",
+          "text": "Hosting the nation’s most influential international exhibition dedicated to banking, insurance, and fintech. Expo Insurance 2025 sets a new benchmark for large-scale industry collaboration, bringing together leading organizations, innovative startups, and policy makers under one roof to foster progress and financial inclusion"
+        },
+        {
+          "title": "Global Connections",
+          "text": "Connecting worldwide industry leaders with regional innovators and investors. The Expo serves as a bridge between Uzbekistan’s growing financial sector and the global marketplace, promoting cross-border partnerships, knowledge exchange, and sustainable investment opportunities"
+        },
+        {
+          "title": "Education & Youth",
+          "text": "Empowering the next generation through knowledge and opportunity. The event highlights financial literacy, professional development programs, and educational sessions designed to inspire students, young specialists, and entrepreneurs to build successful careers in finance and insurance"
+        }
+      ]
+    },
+    "partners": {
+      "title": "Partners & Sponsors",
+      "subtitle": "The Expo Bank is made possible with the support of strategic partners, sponsors, and government institutions. Together, we ensure an impactful and successful event",
+      "list": [
+        {
+          "name": "Bank name & partner",
+          "service": "Financial solutions"
+        },
+        {
+          "name": "Bank name & partner",
+          "service": "Financial solutions"
+        },
+        {
+          "name": "Bank name & partner",
+          "service": "Financial solutions"
+        },
+        {
+          "name": "Bank name & partner",
+          "service": "Financial solutions"
+        },
+        {
+          "name": "Bank name & partner",
+          "service": "Financial solutions"
+        },
+        {
+          "name": "Bank name & partner",
+          "service": "Financial solutions"
+        },
+        {
+          "name": "Bank name & partner",
+          "service": "Financial solutions"
+        },
+        {
+          "name": "Bank name & partner",
+          "service": "Financial solutions"
+        }
+      ]
+    }
   }
 }

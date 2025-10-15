@@ -18,7 +18,7 @@ defineProps({
 .container {
   display: flex;
   flex-direction: column;
-  gap: max(4.5rem, 20px);
+  gap: max(8rem, 32px);
   padding-inline: $inline-spacing;
   overflow: hidden;
 }
