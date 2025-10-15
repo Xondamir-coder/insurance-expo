@@ -113,7 +113,7 @@ onMounted(() => {
 .preloader {
   position: fixed;
   inset: 0;
-  background: linear-gradient(180deg, #008b5f 0%, #155440 100%);
+  background: linear-gradient(180deg, $clr-dark-teal 0%, #155440 100%);
   z-index: 100;
   overflow: hidden;
   @include flex-center;
@@ -148,7 +148,7 @@ onMounted(() => {
     left: 0;
     top: 0;
     height: 100%;
-    fill: #006646;
+    fill: $clr-dark-green;
     opacity: 0.2;
     @media only screen and (max-width: $bp-lg) {
       height: 150%;

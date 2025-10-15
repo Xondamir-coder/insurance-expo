@@ -77,7 +77,7 @@ const timeUnits = computed(() => [
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(90deg, #008b5f 4.36%, #044430 95.17%);
+  background: linear-gradient(90deg, $clr-dark-teal 4.36%, #044430 95.17%);
   color: #fff;
   animation: slide-from-bottom-20 1s 0.2s backwards;
   &__pattern {

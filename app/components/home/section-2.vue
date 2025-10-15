@@ -8,7 +8,7 @@
     />
     <div class="section__container">
       <video ref="videoRef" class="section__video" muted @click="toggleVideo">
-        <source src="/videos/home.mp4" type="video/mp4" >
+        <source src="/videos/home.mp4" type="video/mp4" />
       </video>
       <button class="section__play" :class="{ hidden: isVideoPlaying }" @click="toggleVideo">
         <IconsPlay class="icon-play" />
@@ -17,7 +17,7 @@
     </div>
     <div class="section__data">
       <div v-for="(card, i) in cards" :key="i" class="section__box">
-        <h3 class="title-charcoal-gray-24-20">{{ $rt(card.number) }}</h3>
+        <h3 class="section__box-number">{{ $rt(card.number) }}</h3>
         <div class="section__box-wrapper">
           <component :is="card.icon" class="section__box-icon" />
           <span class="section__box-label">{{ $rt(card.label) }}</span>
@@ -187,6 +187,12 @@ onUnmounted(() => {
     background-color: $clr-light-white;
     border-radius: 16px;
     padding: 20px;
+    &-number {
+      color: $clr-charcoal-gray;
+      font-weight: 700;
+      font-size: max(2.4rem, 20px);
+      text-transform: uppercase;
+    }
     &-wrapper {
       display: flex;
       align-items: center;

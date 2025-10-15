@@ -5,7 +5,7 @@
         <NuxtLink
           v-for="link in allLinks.flatMap(l => l.links)"
           :key="link.to"
-          :to="link.to"
+          :to="$localePath(link.to)"
           class="nav__link"
         >
           {{ link.label }}
@@ -80,7 +80,7 @@ watchEffect(() => {
   }
   &__link {
     transition: transform 0.5s, opacity 0.5s;
-    color: #1f2937;
+    color: $clr-charcoal-gray;
     font-weight: 500;
     font-size: 17px;
     padding: 12px;
@@ -115,7 +115,7 @@ watchEffect(() => {
   }
   &__link {
     @include flex-center;
-    border: 1px solid #009969;
+    border: 1px solid $clr-rich-teal;
     backdrop-filter: blur(12px);
     width: 48px;
     height: 48px;
@@ -129,18 +129,18 @@ watchEffect(() => {
     align-items: center;
     gap: 9px;
     font-size: 18px;
-    color: rgba(#003323, 0.8);
+    color: rgba($clr-deep-green, 0.8);
     span {
       opacity: 0.8;
     }
     &-icon {
-      fill: #003323;
+      fill: $clr-deep-green;
     }
   }
   &__title {
     font-weight: 700;
     font-size: 18px;
-    color: rgba(#003323, 0.8);
+    color: rgba($clr-deep-green, 0.8);
   }
   &__details {
     display: flex;
@@ -154,7 +154,7 @@ watchEffect(() => {
     gap: 24px;
   }
   &__icon {
-    fill: #003323;
+    fill: $clr-deep-green;
   }
 }
 .appear-enter-active,

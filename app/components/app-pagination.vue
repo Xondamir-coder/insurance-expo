@@ -81,22 +81,6 @@ const changePage = newPage => {
   }
 };
 const showAllButtons = () => (shownButtonsCount.value = props.pagesCount);
-
-//  animation
-const attrs = useAttrs();
-onMounted(() => {
-  const parentId = `#${attrs.id}`;
-  const parentContainer = `${parentId} .pagination`;
-  GSAPanimation(`${parentContainer}__button:first-child`, {
-    animProps: { x: -20 }
-  });
-  GSAPanimation(`${parentContainer}__button:last-child`, {
-    animProps: { x: 20 }
-  });
-  GSAPanimation(`${parentContainer}__button.pagination__button--number`, {
-    animProps: { y: 20 }
-  });
-});
 </script>
 
 <style lang="scss" scoped>
@@ -120,21 +104,21 @@ onMounted(() => {
     &--number {
       font-weight: 700;
       font-size: 16px;
-      color: #111827;
+      color: $clr-dark-charcoal;
       text-align: center;
       transition: background-color 0.3s, border-color 0.3s, color 0.3s;
     }
     &--active {
       background-color: #c89e45;
       border-color: #c89e45;
-      color: #fafafa;
+      color: $clr-almost-white;
     }
     &--hidden {
       display: none;
     }
   }
   &__arrow {
-    fill: #111827;
+    fill: $clr-dark-charcoal;
     width: 18px;
     transition: fill 0.3s;
     &--reverse {

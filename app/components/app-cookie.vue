@@ -3,7 +3,7 @@
     <div v-if="isActive" class="cookie">
       <div class="cookie__content">
         <h2 class="title-charcoal-gray-32">Cookies advice</h2>
-        <p class="text-16">
+        <p>
           Cookies are small text files stored on your device when you visit a website. They are
           widely used to enhance user experience by remembering your preferences, enabling
           functionalities, and providing insights into website performance.
@@ -49,10 +49,10 @@ onMounted(() => {
 .cookie {
   position: fixed;
   bottom: clamp(16px, 1.6vw, 30px);
-  background: #fafafa;
+  background: $clr-almost-white;
   box-shadow: 0px 114px 60px 20px #0000001a;
   border: 1px solid #e9eaec;
-  margin-inline: $padding-inline;
+  margin-inline: $inline-spacing;
   z-index: 10;
   padding: clamp(16px, 1.6vw, 30px);
   border-radius: clamp(12px, 1.6vw, 30px);
@@ -72,11 +72,11 @@ onMounted(() => {
     border-radius: 42px;
     transition: color 0.3s, background-color 0.3s;
     &--reject {
-      background: #f8f8f8;
+      background: $clr-light-white;
       border: 1px solid #f1f2f4;
       &:hover {
         background-color: $clr-charcoal-gray;
-        color: #f8f8f8;
+        color: $clr-light-white;
       }
     }
     &--accept {

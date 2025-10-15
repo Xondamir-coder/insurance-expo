@@ -100,10 +100,10 @@ const buttons = computed(() =>
     }
     &.active {
       background-color: $clr-dark-teal;
-      color: #f8f8f8;
+      color: $clr-light-white;
       border-color: $clr-dark-teal;
       .nav__button-icontainer {
-        background-color: #f8f8f8;
+        background-color: $clr-light-white;
       }
       .nav__button-icon {
         fill: $clr-dark-teal;
@@ -119,7 +119,7 @@ const buttons = computed(() =>
     }
     &-icon {
       width: 54.5454%;
-      fill: #f8f8f8;
+      fill: $clr-light-white;
     }
   }
 }

@@ -12,7 +12,7 @@
         Sorry, the page you’re looking for does not exist or has been moved please go back to the
         Home page
       </p>
-      <NuxtLink to="/" class="error__link">
+      <NuxtLink :to="$localePath('/')" class="error__link">
         <span>Go back home</span>
         <IconsCircleNoArrow class="error__arrow" />
       </NuxtLink>
@@ -85,7 +85,7 @@ definePageMeta({
     height: 100%;
     z-index: -1;
     padding-inline: 0 !important;
-    fill: #f8f3ed;
+    fill: $clr-light-beige;
     @media only screen and (max-width: $bp-lg) {
       height: 150%;
       inset: 0;
@@ -164,7 +164,7 @@ definePageMeta({
     &-title {
       font-size: clamp(20px, 2vw, 28px);
       font-weight: 700;
-      color: #111827;
+      color: $clr-dark-charcoal;
     }
   }
   &__top {

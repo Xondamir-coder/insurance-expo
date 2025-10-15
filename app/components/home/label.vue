@@ -2,9 +2,9 @@
   <div class="label">
     <div class="label__top">
       <IconsHash class="icon-hash" />
-      <h4 class="title-charcoal-gray-17-14">{{ label }}</h4>
+      <p class="label__text">{{ label }}</p>
     </div>
-    <h2 class="title-32">{{ title }}</h2>
+    <h2 class="label__title">{{ title }}</h2>
   </div>
 </template>
 
@@ -40,6 +40,17 @@ defineProps({
         animation-delay: $i * 0.1s;
       }
     }
+  }
+  &__title {
+    color: $clr-deep-slate;
+    font-size: max(3.2rem, 18px);
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  &__text {
+    font-weight: 700;
+    color: $clr-charcoal-gray;
+    font-size: max(1.7rem, 14px);
   }
   &__top {
     display: flex;

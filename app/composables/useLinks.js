@@ -24,16 +24,16 @@ export default () => {
   ]);
   const aboutLinks = computed(() => [
     {
-      to: '/organizer',
-      label: t('nav.organizer')
+      to: '/mission',
+      label: t('nav.mission')
     },
     {
       to: '/venue',
       label: t('nav.venue')
     },
     {
-      to: '/mission',
-      label: t('nav.mission')
+      to: '/organizer',
+      label: t('nav.organizer')
     }
   ]);
   const mediaLinks = computed(() => [

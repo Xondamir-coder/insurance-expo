@@ -1,51 +1,39 @@
 @use './variables' as *;
 
 @mixin grid-center {
-	display: grid;
-	place-items: center;
+  display: grid;
+  place-items: center;
 }
 @mixin flex-center {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @mixin flex-gap($gap) {
-	display: flex;
-	gap: $gap;
-	flex-direction: column;
-}
-@mixin text-style($fs, $clr: $clr-steel-blue) {
-	font-size: $fs;
-	color: $clr;
-	line-height: 1.45;
-}
-@mixin title-style($fs, $fw: 900, $clr: $clr-deep-slate, $tt: uppercase) {
-	font-size: $fs;
-	font-weight: $fw;
-	color: $clr;
-	line-height: 1.35;
-	text-transform: $tt;
+  display: flex;
+  gap: $gap;
+  flex-direction: column;
 }
 @mixin grid-scroll($grid-width, $snap-align: start) {
-	grid-template-columns: initial;
-	grid-auto-flow: column;
-	grid-auto-columns: $grid-width;
-	overflow-x: auto;
-	scroll-snap-type: x mandatory;
-	&::-webkit-scrollbar {
-		display: none;
-	}
-	& > * {
-		scroll-snap-align: $snap-align;
-	}
+  grid-template-columns: initial;
+  grid-auto-flow: column;
+  grid-auto-columns: $grid-width;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  & > * {
+    scroll-snap-align: $snap-align;
+  }
 }
 @mixin flex-scroll($snap-align: start) {
-	overflow-x: auto;
-	scroll-snap-type: x mandatory;
-	&::-webkit-scrollbar {
-		display: none;
-	}
-	& > * {
-		scroll-snap-align: $snap-align;
-	}
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  & > * {
+    scroll-snap-align: $snap-align;
+  }
 }

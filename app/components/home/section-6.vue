@@ -50,10 +50,10 @@
       <div class="section__bottom">
         <p class="footer__copyright">© {{ new Date().getFullYear() }} Expo - All rights reserved</p>
         <div class="section__bottom-links">
-          <NuxtLink to="/terms-of-service" class="section__bottom-link">
+          <NuxtLink :to="$localePath('/terms-of-service')" class="section__bottom-link">
             <span>Terms of service</span>
           </NuxtLink>
-          <NuxtLink to="/privacy-policy" class="section__bottom-link">
+          <NuxtLink :to="$localePath('/privacy-policy')" class="section__bottom-link">
             <span>Privacy policy</span>
           </NuxtLink>
         </div>

@@ -1,34 +1,23 @@
 // Colors
-$clr-light-beige: #f8f3ed;
-$clr-pale-beige: #f0e8db;
-$clr-soft-beige: #e1d1b7;
-$clr-medium-beige: #d2ba93;
-$clr-warm-beige: #c3a36f;
-$clr-dark-beige: #90703c;
-$clr-deep-brown: #6c542d;
-$clr-rich-brown: #48381e;
-$clr-dark-brown: #241c0f;
-$clr-almost-black: #120e07;
-$clr-light-green: #ccffef;
-$clr-pale-green: #99ffdf;
-$clr-soft-green: #66ffcf;
-$clr-minty-green: #e5fff7;
 $clr-dark-teal: #008b5f;
-$clr-bright-teal: #00cc8b;
 $clr-rich-teal: #009969;
 $clr-dark-green: #006646;
 $clr-deep-green: #003323;
-$clr-almost-black-green: #001a11;
-$clr-dark-slate: #2c3a47;
 $clr-bright-teal-alt: #008b5e;
+
+$clr-dark-slate: #2c3a47;
 $clr-deep-slate: #11171c;
-$clr-light-gray: #eaebed;
 $clr-steel-blue: #56616c;
 $clr-charcoal-gray: #1f2937;
 $clr-dark-charcoal: #111827;
 $clr-dark-slate-blue: #323b49;
-$clr-white: #fafafa;
+
+$clr-light-gray: #eaebed;
+$clr-almost-white: #fafafa;
 $clr-light-white: #f8f8f8;
+$clr-light-beige: #f8f3ed;
+
+$clr-medium-beige: #d2ba93;
 
 // Breakpoints
 $bp-xs: 425px;
@@ -42,4 +31,4 @@ $bp-xxl: 1400px;
 $font-base: 'AA Stetica';
 
 // Others
-$padding-inline: max(16px, 7rem);
+$inline-spacing: max(16px, 7rem);

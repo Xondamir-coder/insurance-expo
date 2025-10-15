@@ -17,8 +17,7 @@ const isPreloaderActive = ref(true);
 .layout {
   display: flex;
   flex-direction: column;
-  color: $clr-charcoal-gray;
-  background-color: #f9f9fa;
   min-height: 100vh;
+  color: $clr-steel-blue;
 }
 </style>

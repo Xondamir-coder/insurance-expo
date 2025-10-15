@@ -56,7 +56,7 @@ const banks = [
   }
   &__item {
     @include flex-center;
-    background: #f8f8f8;
+    background: $clr-light-white;
     border: 1px solid #2c3a471a;
     border-radius: 20px;
     aspect-ratio: 1;

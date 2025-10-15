@@ -12,10 +12,10 @@
       <div class="image-card-carousel__container">
         <Transition name="box">
           <div :key="currentIndex" class="image-card-carousel__box">
-            <h3 class="title-charcoal-gray-20-14">
+            <h3 class="image-card-carousel__title">
               {{ $rt(content[currentIndex].title) }}
             </h3>
-            <p class="text-14">
+            <p class="image-card-carousel__text">
               {{ $rt(content[currentIndex].text) }}
             </p>
           </div>
@@ -85,7 +85,15 @@ onUnmounted(() => {
   @media screen and (max-width: $bp-sm) {
     aspect-ratio: 328/343;
   }
-
+  &__title {
+    color: $clr-charcoal-gray;
+    text-transform: uppercase;
+    font-size: max(2rem, 14px);
+    font-weight: 700;
+  }
+  &__text {
+    font-size: max(12px, 1.4rem);
+  }
   &__container {
     display: grid;
     align-items: flex-end;

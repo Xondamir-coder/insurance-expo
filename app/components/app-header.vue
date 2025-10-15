@@ -5,7 +5,7 @@
         <IconsMenu class="icon-menu" />
         <IconsCross class="icon-menu" />
       </button>
-      <NuxtLink to="/">
+      <NuxtLink :to="$localePath('/')">
         <SvgLogo class="header__logo" />
       </NuxtLink>
       <nav class="header__nav">
@@ -198,12 +198,12 @@ onMounted(() => {
   padding-block: max(16px, 2rem);
   display: flex;
   justify-content: space-between;
-  padding-inline: $padding-inline;
+  padding-inline: $inline-spacing;
   position: sticky;
   top: 0;
-  background-color: #ffffffcc;
   backdrop-filter: blur(5px);
   z-index: 50;
+  background-color: #ffffffcc;
   &__hamburger {
     border-radius: 42px;
     width: 42px;
@@ -245,7 +245,7 @@ onMounted(() => {
     &.active,
     &:hover {
       background: #f1f2f4;
-      color: #003323;
+      color: $clr-deep-green;
     }
   }
   &__dropdown {
@@ -280,8 +280,8 @@ onMounted(() => {
       background-color: #eaebed;
     }
     &.active {
-      background: #008b5f;
-      border-color: #008b5f;
+      background: $clr-dark-teal;
+      border-color: $clr-dark-teal;
       color: #fff;
       .icon-globe {
         fill: #fff;
@@ -343,7 +343,7 @@ onMounted(() => {
       }
     }
     &-link.active {
-      background-color: #008b5f;
+      background-color: $clr-dark-teal;
       color: #fff;
     }
     &-item {
@@ -401,7 +401,7 @@ onMounted(() => {
         background-color: #e9eaec;
       }
       &.active {
-        background-color: #008b5f;
+        background-color: $clr-dark-teal;
         color: #fff;
       }
     }

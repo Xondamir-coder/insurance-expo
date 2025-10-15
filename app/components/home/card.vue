@@ -8,10 +8,10 @@
       </div>
     </div>
     <div class="card__content">
-      <h3 class="title-charcoal-gray-20-16">
+      <h3 class="card__content-title">
         {{ data.title }}
       </h3>
-      <p class="text-dark-slate-blue-14">
+      <p class="card__content-text">
         {{ data.text }}
       </p>
     </div>
@@ -33,7 +33,7 @@ defineProps({
   display: grid;
   grid-auto-rows: 1fr;
   &:hover &__content {
-    border-color: #006646;
+    border-color: $clr-dark-green;
   }
   &:hover &__top {
     box-shadow: 0px 49px 60px -20px #03ab3233;
@@ -58,10 +58,22 @@ defineProps({
     flex-basis: 70%;
     border-radius: max(16px, 2rem);
     padding: max(14px, 2rem);
-    background: #fafafa;
+    background: $clr-almost-white;
     border: 1px solid #e9eaec;
     border-bottom: 6px solid #e9eaec;
     transition: border-color 0.3s;
+    &-title {
+      font-size: max(16px, 2rem);
+      font-weight: 700;
+      color: $clr-charcoal-gray;
+      line-height: 1.35;
+      text-transform: uppercase;
+    }
+    &-text {
+      font-size: 14px;
+      color: $clr-dark-slate-blue;
+      line-height: 1.45;
+    }
   }
   &__top {
     flex-basis: 50%;

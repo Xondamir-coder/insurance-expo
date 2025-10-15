@@ -62,7 +62,7 @@ defineProps({
   }
   &__subtitle,
   &__title {
-    color: #111827;
+    color: $clr-dark-charcoal;
     font-weight: 700;
   }
   &__box {
@@ -86,7 +86,7 @@ defineProps({
     font-size: clamp(24px, 2.5vw, 42px);
   }
   &__text {
-    color: #323b49;
+    color: $clr-dark-slate-blue;
     opacity: 0.8;
     font-size: clamp(14px, 1vw, 17px);
     line-height: 1.45;

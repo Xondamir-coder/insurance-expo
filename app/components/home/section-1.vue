@@ -115,6 +115,7 @@ const formattedDate = computed(() =>
     }
 
     &-content {
+      color: $clr-charcoal-gray;
       display: flex;
       justify-content: space-evenly;
       flex-direction: column;

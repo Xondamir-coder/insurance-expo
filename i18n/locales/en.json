@@ -6,6 +6,7 @@
   "contact-us": "Contact us",
 
   "nav": {
+    "home": "Home",
     "about": "About",
     "organizer": "Organizer",
     "venue": "Venue",
@@ -126,5 +127,54 @@
       "Partners & Sponsors",
       "Contacts"
     ]
+  },
+
+  "mission": {
+    "title": "Expo Insurance 2025 is your gateway to a secure future!",
+    "subtitle": "In 2025, the world’s insurance leaders will gather at Expo Insurance 2025 — a global hub for innovation, collaboration, and progress. This event unites experts and visionaries to shape the next era of trust and protection, driving digital transformation and sustainable growth across the industry",
+    "texts": [
+      "The Expo Insurance 2025 is not just an event—it’s a transformative experience that connects people, ideas, and innovations to redefine the future of the insurance industry. This global platform brings together leaders from the insurance sector, emerging fintech innovators, and everyday individuals who are eager to learn how insurance can provide them with stability and peace of mind in an ever-changing world.",
+      "The insurance industry is undergoing rapid evolution, driven by digital transformation, emerging risks, and changing consumer needs. Expo Insurance 2025 is designed to address these shifts, offering a space where knowledge meets innovation. It serves as the ultimate destination for discovering new trends, exploring groundbreaking products, and building connections with key players in the insurance ecosystem."
+    ],
+    "info": {
+      "title": "Reliable insurance partners",
+      "subtitle": "Expo Insurance 2025 brings together leading insurance providers from around the world — offering solutions for both personal and business needs.",
+      "cards": [
+        {
+          "title": "Broad audience",
+          "text": "1000+ participants: representatives of top banks, business leaders, and guests — the perfect environment for new connections."
+        },
+        {
+          "title": "Valuable connections",
+          "text": "1000+ networking opportunities: business meetings, partnerships, and knowledge exchange."
+        },
+        {
+          "title": "Cross-industry cooperation",
+          "text": "10+ направлений: финтех, кредитование, страхование и другие отрасли — стимулируем 10+ sectors: fintech, lending, insurance, and more — fostering collaborative projects"
+        }
+      ]
+    },
+    "team": {
+      "title": "Our managment team",
+      "subtitle": "Meet the leaders driving innovation, growth, and excellence at Expo Insurance 2025.",
+      "list": [
+        {
+          "title": "Nozima Muhammedova",
+          "text": "Digital direktor"
+        },
+        {
+          "title": "Nozima Muhammedova",
+          "text": "Digital direktor"
+        },
+        {
+          "title": "Nozima Muhammedova",
+          "text": "Digital direktor"
+        },
+        {
+          "title": "Nozima Muhammedova",
+          "text": "Digital direktor"
+        }
+      ]
+    }
   }
 }

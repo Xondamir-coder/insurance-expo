@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <HomeLabel :title="title" :label="label" />
-    <p v-for="text in texts" :key="text" class="text-16 content__text">
+    <p v-for="text in texts" :key="text" class="content__text">
       {{ text }}
     </p>
   </div>
@@ -18,8 +18,9 @@ defineProps({
     type: String
   },
   texts: {
-    required: true,
-    type: Array
+    required: false,
+    type: Array,
+    default: () => []
   }
 });
 </script>

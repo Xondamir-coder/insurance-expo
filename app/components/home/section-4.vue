@@ -115,7 +115,7 @@ useSwiper(listRef, {
       fill: inherit;
     }
     &:hover {
-      background-color: #008b5f;
+      background-color: $clr-dark-teal;
       fill: #fff;
     }
   }

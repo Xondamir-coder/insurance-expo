@@ -51,10 +51,10 @@
         &copy; {{ new Date().getFullYear() }} Expo - All rights reserved
       </p>
       <div class="footer__bottom-links">
-        <NuxtLink to="/terms-of-service" class="footer__bottom-link">
+        <NuxtLink :to="$localePath('/terms-of-service')" class="footer__bottom-link">
           <span>Terms of service</span>
         </NuxtLink>
-        <NuxtLink to="/privacy-policy" class="footer__bottom-link">
+        <NuxtLink :to="$localePath('/privacy-policy')" class="footer__bottom-link">
           <span>Privacy policy</span>
         </NuxtLink>
       </div>
@@ -64,13 +64,6 @@
 
 <script setup>
 const { allLinks } = useLinks();
-
-onMounted(() => {
-  GSAPanimation('.footer', {
-    animProps: { y: 100 },
-    scrollTriggerOptions: { end: '20% bottom' }
-  });
-});
 </script>
 
 <style lang="scss" scoped>
@@ -90,6 +83,7 @@ onMounted(() => {
   }
 }
 .footer {
+  margin-top: max(8rem, 30px);
   background-color: $clr-deep-slate;
   z-index: 3;
   padding-block: max(16px, 3rem);
@@ -98,11 +92,12 @@ onMounted(() => {
   flex-direction: column;
   gap: max(16px, 3rem);
   color: #ffffff;
-  padding-inline: $padding-inline;
+  padding-inline: $inline-spacing;
   &__arrow {
     width: max(20px, 2.4rem);
   }
   &__title {
+    color: #fff;
     line-height: 1.34;
     font-size: max(20px, 2.6rem);
     font-weight: 700;

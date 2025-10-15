@@ -38,7 +38,7 @@
     grid-auto-rows: max-content 1fr;
   }
   &__title {
-    color: #11171c;
+    color: $clr-deep-slate;
     font-weight: 700;
     font-size: max(16px, 2rem);
     line-height: 1.35;
@@ -47,14 +47,14 @@
   &__text {
     font-size: max(14px, 1.6rem);
     line-height: 1.45;
-    color: #56616c;
+    color: $clr-steel-blue;
   }
   &__item {
     border-radius: 20px;
     padding: max(14px, 3rem);
     overflow: hidden;
     color: #fff;
-    background: #fafafa;
+    background: $clr-almost-white;
     border: 1px solid #e9eaec;
     display: flex;
     animation: 0.6s backwards;
@@ -93,7 +93,7 @@
       }
       position: relative;
       border-color: $clr-dark-teal;
-      background: linear-gradient(90deg, #008b5e 0%, #08ad78 100%);
+      background: linear-gradient(90deg, $clr-bright-teal-alt 0%, #08ad78 100%);
       .section__text {
         color: #fff;
       }

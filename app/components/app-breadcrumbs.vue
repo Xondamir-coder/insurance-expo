@@ -1,10 +1,10 @@
 <template>
   <nav class="breadcrumbs">
     <NuxtLink
-      v-for="breadcrumb in breadcrumbs"
-      :key="breadcrumb.to"
+      v-for="(breadcrumb, index) in breadcrumbs"
+      :key="index"
       class="breadcrumbs__link"
-      :to="breadcrumb.to"
+      :to="$localePath(breadcrumb.to)"
     >
       <span class="breadcrumbs__label">{{ breadcrumb.label }}</span>
       <span class="breadcrumbs__divider">/</span>
@@ -67,6 +67,8 @@ defineProps({
       color: $clr-dark-teal;
     }
     &:last-child {
+      pointer-events: none;
+      opacity: 0.75;
       .breadcrumbs__divider {
         display: none;
       }
