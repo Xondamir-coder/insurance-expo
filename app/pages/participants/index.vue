@@ -10,8 +10,13 @@
       />
     </section>
     <section class="content">
-      <ul class="content__list">
-        <li v-for="(item, index) in list" :key="index" class="content__item">
+      <div class="content__list">
+        <NuxtLink
+          v-for="(item, index) in list"
+          :key="index"
+          :to="$localePath(`/participants/${index}`)"
+          class="content__item"
+        >
           <div class="content__item-left">
             <div class="content__item-box">
               <component :is="item.logo" class="content__item-logo" />
@@ -48,8 +53,8 @@
               <h3 class="content__item-col-label">{{ $rt(item.service) }}</h3>
             </div>
           </div>
-        </li>
-      </ul>
+        </NuxtLink>
+      </div>
       <AppPagination
         :pages-count="list.length"
         :current-page="currentPage"

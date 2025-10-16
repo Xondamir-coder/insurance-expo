@@ -9,6 +9,12 @@
   "years-of-exp": "Years of experience",
   "branch-network": "Branch network",
   "specify": "Specify",
+  "address": "Address",
+  "phone": "Phone",
+  "email": "Email",
+  "website": "Website",
+  "contact-information": "Contact information",
+  "quote": "Quote",
 
   "nav": {
     "home": "Home",
@@ -329,5 +335,16 @@
         "service": "Life insurance"
       }
     ]
+  },
+
+  "participant": {
+    "info": {
+      "services": "Services presented at the exhibition"
+    }
+  },
+
+  "speakers": {
+    "title": "We are inspired by the leading experts of the industry",
+    "subtitle": "Expo Insurance unites participants from over"
   }
 }

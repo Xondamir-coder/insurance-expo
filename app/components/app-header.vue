@@ -14,6 +14,7 @@
             v-if="link.to"
             :to="$localePath(link.to)"
             class="header__nav-link"
+            :class="{ active: $route.path.includes(link.to) }"
             active-class="active"
           >
             {{ link.label }}
