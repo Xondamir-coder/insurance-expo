@@ -2,8 +2,8 @@ export default () => {
   const { t } = useI18n();
   const links = computed(() => [
     {
-      to: '/partners',
-      label: t('nav.partners')
+      to: '/',
+      label: t('nav.home')
     },
     {
       to: '/participants',

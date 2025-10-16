@@ -5,6 +5,10 @@
   "contacts": "Contacts",
   "contact-us": "Contact us",
   "view-maps": "View on Google Maps",
+  "company-name": "Company name",
+  "years-of-exp": "Years of experience",
+  "branch-network": "Branch network",
+  "specify": "Specify",
 
   "nav": {
     "home": "Home",
@@ -282,5 +286,48 @@
         }
       ]
     }
+  },
+
+  "participants": {
+    "title": "Meet Our Trusted Insurance Providers",
+    "subtitle": "Expo Insurance 2025 is proud to showcase a diverse range of leading insurance providers from around the globe. Discover innovative solutions tailored to your personal and business needs",
+    "list": [
+      {
+        "name": "Kapital sug’urta",
+        "exp": "20",
+        "networks": "200",
+        "service": "Life insurance"
+      },
+      {
+        "name": "Kapital sug’urta",
+        "exp": "20",
+        "networks": "200",
+        "service": "Life insurance"
+      },
+      {
+        "name": "Kapital sug’urta",
+        "exp": "20",
+        "networks": "200",
+        "service": "Life insurance"
+      },
+      {
+        "name": "Kapital sug’urta",
+        "exp": "20",
+        "networks": "200",
+        "service": "Life insurance"
+      },
+      {
+        "name": "Kapital sug’urta",
+        "exp": "20",
+        "networks": "200",
+        "service": "Life insurance"
+      },
+      {
+        "name": "Kapital sug’urta",
+        "exp": "20",
+        "networks": "200",
+        "service": "Life insurance"
+      }
+    ]
   }
 }

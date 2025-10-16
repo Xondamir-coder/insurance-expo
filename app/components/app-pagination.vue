@@ -15,8 +15,8 @@
       :key="i"
       class="pagination__button pagination__button--number"
       :class="{
-        'pagination__button--active': i === currentPage,
-        'pagination__button--hidden': i > shownButtonsCount
+        active: i === currentPage,
+        hidden: i > shownButtonsCount
       }"
       @click="changePage(i)"
     >
@@ -98,27 +98,35 @@ const showAllButtons = () => (shownButtonsCount.value = props.pagesCount);
     border: 1px solid #cbd5e0;
     background: #ffffff;
     aspect-ratio: 1;
-    &:disabled .pagination__arrow {
-      fill: #687588;
+    transition: opacity 0.4s;
+    fill: $clr-dark-charcoal;
+
+    &:disabled {
+      opacity: 0.5;
+      pointer-events: none;
     }
     &--number {
       font-weight: 700;
       font-size: 16px;
       color: $clr-dark-charcoal;
       text-align: center;
-      transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+      transition: background-color 0.4s, border-color 0.4s, color 0.4s;
+      &:not(.active):hover {
+        background-color: #cbd5e0;
+        color: #fff;
+      }
     }
-    &--active {
+    &.active {
       background-color: #c89e45;
       border-color: #c89e45;
       color: $clr-almost-white;
     }
-    &--hidden {
+    &.hidden {
       display: none;
     }
   }
   &__arrow {
-    fill: $clr-dark-charcoal;
+    fill: inherit;
     width: 18px;
     transition: fill 0.3s;
     &--reverse {

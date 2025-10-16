@@ -1,7 +1,9 @@
 <template>
   <main class="container">
     <AppBreadcrumbs :breadcrumbs />
-    <slot />
+    <div class="container__content">
+      <slot />
+    </div>
   </main>
 </template>
 
@@ -18,8 +20,13 @@ defineProps({
 .container {
   display: flex;
   flex-direction: column;
-  gap: max(8rem, 32px);
+  gap: max(4.5rem, 20px);
   padding-inline: $inline-spacing;
   overflow: hidden;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: max(8rem, 32px);
+  }
 }
 </style>
