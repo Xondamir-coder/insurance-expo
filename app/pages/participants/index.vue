@@ -197,6 +197,7 @@ const breadcrumbs = computed(() => [
   &__content {
     align-self: flex-end;
     margin-bottom: 6rem;
+    z-index: 2;
     & > * {
       @media screen and (min-width: $bp-md) {
         color: #fff;
@@ -207,7 +208,6 @@ const breadcrumbs = computed(() => [
     position: absolute;
     inset: 0;
     width: 100%;
-    z-index: -1;
     @media screen and (max-width: $bp-md) {
       position: static;
       order: 1;

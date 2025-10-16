@@ -32,51 +32,14 @@
         :title="$t('organizer.partners.title')"
         :subtitle="$t('organizer.partners.subtitle')"
       />
-      <ul class="partners__list">
-        <li v-for="(item, index) in partnersList" :key="index" class="partners__item">
-          <SvgGrid class="partners__item-grid" />
-          <div class="partners__item-container">
-            <component :is="item.logo" class="partners__item-logo" />
-          </div>
-          <div class="partners__item-content">
-            <h3 class="partners__item-title">{{ $rt(item.name) }}</h3>
-            <p class="text-small">{{ $rt(item.service) }}</p>
-          </div>
-        </li>
-      </ul>
+      <PartnersList />
     </section>
   </BreadcrumbsLayout>
 </template>
 
 <script setup>
-import SvgBanksMastercard from '~/components/svg/banks/mastercard.vue';
-import SvgBanksTbc from '~/components/svg/banks/asaka.vue';
-import SvgBanksKapital from '~/components/svg/banks/kapital.vue';
-import SvgBanksQqb from '~/components/svg/banks/qqb.vue';
-import SvgBanksSqb from '~/components/svg/banks/sqb.vue';
-import SvgBanksZiraat from '~/components/svg/banks/ziraat.vue';
-import SvgBanksTrast from '~/components/svg/banks/trast.vue';
-import SvgBanksVisa from '~/components/svg/banks/visa.vue';
+const { t } = useI18n();
 
-const { t, tm } = useI18n();
-
-const logos = [
-  SvgBanksMastercard,
-  SvgBanksTbc,
-  SvgBanksKapital,
-  SvgBanksQqb,
-  SvgBanksSqb,
-  SvgBanksZiraat,
-  SvgBanksTrast,
-  SvgBanksVisa
-];
-
-const partnersList = computed(() =>
-  logos.map((logo, index) => ({
-    logo,
-    ...tm('organizer.partners.list')[index]
-  }))
-);
 const breadcrumbs = computed(() => [
   {
     to: '/',
@@ -94,51 +57,6 @@ const breadcrumbs = computed(() => [
   display: flex;
   flex-direction: column;
   gap: max(4.5rem, 20px);
-  &__list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(max(42rem, 181px), 1fr));
-    gap: max(3rem, 12px);
-    @media screen and (max-width: $bp-md) {
-      @include grid-scroll(190px);
-    }
-  }
-  &__item {
-    position: relative;
-    border: 1px solid #e9eaec;
-    box-shadow: 0px 2px 2px -1px #00000014;
-    border-radius: max(2.4rem, 16px);
-    padding: max(3.2rem, 16px);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: max(2rem, 16px);
-    overflow: hidden;
-    &-title {
-      color: #003323;
-      font-weight: bold;
-      font-size: max(2rem, 14px);
-    }
-    &-grid {
-      position: absolute;
-      width: 63.5%;
-      top: -1px;
-      left: 50%;
-      translate: -50% 0;
-      z-index: -1;
-    }
-    &-logo {
-      width: 86%;
-    }
-    &-container {
-      @include flex-center;
-      box-shadow: 0px 7.71px 5.33px -2.67px #0000001a;
-      width: max(7rem, 60px);
-      height: max(7rem, 60px);
-      border-radius: max(1.6rem, 14px);
-      background-color: #fff;
-    }
-  }
 }
 .vision {
   display: flex;

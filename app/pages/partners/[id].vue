@@ -4,12 +4,18 @@
       :logo="SvgBanksKapital"
       title="Kapital Sug‘urta"
       subtitle="Insurance services"
+      :info="{
+        label: 'Why They Partner with Expo Insurance',
+        text: 'Expo Insurance provides Kapital Bank Insurance with a platform to showcase innovation, connect with international investors, and exchange insights with global experts. Through this partnership, the company aims to expand its digital product ecosystem and strengthen Uzbekistan’s position in the regional insurance market.'
+      }"
       :about="{
-        label: 'About company',
+        label: 'About',
         text: 'Kapital Sug’urta is one of Uzbekistan’s leading insurance companies, offering a wide range of insurance services for both individuals and legal entities. The company provides innovative solutions aimed at ensuring clients’ financial security and minimizing risks. Kapital Sug’urta’s services include life insurance, property protection, health insurance, and vehicle insurance.'
       }"
-      :focus="heroFocus"
-      banner="participants-index.png"
+      :quote="{
+        image: 'partners-banner.jpg',
+        text: '“Our goal is to make technology serve to make human life more comfortable and efficient.” — Ahmadjon Rahmatjonov, CEO of Samsung Uzbekistan'
+      }"
     />
     <section class="info">
       <div class="info__card">
@@ -106,37 +112,17 @@ const carouselImages = [
   'participant-1.jpg'
 ];
 
-const heroFocus = computed(() => [
-  {
-    text: 'Life and health insurance services'
-  },
-  {
-    text: 'Car insurance (OSAGO, KASKO)'
-  },
-  {
-    text: 'Travel insurance'
-  },
-  {
-    text: 'Travel insurance'
-  },
-  {
-    text: 'Property and real estate insurance'
-  },
-  {
-    text: 'Corporate insurance packages'
-  }
-]);
 const breadcrumbs = computed(() => [
   {
     to: '/',
     label: t('nav.home')
   },
   {
-    to: '/participants',
-    label: t('nav.participants')
+    to: '/partners',
+    label: t('nav.partners')
   },
   {
-    to: '/participants/1',
+    to: '/partners/1',
     label: 'participant name'
   }
 ]);

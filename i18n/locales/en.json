@@ -15,6 +15,7 @@
   "website": "Website",
   "contact-information": "Contact information",
   "quote": "Quote",
+  "register-online": "Register online",
 
   "nav": {
     "home": "Home",
@@ -256,41 +257,7 @@
     },
     "partners": {
       "title": "Partners & Sponsors",
-      "subtitle": "The Expo Bank is made possible with the support of strategic partners, sponsors, and government institutions. Together, we ensure an impactful and successful event",
-      "list": [
-        {
-          "name": "Bank name & partner",
-          "service": "Financial solutions"
-        },
-        {
-          "name": "Bank name & partner",
-          "service": "Financial solutions"
-        },
-        {
-          "name": "Bank name & partner",
-          "service": "Financial solutions"
-        },
-        {
-          "name": "Bank name & partner",
-          "service": "Financial solutions"
-        },
-        {
-          "name": "Bank name & partner",
-          "service": "Financial solutions"
-        },
-        {
-          "name": "Bank name & partner",
-          "service": "Financial solutions"
-        },
-        {
-          "name": "Bank name & partner",
-          "service": "Financial solutions"
-        },
-        {
-          "name": "Bank name & partner",
-          "service": "Financial solutions"
-        }
-      ]
+      "subtitle": "The Expo Bank is made possible with the support of strategic partners, sponsors, and government institutions. Together, we ensure an impactful and successful event"
     }
   },
 
@@ -346,5 +313,41 @@
   "speakers": {
     "title": "We are inspired by the leading experts of the industry",
     "subtitle": "Expo Insurance unites participants from over"
+  },
+
+  "partners": {
+    "title": "We are chosen by market leaders — over 100 partners",
+    "subtitle": "Insurance Expo — a space where partnerships turn into opportunities."
+  },
+
+  "form-section": {
+    "text": "Get your ticket in minutes. Fill out the form and secure your spot at the Expo"
+  },
+
+  "form": {
+    "organization": {
+      "placeholder": "Your organization name",
+      "label": "Organization"
+    },
+    "full-name": {
+      "placeholder": "Enter your name",
+      "label": "Full name"
+    },
+    "mobile-phone": {
+      "placeholder": "Enter your number",
+      "label": "Mobile phone"
+    },
+    "send-request": "Send request",
+    "approval": "By registering, you confirm that you have read and agree with",
+    "policy": "Privacy policy"
+  },
+
+  "detailed-hero": {
+    "focus-label": "Exhibition Focus / Highlights"
+  },
+
+  "sponsors": {
+    "title": "Over 100 reliable partners across the country",
+    "subtitle": "At Expo Insurance 2025, we are proud to collaborate with industry leaders and innovators who share our vision of advancing the insurance sector."
   }
 }

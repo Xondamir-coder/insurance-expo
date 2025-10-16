@@ -172,6 +172,7 @@ const teamList = computed(() =>
     gap: max(2rem, 12px);
     &-subtitle {
       font-size: max(2rem, 14px);
+      z-index: 1;
       @media screen and (min-width: $bp-md) {
         max-width: 40%;
       }
@@ -181,6 +182,7 @@ const teamList = computed(() =>
     }
     &-title {
       text-transform: uppercase;
+      z-index: 1;
       font-size: max(3.6rem, 18px);
       color: #fff;
       @media screen and (max-width: $bp-md) {
@@ -192,7 +194,7 @@ const teamList = computed(() =>
       inset: 0;
       width: 100%;
       height: 100%;
-      z-index: -1;
+
       @media screen and (max-width: $bp-md) {
         & > * {
           object-position: 60%;
@@ -220,8 +222,10 @@ const teamList = computed(() =>
         left: 0;
         top: 0;
         width: 49%;
-        z-index: -1;
         left: -10%;
+      }
+      &:nth-child(2) {
+        z-index: 2;
       }
       &:last-child {
         right: 0;

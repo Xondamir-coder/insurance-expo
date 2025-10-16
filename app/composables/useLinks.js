@@ -38,7 +38,7 @@ export default () => {
   ]);
   const mediaLinks = computed(() => [
     {
-      to: '/media-library',
+      to: '/media',
       label: t('nav.media-library')
     },
     {

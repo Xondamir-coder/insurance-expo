@@ -1,9 +1,10 @@
 <template>
   <BreadcrumbsLayout :breadcrumbs class="speakers">
-    <div class="hero">
-      <h1 class="hero__title">{{ $t('speakers.title') }}</h1>
-      <p class="hero__subtitle">{{ $t('speakers.subtitle') }}</p>
-    </div>
+    <GreenPageHeader
+      :title="$t('speakers.title')"
+      :subtitle="$t('speakers.subtitle')"
+      class="speakers__header"
+    />
     <ClientOnly>
       <div class="carousel">
         <swiper-container
@@ -173,7 +174,7 @@ const breadcrumbs = computed(() => [
   gap: max(3.2rem, 10px);
   padding-inline: $inline-spacing;
   @media screen and (min-width: $bp-lg) {
-    max-width: 60%;
+    max-width: 70%;
   }
   &__title {
     font-weight: 700;
@@ -189,6 +190,9 @@ const breadcrumbs = computed(() => [
 }
 .speakers {
   padding: 0;
+  &__header {
+    padding-left: $inline-spacing;
+  }
   & > *:first-child {
     padding-inline: $inline-spacing;
   }

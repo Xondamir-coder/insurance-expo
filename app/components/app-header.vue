@@ -205,6 +205,7 @@ onMounted(() => {
   backdrop-filter: blur(5px);
   z-index: 50;
   background-color: #ffffffcc;
+
   &__hamburger {
     border-radius: 42px;
     width: 42px;
