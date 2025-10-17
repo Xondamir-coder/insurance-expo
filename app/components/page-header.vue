@@ -25,8 +25,9 @@ defineProps({
   gap: max(1.6rem, 10px);
   text-align: center;
   align-self: center;
-  @media screen and (min-width: $bp-md) {
-    max-width: 60%;
+  max-width: 60%;
+  @media screen and (max-width: $bp-md) {
+    max-width: 100% !important;
   }
   &__title {
     font-weight: 900;

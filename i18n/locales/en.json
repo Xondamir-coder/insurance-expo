@@ -349,5 +349,26 @@
   "sponsors": {
     "title": "Over 100 reliable partners across the country",
     "subtitle": "At Expo Insurance 2025, we are proud to collaborate with industry leaders and innovators who share our vision of advancing the insurance sector."
+  },
+
+  "media": {
+    "title": "Official sources of news and inspiration",
+    "subtitle": "Official photos and videos from the Expo Insurance event"
+  },
+
+  "media-accreditation": {
+    "title": "Media accreditation",
+    "texts": [
+      {
+        "title": "Dear Representatives of the Mass Media,",
+        "text": "In accordance with the legislative requirements of the Republic of Uzbekistan, the decision on the accreditation of temporary foreign correspondents may take up to two weeks."
+      },
+      {
+        "title": "All media representatives will be notified of the accreditation decision by the Ministry of Foreign Affairs of the Republic of Uzbekistan.",
+        "text": "Representatives of the mass media, who are not accredited in Uzbekistan, must be accredited by the Ministry of Foreign Affairs of the Republic of Uzbekistan."
+      }
+    ],
+    "available": "The accreditation procedure for representatives of foreign countries in Uzbekistan is available here:",
+    "contacts": "Contacts of the Media Department:"
   }
 }
