@@ -370,5 +370,104 @@
     ],
     "available": "The accreditation procedure for representatives of foreign countries in Uzbekistan is available here:",
     "contacts": "Contacts of the Media Department:"
+  },
+
+  "for-visitors": {
+    "title": "Откройте для себя новые возможности и знакомства",
+    "subtitle": "Практические кейсы, экспертные сессии и реальные истории успеха",
+    "hero-items": [
+      {
+        "label": "For Students",
+        "text": "Explore career paths, internships and the future of banking & fintech."
+      },
+      {
+        "label": "For Parents",
+        "text": "Learn about financial literacy, education opportunities and safe investments."
+      },
+      {
+        "label": "For Educators",
+        "text": "Connect with industry leaders and bring new knowledge to classrooms."
+      }
+    ],
+    "visit": {
+      "title": "Plan Your Visit",
+      "items": [
+        {
+          "label": "Opening Hours:",
+          "items": ["10:00 – 18:00 (15–17 September, 2025)"]
+        },
+        {
+          "label": "How to Get There:",
+          "items": ["Metro: Expo Station (Line 2)", "Taxi & Ride-hailing services available"]
+        },
+        {
+          "label": "Accommodation Suggestions:",
+          "items": [
+            "Hilton Tashkent City",
+            "Hyatt Regency Tashkent",
+            "Local boutique hotels near Expo Center"
+          ]
+        }
+      ]
+    },
+    "leaders": {
+      "title": "Where Leaders Meet Innovation And the Future of Insurance Begins",
+      "text": "Expo Insurance 2025 brings together visionaries, innovators, and decision-makers shaping the next era of insurance. Explore groundbreaking solutions, digital transformation, and global collaboration that redefine how trust and protection evolve.",
+      "cards": [
+        {
+          "labels": ["Innovation", "Technology"],
+          "title": "Shaping the Future Through Smart Solutions",
+          "text": "Discover how AI, data, and digital ecosystems are transforming the insurance industry — from automation to customer personalization."
+        },
+        {
+          "labels": ["Innovation", "Technology"],
+          "title": "Shaping the Future Through Smart Solutions",
+          "text": "Discover how AI, data, and digital ecosystems are transforming the insurance industry — from automation to customer personalization."
+        },
+        {
+          "labels": ["Innovation", "Technology"],
+          "title": "Shaping the Future Through Smart Solutions",
+          "text": "Discover how AI, data, and digital ecosystems are transforming the insurance industry — from automation to customer personalization."
+        }
+      ]
+    }
+  },
+
+  "faq": {
+    "title": "FAQ (Visitors)",
+    "items": [
+      {
+        "question": "Do I need to register online?",
+        "answer": "Yes, all visitors are required to register online before attending the Expo."
+      },
+      {
+        "question": "Is entry free for students?",
+        "answer": "Yes, students can enter for free by presenting a valid student ID at registration."
+      },
+      {
+        "question": "Where do I get my badge?",
+        "answer": "You can collect your badge at the registration desk upon arrival by showing your confirmation email or QR code."
+      },
+      {
+        "question": "Can families attend together?",
+        "answer": "Yes, families are welcome. Each member must complete individual registration."
+      },
+      {
+        "question": "What are the exhibition opening hours?",
+        "answer": "The exhibition is open daily from 10:00 AM to 6:00 PM during event dates."
+      },
+      {
+        "question": "Is there parking available at the venue?",
+        "answer": "Yes, free parking is available for registered visitors on a first-come, first-served basis."
+      },
+      {
+        "question": "Will there be translation services?",
+        "answer": "Yes, simultaneous translation will be provided for major sessions in English, Russian, and Uzbek."
+      },
+      {
+        "question": "Can I attend specific sessions without visiting the exhibition floor?",
+        "answer": "Yes, session-only passes are available, but registration is still required."
+      }
+    ]
   }
 }

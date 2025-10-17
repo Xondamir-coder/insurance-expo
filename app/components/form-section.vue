@@ -38,7 +38,7 @@
 <style lang="scss" scoped>
 .form-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr 1.1fr;
   gap: 8rem;
   background-color: #fff;
   padding: max(6rem, 16px);
