@@ -10,51 +10,48 @@
       />
     </section>
     <section class="content">
-      <div class="content__list">
-        <NuxtLink
-          v-for="(item, index) in list"
-          :key="index"
-          :to="$localePath(`/participants/${index}`)"
-          class="content__item"
-        >
-          <div class="content__item-left">
-            <div class="content__item-box">
-              <component :is="item.logo" class="content__item-logo" />
+      <ul class="content__list">
+        <li v-for="(item, index) in list" :key="index" class="content__list-item">
+          <NuxtLink :to="$localePath(`/participants/${index}`)" class="content__item">
+            <div class="content__item-left">
+              <div class="content__item-box">
+                <component :is="item.logo" class="content__item-logo" />
+              </div>
+              <div class="content__item-left-content">
+                <p class="content__item-text">{{ $rt(item.service) }}</p>
+                <h4 class="content__item-title">{{ $rt(item.name) }}</h4>
+              </div>
             </div>
-            <div class="content__item-left-content">
-              <p class="content__item-text">{{ $rt(item.service) }}</p>
-              <h4 class="content__item-title">{{ $rt(item.name) }}</h4>
+            <div class="content__item-col">
+              <div class="content__item-icon-container">
+                <IconsFlag class="content__item-icon icon" />
+              </div>
+              <div class="content__item-col-content">
+                <p>{{ $t('years-of-exp') }}</p>
+                <h3 class="content__item-col-label">{{ $rt(item.exp) }}+</h3>
+              </div>
             </div>
-          </div>
-          <div class="content__item-col">
-            <div class="content__item-icon-container">
-              <IconsFlag class="content__item-icon icon" />
+            <div class="content__item-col">
+              <div class="content__item-icon-container">
+                <IconsCityBuilding class="content__item-icon icon" />
+              </div>
+              <div class="content__item-col-content">
+                <p>{{ $t('branch-network') }}</p>
+                <h3 class="content__item-col-label">{{ $rt(item.networks) }}+</h3>
+              </div>
             </div>
-            <div class="content__item-col-content">
-              <p>{{ $t('years-of-exp') }}</p>
-              <h3 class="content__item-col-label">{{ $rt(item.exp) }}+</h3>
+            <div class="content__item-col">
+              <div class="content__item-icon-container">
+                <IconsRouteDirection class="content__item-icon icon" />
+              </div>
+              <div class="content__item-col-content">
+                <p>{{ $t('specify') }}</p>
+                <h3 class="content__item-col-label">{{ $rt(item.service) }}</h3>
+              </div>
             </div>
-          </div>
-          <div class="content__item-col">
-            <div class="content__item-icon-container">
-              <IconsCityBuilding class="content__item-icon icon" />
-            </div>
-            <div class="content__item-col-content">
-              <p>{{ $t('branch-network') }}</p>
-              <h3 class="content__item-col-label">{{ $rt(item.networks) }}+</h3>
-            </div>
-          </div>
-          <div class="content__item-col">
-            <div class="content__item-icon-container">
-              <IconsRouteDirection class="content__item-icon icon" />
-            </div>
-            <div class="content__item-col-content">
-              <p>{{ $t('specify') }}</p>
-              <h3 class="content__item-col-label">{{ $rt(item.service) }}</h3>
-            </div>
-          </div>
-        </NuxtLink>
-      </div>
+          </NuxtLink>
+        </li>
+      </ul>
       <AppPagination
         :pages-count="list.length"
         :current-page="currentPage"
@@ -103,6 +100,15 @@ const breadcrumbs = computed(() => [
     label: t('nav.participants')
   }
 ]);
+
+useGSAPAnimate({
+  selector: '.hero__image',
+  base: { scale: 0.95 }
+});
+useGSAPAnimate({
+  selector: '.content__list-item',
+  base: { y: 20 }
+});
 </script>
 
 <style lang="scss" scoped>
@@ -127,6 +133,11 @@ const breadcrumbs = computed(() => [
     padding: 16px;
     border-radius: max(2rem, 16px);
     gap: 16px;
+    transition: all 0.4s;
+    &:hover {
+      background-color: #eaebed;
+      transform: scale(0.99);
+    }
     &-left {
       display: flex;
       align-items: center;
@@ -190,6 +201,7 @@ const breadcrumbs = computed(() => [
   display: flex;
   justify-content: center;
   @media screen and (max-width: $bp-md) {
+    aspect-ratio: initial;
     flex-direction: column;
     justify-content: stretch;
     gap: 20px;
@@ -198,6 +210,9 @@ const breadcrumbs = computed(() => [
     align-self: flex-end;
     margin-bottom: 6rem;
     z-index: 2;
+    @media screen and (max-width: $bp-md) {
+      margin-bottom: 0;
+    }
     & > * {
       @media screen and (min-width: $bp-md) {
         color: #fff;

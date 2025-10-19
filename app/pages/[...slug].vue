@@ -3,17 +3,19 @@
     <SvgPattern class="error__pattern" />
     <SvgLogo class="error__top" />
     <div class="error__content">
-      <h1 class="error__title">404</h1>
+      <h1 class="error__title">{{ $t('error.number') }}</h1>
       <SvgPlug class="error__plug" />
+      <SvgPlugSmall class="error__plug" />
     </div>
     <div class="error__bottom">
-      <h2 class="error__bottom-title">Page Not Found</h2>
+      <h2 class="error__bottom-title">
+        {{ $t('error.title') }}
+      </h2>
       <p class="error__text">
-        Sorry, the page you’re looking for does not exist or has been moved please go back to the
-        Home page
+        {{ $t('error.subtitle') }}
       </p>
       <NuxtLink :to="$localePath('/')" class="error__link">
-        <span>Go back home</span>
+        <span>{{ $t('error.back') }}</span>
         <IconsCircleNoArrow class="error__arrow" />
       </NuxtLink>
     </div>
@@ -94,13 +96,18 @@ definePageMeta({
   }
   &__plug {
     animation: plug-slide 1s 0.3s backwards;
-    @media only screen and (min-width: $bp-xl) {
-      max-width: 80%;
+    &:first-of-type {
+      max-width: 73%;
     }
-    @media only screen and (max-width: $bp-lg) {
-      width: 150%;
-      translate: -40%;
-      height: auto;
+    @media only screen and (min-width: $bp-md) {
+      &:last-of-type {
+        display: none;
+      }
+    }
+    @media only screen and (max-width: $bp-md) {
+      &:first-of-type {
+        display: none;
+      }
     }
   }
   &__content {

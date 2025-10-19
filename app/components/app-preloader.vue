@@ -1,6 +1,6 @@
 <template>
   <Transition name="fade">
-    <div v-if="isActive" class="preloader">
+    <div v-if="showPreloader" class="preloader">
       <SvgPattern class="preloader__pattern" />
       <div class="preloader__wrapper">
         <div class="preloader__content">
@@ -32,41 +32,32 @@
 <script setup>
 const { $lenis, $gsap } = useNuxtApp();
 
+const showPreloader = useState('showPreloader', () => true);
 const progress = ref(0);
+
 let animationStarted = false;
 const LOADING_TIME = 3; // 3 seconds
 const SLOT_ANIMATION_DELAY = 0.35;
-defineProps({
-  isActive: Boolean
-});
-const emits = defineEmits(['inactive']);
 
 const toggleElements = () => {
-  const main = document.querySelector('main');
-  const header = document.querySelector('header');
-  main?.classList.add('dis-none');
-  header.classList.add('dis-none');
-
   setTimeout(() => {
-    main?.classList.remove('dis-none');
-    header.classList.remove('dis-none');
+    document.body.classList.remove('preloading');
   }, SLOT_ANIMATION_DELAY * 1000);
 };
 const checkProgress = () => {
-  // start this toggling process when the preloader is at 100%, for SEO purposes
   if (Math.round(progress.value) === 100 && !animationStarted) {
     animationStarted = true;
     toggleElements();
   }
 };
 const removePreloader = () => {
-  emits('inactive', false);
-  document.body.style.overflow = 'visible';
-  document.querySelector('.layout').classList.remove('overflow-hidden');
+  showPreloader.value = false;
+  document.body.classList.remove('overflow-hidden');
   $lenis.start();
 };
 
 onMounted(() => {
+  document.body.classList.add('overflow-hidden');
   $lenis.stop();
 
   // Animation

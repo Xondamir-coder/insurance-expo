@@ -5,15 +5,11 @@
       title="Bank va moliya tashkilotlarining Expo doirasida namoyish etgan xizmatlari"
       subtitle="Innovatsion yechimlar va raqamli xizmatlar taqdimoti"
     />
-    <div class="media__list">
-      <MyPicture
-        v-for="(image, index) in data"
-        :key="index"
-        :src="image"
-        alt="media banner"
-        class="media__list-item"
-      />
-    </div>
+    <ul class="media__list">
+      <li v-for="(image, index) in data" :key="index">
+        <MyPicture :src="image" alt="media banner" class="media__list-item" />
+      </li>
+    </ul>
   </BreadcrumbsLayout>
 </template>
 
@@ -53,6 +49,12 @@ const breadcrumbs = computed(() => [
     label: 'media name'
   }
 ]);
+
+useGSAPAnimate({
+  selector: '.media__list li',
+  mode: 'group',
+  base: { y: 30 }
+});
 </script>
 
 <style lang="scss" scoped>
@@ -62,6 +64,9 @@ const breadcrumbs = computed(() => [
     column-gap: max(3.2rem, 16px);
     row-gap: max(2rem, 16px);
     grid-template-columns: repeat(auto-fill, minmax(max(42.1rem, 328px), 1fr));
+    li {
+      display: flex;
+    }
     &-item {
       border-radius: 12px;
     }

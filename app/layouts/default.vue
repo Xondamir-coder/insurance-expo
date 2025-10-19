@@ -1,20 +1,19 @@
 <template>
   <div class="layout" :class="{ 'almost-white': isAlmostWhite }">
-    <AppPreloader :is-active="isPreloaderActive" @inactive="isPreloaderActive = false" />
+    <AppPreloader />
     <AppCookie />
     <AppHeader />
     <AppMenu />
     <slot />
     <AppFooter />
+    <FormModal />
+    <SuccessModal />
   </div>
 </template>
 
 <script setup>
 const route = useRoute();
-
-const isPreloaderActive = ref(true);
 const pages = ['partners', 'participants-id', 'sponsors', 'speakers', 'media'];
-
 const isAlmostWhite = computed(() => pages.some(p => route.path.includes(p)));
 </script>
 

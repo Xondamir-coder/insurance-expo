@@ -51,6 +51,11 @@ const breadcrumbs = computed(() => [
     label: t('nav.media-accreditation')
   }
 ]);
+useGSAPAnimate({
+  selector: '.media-accreditation>*',
+  mode: 'group',
+  base: { y: 20 }
+});
 </script>
 
 <style lang="scss" scoped>

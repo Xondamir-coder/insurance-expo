@@ -19,6 +19,7 @@ import HomeSection4 from '~/components/home/section-4.vue';
 import HomeSection5 from '~/components/home/section-5.vue';
 import HomeSection6 from '~/components/home/section-6.vue';
 
+const showPreloader = useState('showPreloader');
 const sections = [
   HomeSection1,
   HomeSection2,
@@ -28,6 +29,17 @@ const sections = [
   HomeSection6
 ];
 
+watch(showPreloader, () => {
+  if (!showPreloader.value) {
+    document.querySelector('main').classList.remove('dis-none');
+  }
+});
+
+onMounted(() => {
+  if (showPreloader.value) {
+    document.querySelector('main').classList.add('dis-none');
+  }
+});
 const currentIndex = ref(0);
 
 const changeIndex = newIndex => {

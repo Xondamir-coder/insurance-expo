@@ -41,6 +41,15 @@ const formattedDate = computed(() =>
 </script>
 
 <style lang="scss" scoped>
+body.preloading .section__umbrella-container > * {
+  opacity: 0;
+  &:first-child {
+    transform: translateX(-20px);
+  }
+  &:last-child {
+    transform: translateX(20px);
+  }
+}
 .section {
   display: grid;
   grid-template-areas:

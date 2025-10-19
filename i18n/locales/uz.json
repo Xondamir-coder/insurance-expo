@@ -1,129 +1,560 @@
 {
-  "tashkent": "Tashkent",
-  "link": "Link",
-  "services": "Services",
-  "contacts": "Contacts",
-  "contact-us": "Contact us",
+  "tashkent": "Toshkent",
+  "link": "Havola",
+  "services": "Xizmatlar",
+  "contacts": "Aloqa",
+  "contact-us": "Biz bilan bog'laning",
+  "view-maps": "Google Xaritalarda ko‘rish",
+  "company-name": "Kompaniya nomi",
+  "years-of-exp": "Tajriba yillari",
+  "branch-network": "Filiallar tarmog‘i",
+  "specify": "Ko‘rsatish",
+  "address": "Manzil",
+  "phone": "Telefon",
+  "email": "Email",
+  "website": "Veb-sayt",
+  "contact-information": "Aloqa ma'lumotlari",
+  "quote": "Taklif",
+  "register-online": "Onlayn ro‘yxatdan o‘tish",
+  "reject": "Rad etish",
+  "accept": "Qabul qilish",
+  "okay": "Mayli",
+  "get-started": "Boshlash",
+  "all-rights-reserved": "Barcha huquqlar himoyalangan",
 
   "nav": {
-    "about": "About",
-    "organizer": "Organizer",
-    "venue": "Venue",
-    "mission": "Mission",
-    "participants": "Participants",
-    "speakers": "Speakers",
-    "partners": "Partners",
-    "sponsors": "Sponsors",
-    "media": "Media",
-    "media-library": "Media Library",
-    "media-accreditation": "Media Accreditation"
+    "home": "Bosh sahifa",
+    "about": "Haqimizda",
+    "organizer": "Tashkilotchi",
+    "venue": "Joylashuv",
+    "mission": "Missiya",
+    "participants": "Ishtirokchilar",
+    "speakers": "Ma’ruzachilar",
+    "partners": "Hamkorlar",
+    "sponsors": "Sponsorlar",
+    "media": "OAV",
+    "media-library": "Media kutubxonasi",
+    "media-accreditation": "Media akkreditatsiyasi",
+    "for-visitors": "Mehmonlar uchun",
+    "terms-of-service": "Xizmatlar shartnomasi",
+    "privacy-policy": "Shaxsiy ma'lumotlarni siyosati"
   },
 
   "home": {
     "section-1": {
       "content": {
-        "label": "Insurance Expo",
-        "title": "Insurance Expo 2025 is your gateway to a secure future!",
-        "text": "Discover leading companies and innovative services at the international insurance exhibition. Explore the latest updates and opportunities in the insurance industry all in one place"
+        "label": "Sug‘urta Expo",
+        "title": "Insurance Expo 2025 – sizning xavfsiz kelajagingiz eshigi!",
+        "text": "Xalqaro sug‘urta ko‘rgazmasida yetakchi kompaniyalar va innovatsion xizmatlarni kashf eting. Sug‘urta sanoatidagi eng so‘nggi yangiliklar va imkoniyatlarni bir joyda o‘rganing."
       },
       "cards": [
         {
-          "title": "Expo Insurance 2025: A Space for New Opportunities",
-          "text": "Discover leading companies and innovative services at the international insurance exhibition. Explore the latest updates and opportunities in the insurance industry all in one place. Expo Insurance 2025 is your gateway to a secure future!"
+          "title": "Expo Insurance 2025: Yangi imkoniyatlar maydoni",
+          "text": "Xalqaro sug‘urta ko‘rgazmasida yetakchi kompaniyalar va innovatsion xizmatlarni kashf eting. Sug‘urta sanoatidagi eng so‘nggi yangiliklar va imkoniyatlarni bir joyda o‘rganing. Expo Insurance 2025 sizning xavfsiz kelajagingiz eshigi!"
         },
         {
-          "title": "Insurance Expo 2025: A Platform for Collaboration and Innovation",
-          "text": "Join Insurance Expo 2025 to discover groundbreaking trends and connect with top leaders from the insurance and fintech industries. Explore insurance trends, solutions, and innovations."
+          "title": "Insurance Expo 2025: Hamkorlik va innovatsiya platformasi",
+          "text": "Insurance Expo 2025 ga qo‘shiling va yangi tendensiyalarni kashf eting, sug‘urta va fintech sanoatining yetakchi rahbarlari bilan bog‘laning. Sug‘urta yechimlari va innovatsiyalarini o‘rganing."
         },
         {
-          "title": "Insurance Expo 2025: Your Gateway to a Secure Future!",
-          "text": "Insurance Expo 2025 is not just an event - it's a transformative experience that connects people, ideas, and innovations to redefine the future of the insurance industry."
+          "title": "Insurance Expo 2025: Sizning xavfsiz kelajagingiz eshigi",
+          "text": "Insurance Expo 2025 – bu faqat tadbir emas, balki odamlar, g‘oyalar va innovatsiyalarni birlashtiradigan va sug‘urta sanoatining kelajagini qayta belgilaydigan transformatsion tajriba."
         },
         {
-          "title": "Insurance Expo 2025: A Global Platform for the Insurance Industry",
-          "text": "Insurance Expo 2025 is designed to bring together banks, financial institutions, fintech companies, and industry experts to foster collaboration and exchange ideas."
+          "title": "Insurance Expo 2025: Sug‘urta sanoati uchun global platforma",
+          "text": "Insurance Expo 2025 banklar, moliya institutlari, fintech kompaniyalari va sanoat mutaxassislarini birlashtirib, hamkorlikni rivojlantirish va g‘oyalarni almashish imkonini beradi."
         }
       ]
     },
     "section-2": {
       "content": {
-        "title": "Insurance Expo 2025: Step into the Future of Insurance",
-        "label": "About the Event",
+        "title": "Insurance Expo 2025: Sug‘urtaning kelajagiga qadam",
+        "label": "Tadbir haqida",
         "texts": [
-          "Insurance Expo 2025 is the international exhibition showcasing the latest innovations and opportunities in the insurance industry. Discover leading companies and cutting-edge services, and explore secure solutions for the futureInsurance Expo 2025 is the international exhibition showcasing the latest innovations and opportunities in the insurance industry. Discover leading companies and cutting-edge services, and explore secure solutions for the future",
-          "Insurance Expo 2025 is the international exhibition showcasing the latest innovations and opportunities in the insurance industry. Discover leading companies and cutting-edge services, and explore secure solutions for the future"
+          "Insurance Expo 2025 – sug‘urta sanoatidagi eng so‘nggi innovatsiyalar va imkoniyatlarni namoyish qiluvchi xalqaro ko‘rgazma. Yetakchi kompaniyalarni va ilg‘or xizmatlarni kashf eting, kelajak uchun xavfsiz yechimlarni o‘rganing.",
+          "Insurance Expo 2025 – sug‘urta sanoatidagi eng so‘nggi innovatsiyalar va imkoniyatlarni namoyish qiluvchi xalqaro ko‘rgazma. Yetakchi kompaniyalarni va ilg‘or xizmatlarni kashf eting, kelajak uchun xavfsiz yechimlarni o‘rganing."
         ]
       },
       "cards": [
         {
           "number": "20k+",
-          "label": "Visitors"
+          "label": "Mehmonlar"
         },
         {
           "number": "200+",
-          "label": "Exibitors"
+          "label": "Ishtirokchilar"
         },
         {
-          "number": "50+ ",
-          "label": "Countries"
+          "number": "50+",
+          "label": "Mamlakatlar"
         },
         {
-          "number": "50+ ",
-          "label": "Countries"
+          "number": "50+",
+          "label": "Mamlakatlar"
         }
       ]
     },
     "section-3": {
       "content": {
-        "label": "Our mission",
-        "title": "Expo Insurance 2025: Step into the Future of Insurance",
-        "text": "Expo Insurance 2025 is the international exhibition showcasing the latest innovations and opportunities in the insurance industry. Discover leading companies and cutting-edge services, and explore secure solutions for the future"
+        "label": "Bizning missiyamiz",
+        "title": "Expo Insurance 2025: Sug‘urtaning kelajagiga qadam",
+        "text": "Expo Insurance 2025 – sug‘urta sanoatidagi eng so‘nggi innovatsiyalar va imkoniyatlarni namoyish qiluvchi xalqaro ko‘rgazma. Yetakchi kompaniyalarni va ilg‘or xizmatlarni kashf eting, kelajak uchun xavfsiz yechimlarni o‘rganing."
       },
       "cards": [
         {
-          "title": "Promoting Innovation and Implementing New Technologies",
-          "text": "Our mission is to identify the latest technologies and innovations in the insurance sector and develop new solutions based on them. "
+          "title": "Innovatsiyani targ‘ib qilish va yangi texnologiyalarni joriy etish",
+          "text": "Missiyamiz sug‘urta sohasidagi eng so‘nggi texnologiyalar va innovatsiyalarni aniqlash va ularga asoslangan yangi yechimlarni rivojlantirishdir."
         },
         {
-          "title": "Fostering Collaboration and Creating New Business Opportunities",
-          "text": "We strive to connect the leading companies and experts in the industry to foster collaboration and create new business opportunities"
+          "title": "Hamkorlikni rivojlantirish va yangi biznes imkoniyatlarini yaratish",
+          "text": "Biz yetakchi kompaniyalar va sanoat mutaxassislarini bog‘lash, hamkorlikni rivojlantirish va yangi biznes imkoniyatlarini yaratishga intilamiz."
         },
         {
-          "title": "Advancing the Industry Through Knowledge Sharing",
-          "text": "Expo Insurance 2025 enables professionals to expand their knowledge and stay updated on industry trends through seminars and discussions"
+          "title": "Bilim almashish orqali sanoatni rivojlantirish",
+          "text": "Expo Insurance 2025 professional mutaxassislar uchun seminarlarda va muhokamalarda ishtirok etish orqali bilimlarni kengaytirish va sanoat tendensiyalari bilan tanishish imkonini beradi."
         },
         {
-          "title": "Developing the Insurance Industry for a Secure Future",
-          "text": "We aim to promote innovative solutions that ensure stability and sustainability within the insurance industry, shaping a secure future through Expo Insurance 2025"
+          "title": "Sug‘urta sanoatini xavfsiz kelajak uchun rivojlantirish",
+          "text": "Biz Expo Insurance 2025 orqali innovatsion yechimlarni targ‘ib qilishni maqsad qilganmiz, bu esa sug‘urta sanoatida barqarorlik va barqaror kelajakni ta’minlaydi."
         }
       ]
     },
     "section-4": {
       "content": {
-        "title": "Uniting the Insurance Industry to Build a Secure and Sustainable Future",
-        "label": "Our mission"
+        "title": "Sug‘urta sanoatini birlashtirib, xavfsiz va barqaror kelajak qurish",
+        "label": "Bizning missiyamiz"
       }
     },
     "section-5": {
       "content": {
-        "title": "United for the Advancement of the Insurance Industry",
-        "label": "Partners & Sponsors",
-        "text": "Insurance Expo 2025 is proudly supported by leading partners and trusted sponsors. Their contributions play a vital role in showcasing the latest innovations and creating new opportunities in the insurance industry. Together, we are driving progress and success. Join us and become a part of this transformative platform!"
+        "title": "Sug‘urta sanoatini rivojlantirish uchun birlashdik",
+        "label": "Hamkorlar & Homiylar",
+        "text": "Insurance Expo 2025 yetakchi hamkorlar va ishonchli homiylar tomonidan qo‘llab-quvvatlanadi. Ularning hissasi eng so‘nggi innovatsiyalarni namoyish qilish va sug‘urta sanoatida yangi imkoniyatlar yaratishda muhim rol o‘ynaydi. Birgalikda biz taraqqiyot va muvaffaqiyatni rag‘batlantiramiz. Bizga qo‘shiling va ushbu transformatsion platformaning bir qismi bo‘ling!"
       }
     },
     "section-6": {
       "content": {
-        "title": "Discover the future of Insurance technology in one place!",
-        "label": "Contacts"
+        "title": "Sug‘urta texnologiyasining kelajagini bir joyda kashf eting!",
+        "label": "Kontaktlar"
       }
     },
     "nav": [
-      "Main page",
-      "About the Event",
-      "Our mission",
-      "Upcoming events",
-      "Partners & Sponsors",
-      "Contacts"
+      "Asosiy sahifa",
+      "Tadbir haqida",
+      "Bizning missiyamiz",
+      "Kelajak tadbirlar",
+      "Hamkorlar & Homiylar",
+      "Kontaktlar"
     ]
+  },
+
+  "mission": {
+    "title": "Expo Insurance 2025 sizni xavfsiz kelajak sari yetaklaydi!",
+    "subtitle": "2025 yilda, dunyoning sug‘urta yetakchilari Expo Insurance 2025 da to‘planadi — bu innovatsiya, hamkorlik va taraqqiyot uchun global markaz. Ushbu tadbir ekspertlar va vizionerlarni birlashtirib, ishonch va himoyaning yangi davrini shakllantiradi, sanoat bo‘ylab raqamli transformatsiya va barqaror o‘sishni rag‘batlantiradi.",
+    "texts": [
+      "Expo Insurance 2025 faqat bir tadbir emas — bu sug‘urta sanoatining kelajagini qayta belgilash uchun odamlar, g‘oyalar va innovatsiyalarni birlashtiruvchi transformatsion tajriba. Ushbu global platforma sug‘urta sektorining yetakchilarini, yangi fintech innovatorlarini va o‘rganishga intilayotgan oddiy shaxslarni bir joyga to‘playdi.",
+      "Sug‘urta sanoati tez o‘zgarishlarga duch kelmoqda, bu raqamli transformatsiya, yangi xavf-xatarlar va iste’molchi ehtiyojlarining o‘zgarishi bilan bog‘liq. Expo Insurance 2025 ushbu o‘zgarishlarga javob berish uchun yaratilgan, bilim va innovatsiyani birlashtiruvchi maydon sifatida xizmat qiladi. Bu yangi tendentsiyalarni kashf etish, innovatsion mahsulotlarni o‘rganish va sug‘urta ekotizimidagi asosiy o‘yinchilar bilan aloqalar o‘rnatish uchun ideal manzildir."
+    ],
+    "info": {
+      "title": "Ishonchli sug‘urta hamkorlari",
+      "subtitle": "Expo Insurance 2025 dunyo bo‘ylab yetakchi sug‘urta provayderlarini birlashtiradi — shaxsiy va biznes ehtiyojlar uchun yechimlar taqdim etadi.",
+      "cards": [
+        {
+          "title": "Keng auditoriya",
+          "text": "1000+ ishtirokchi: yetakchi banklar vakillari, biznes liderlari va mehmonlar — yangi aloqalar uchun mukammal muhit."
+        },
+        {
+          "title": "Qimmatli aloqalar",
+          "text": "1000+ tarmoq imkoniyatlari: biznes uchrashuvlar, hamkorliklar va bilim almashish."
+        },
+        {
+          "title": "Sanoatlararo hamkorlik",
+          "text": "10+ yo‘nalishlar: fintech, kreditlash, sug‘urta va boshqa sohalar — hamkorlik loyihalarini rivojlantirish."
+        }
+      ]
+    },
+    "team": {
+      "title": "Bizning boshqaruv jamoamiz",
+      "subtitle": "Expo Insurance 2025 da innovatsiya, o‘sish va mukammallikni rag‘batlantirayotgan yetakchilar bilan tanishing.",
+      "list": [
+        {
+          "title": "Nozima Muhammedova",
+          "text": "Raqamli direktor"
+        },
+        {
+          "title": "Nozima Muhammedova",
+          "text": "Raqamli direktor"
+        },
+        {
+          "title": "Nozima Muhammedova",
+          "text": "Raqamli direktor"
+        },
+        {
+          "title": "Nozima Muhammedova",
+          "text": "Raqamli direktor"
+        }
+      ]
+    }
+  },
+  "venue": {
+    "hero": {
+      "title": "Expo Insurance 2025 sizni xavfsiz kelajak sari yetaklaydi!",
+      "subtitle": "Xalqaro Expo Toshkent, O‘zbekiston, UzExpoCenterda bo‘lib o‘tadi. Joy zamonaviy ko‘rgazma kompleksi bo‘lib, dunyo darajasidagi imkoniyatlar bilan jihozlangan, tarmoq yaratish, innovatsiyalarni namoyish etish va biznes uchrashuvlarini o‘tkazish uchun ideal muhit taqdim etadi."
+    },
+    "texts": [
+      "Mustaqillik ko‘chasi 45, Toshkentdagi Expo Centerda innovatsiya energiyasini his eting — xalqaro ko‘rgazmalar, konferensiyalar va tarmoq tadbirlarini o‘tkazish uchun mo‘ljallangan zamonaviy va dinamik joy.",
+      "Kerak bo‘lgan hamma narsa — keng zallar va zamonaviy infratuzilmalardan tortib — Toshkent markazida mavjud."
+    ],
+    "visit": {
+      "title": "Tashrifingizni rejalashtiring",
+      "list": [
+        {
+          "title": "Ish vaqtlari",
+          "subtitle": "Tashrifingizni rejalashtiring va har bir ilhomlantiruvchi daqiyani maksimal darajada foydalaning.",
+          "bullets": ["10:00 – 18:00 (har kuni)"],
+          "text": "15–17 sentyabr 2025 kunlari bizga qo‘shiling"
+        },
+        {
+          "title": "Qanday yetib borish",
+          "subtitle": "Bu yerga yetib borish oson!",
+          "bullets": [
+            "Shaharning istalgan nuqtasidan taksi yoki ride-hailing xizmatidan foydalaning.",
+            "Metro: Expo stansiyasi (2-liniya)"
+          ],
+          "text": "Tadbir kunlarida avtoulovlar va shuttle xizmatlari ham mavjud bo‘ladi"
+        },
+        {
+          "title": "Mehmonxona",
+          "subtitle": "Yaqqol, yaqin joyda qoling",
+          "bullets": [
+            "Hilton Tashkent City – shaharning markazida qulay va zamonaviy",
+            "Hyatt Regency Tashkent – zamonaviy uslubda premium qolish"
+          ],
+          "text": "Tadbir kunlarida avtoulovlar va shuttle xizmatlari ham mavjud bo‘ladi"
+        }
+      ]
+    }
+  },
+
+  "organizer": {
+    "title": "Tashkilotchi haqida",
+    "subtitle": "Expo Bank O‘zbekistonning yetakchi moliyaviy tashkiloti Epo Bank Assotsiatsiyasi tomonidan tashkil etiladi, u bank va fintech sohasida innovatsiya, hamkorlik va o‘sishni rag‘batlantirishga bag‘ishlangan.",
+    "hero": {
+      "title": "Missiya",
+      "text": "Bizning missiyamiz banklar, moliyaviy institutlar, startaplar, o‘qituvchilar va hukumat organlarini birlashtiruvchi platforma yaratish — bilim almashish, yangi texnologiyalarni o‘rganish va moliya kelajagini shakllantirish."
+    },
+    "vision": {
+      "title": "Bizning vizyonimiz va rolimiz",
+      "subtitle": "Expo Bank strategik hamkorlar, homiylar va davlat tashkilotlari yordami bilan amalga oshiriladi. Birgalikda, Expo Insurance 2025 sug‘urta va moliya sanoatini O‘zbekistonda va undan tashqarida rivojlantiruvchi haqiqiy ta’sirli va transformatsion tadbirga aylanadi.",
+      "list": [
+        {
+          "title": "O‘zbekistondagi eng yirik",
+          "text": "Mamlakatning eng nufuzli xalqaro ko‘rgazmasini tashkil etadi — bank, sug‘urta va fintech sohalariga bag‘ishlangan. Expo Insurance 2025 katta miqyosdagi sanoat hamkorligi uchun yangi standart belgilaydi, yetakchi tashkilotlar, innovatsion startaplar va siyosatchilarni birlashtirib taraqqiyot va moliyaviy inklyuzivlikni rivojlantiradi."
+        },
+        {
+          "title": "Global aloqalar",
+          "text": "Dunyo bo‘ylab sanoat liderlarini mintaqaviy innovatorlar va investorlar bilan bog‘laydi. Expo O‘zbekistonning o‘sib borayotgan moliya sektorini global bozor bilan bog‘lovchi ko‘prik vazifasini bajaradi, transchegaraviy hamkorlik, bilim almashish va barqaror investitsiya imkoniyatlarini rag‘batlantiradi."
+        },
+        {
+          "title": "Ta’lim va yoshlar",
+          "text": "Kelajak avlodni bilim va imkoniyatlar orqali qo‘llab-quvvatlash. Tadbir moliyaviy savodxonlik, professional rivojlanish dasturlari va talabalar, yosh mutaxassislar hamda tadbirkorlarni moliya va sug‘urta sohasida muvaffaqiyatli kariyera qurishga ilhomlantiruvchi ta’limiy sessiyalarni ta’kidlaydi."
+        }
+      ]
+    },
+    "partners": {
+      "title": "Hamkorlar va Homiylar",
+      "subtitle": "Expo Bank strategik hamkorlar, homiylar va davlat tashkilotlari yordami bilan amalga oshiriladi. Birgalikda, ta’sirli va muvaffaqiyatli tadbirni ta’minlaymiz."
+    }
+  },
+  "participants": {
+    "title": "Ishonchli sug‘urta provayderlarimiz bilan tanishing",
+    "subtitle": "Expo Insurance 2025 dunyo bo‘ylab yetakchi sug‘urta provayderlarini namoyish etishdan faxrlanadi. Shaxsiy va biznes ehtiyojlaringizga mos innovatsion yechimlarni kashf eting.",
+    "list": [
+      {
+        "name": "Kapital sug’urta",
+        "exp": "20",
+        "networks": "200",
+        "service": "Hayot sug‘urtasi"
+      },
+      {
+        "name": "Kapital sug’urta",
+        "exp": "20",
+        "networks": "200",
+        "service": "Hayot sug‘urtasi"
+      },
+      {
+        "name": "Kapital sug’urta",
+        "exp": "20",
+        "networks": "200",
+        "service": "Hayot sug‘urtasi"
+      },
+      {
+        "name": "Kapital sug’urta",
+        "exp": "20",
+        "networks": "200",
+        "service": "Hayot sug‘urtasi"
+      },
+      {
+        "name": "Kapital sug’urta",
+        "exp": "20",
+        "networks": "200",
+        "service": "Hayot sug‘urtasi"
+      },
+      {
+        "name": "Kapital sug’urta",
+        "exp": "20",
+        "networks": "200",
+        "service": "Hayot sug‘urtasi"
+      }
+    ]
+  },
+  "participant": {
+    "info": {
+      "services": "Ko‘rgazmada taqdim etilgan xizmatlar"
+    }
+  },
+  "speakers": {
+    "title": "Biz sanoatning yetakchi ekspertlaridan ilhom olamiz",
+    "subtitle": "Expo Insurance ishtirokchilarini birlashtiradi"
+  },
+
+  "partners": {
+    "title": "Bozor yetakchilari tanlagan — 100 dan ortiq hamkorlar",
+    "subtitle": "Insurance Expo — hamkorlik imkoniyatlarga aylanishadigan maydon."
+  },
+  "form-section": {
+    "text": "Chiptangizni bir necha daqiqada oling. Formani to‘ldiring va Expo’dagi joyingizni ta’minlang."
+  },
+  "form": {
+    "organization": {
+      "placeholder": "Tashkilotingiz nomi",
+      "label": "Tashkilot"
+    },
+    "full-name": {
+      "placeholder": "Ismingizni kiriting",
+      "label": "To‘liq ism"
+    },
+    "mobile-phone": {
+      "placeholder": "Raqamingizni kiriting",
+      "label": "Mobil telefon"
+    },
+    "send-request": "So‘rovni yuborish",
+    "approval": "Ro‘yxatdan o‘tganingiz bilan siz quyidagilarni o‘qib, rozilik bildirasiz",
+    "policy": "Maxfiylik siyosati"
+  },
+  "detailed-hero": {
+    "focus-label": "Ko‘rgazmaning e’tibori / Asosiy jihatlar"
+  },
+  "sponsors": {
+    "title": "Butun mamlakat bo‘ylab 100 dan ortiq ishonchli hamkorlar",
+    "subtitle": "Expo Insurance 2025da biz sug‘urta sohasini rivojlantirish vizyonini baham ko‘radigan sanoat yetakchilari va innovatorlar bilan hamkorlik qilishdan faxrlanamiz."
+  },
+
+  "media": {
+    "title": "Rasmiy yangiliklar va ilhom manbalari",
+    "subtitle": "Expo Insurance tadbiridan rasmiy fotosuratlar va videolar"
+  },
+  "media-accreditation": {
+    "title": "OAV akkreditatsiyasi",
+    "texts": [
+      {
+        "title": "Hurmatli OAV vakillari,",
+        "text": "O‘zbekiston Respublikasi qonunchilik talablariga muvofiq, vaqtincha xorijiy muxbirlarning akkreditatsiya qarori ikki haftagacha davom etishi mumkin."
+      },
+      {
+        "title": "Barcha OAV vakillari O‘zbekiston Respublikasi Tashqi ishlar vazirligi tomonidan akkreditatsiya qarori bilan xabardor qilinadi.",
+        "text": "O‘zbekiston Respublikasida akkreditatsiya qilinmagan OAV vakillari Tashqi ishlar vazirligi tomonidan akkreditatsiyadan o‘tishi shart."
+      }
+    ],
+    "available": "Xorijiy mamlakat vakillari uchun O‘zbekistonda akkreditatsiya tartibi bu yerda mavjud:",
+    "contacts": "OAV bo‘limi kontaktlari:"
+  },
+  "for-visitors": {
+    "title": "Yangi imkoniyatlar va tanishuvlarni kashf eting",
+    "subtitle": "Amaliy case’lar, ekspert sessiyalari va haqiqiy muvaffaqiyat hikoyalari",
+    "hero-items": [
+      {
+        "label": "Talabalar uchun",
+        "text": "Karyera yo‘llari, amaliyotlar va bank & fintech kelajagini o‘rganing."
+      },
+      {
+        "label": "Ota-onalar uchun",
+        "text": "Moliyaviy savodxonlik, ta’lim imkoniyatlari va xavfsiz investitsiyalar haqida bilib oling."
+      },
+      {
+        "label": "O‘qituvchilar uchun",
+        "text": "Sanoat yetakchilari bilan bog‘laning va yangi bilimlarni sinflarga olib keling."
+      }
+    ],
+    "visit": {
+      "title": "Tashrifni rejalashtiring",
+      "items": [
+        {
+          "label": "Ish vaqti:",
+          "items": ["10:00 – 18:00 (15–17 sentyabr, 2025)"]
+        },
+        {
+          "label": "Qanday yetib borish:",
+          "items": [
+            "Metro: Expo stantsiyasi (2-chi liniya)",
+            "Shahar bo‘ylab taksi va ride-hailing xizmatlari mavjud"
+          ]
+        },
+        {
+          "label": "Mehmonxona takliflari:",
+          "items": [
+            "Hilton Tashkent City",
+            "Hyatt Regency Tashkent",
+            "Expo markaziga yaqin mahalliy boutique mehmonxonalar"
+          ]
+        }
+      ]
+    },
+    "leaders": {
+      "title": "Liderlar innovatsiya va sug‘urta kelajagi bilan uchrashadigan joy",
+      "text": "Expo Insurance 2025 vizionerlar, innovatorlar va qaror qabul qiluvchilarni birlashtiradi. Innovatsion yechimlar, raqamli transformatsiya va global hamkorlikni o‘rganing, ishonch va himoya qanday rivojlanishini qayta belgilash.",
+      "cards": [
+        {
+          "labels": ["Innovatsiya", "Texnologiya"],
+          "title": "Aqlli yechimlar orqali kelajakni shakllantirish",
+          "text": "Sun’iy intellekt, ma’lumotlar va raqamli ekotizimlar sug‘urta sohasini qanday o‘zgartirayotganini kashf eting — avtomatlashtirishdan tortib mijozlarga moslashtirilgan xizmatgacha."
+        },
+        {
+          "labels": ["Innovatsiya", "Texnologiya"],
+          "title": "Aqlli yechimlar orqali kelajakni shakllantirish",
+          "text": "Sun’iy intellekt, ma’lumotlar va raqamli ekotizimlar sug‘urta sohasini qanday o‘zgartirayotganini kashf eting — avtomatlashtirishdan tortib mijozlarga moslashtirilgan xizmatgacha."
+        },
+        {
+          "labels": ["Innovatsiya", "Texnologiya"],
+          "title": "Aqlli yechimlar orqali kelajakni shakllantirish",
+          "text": "Sun’iy intellekt, ma’lumotlar va raqamli ekotizimlar sug‘urta sohasini qanday o‘zgartirayotganini kashf eting — avtomatlashtirishdan tortib mijozlarga moslashtirilgan xizmatgacha."
+        }
+      ]
+    }
+  },
+  "faq": {
+    "title": "FAQ (Tashrifchilar uchun)",
+    "items": [
+      {
+        "question": "Onlayn ro‘yxatdan o‘tishim kerakmi?",
+        "answer": "Ha, barcha tashrifchilar Expo’ga tashrifdan oldin onlayn ro‘yxatdan o‘tishlari shart."
+      },
+      {
+        "question": "Talabalar uchun kirish bepulmi?",
+        "answer": "Ha, talabalar ro‘yxatdan o‘tishda haqiqiy student guvohnomasini taqdim etib bepul kirishlari mumkin."
+      },
+      {
+        "question": "Yopishtirishni qaerdan olaman?",
+        "answer": "Tasdiqlash elektron pochtangiz yoki QR kodni ko‘rsatgan holda, kelganingizda ro‘yxatdan o‘tish stolidan yopishtirishni olishingiz mumkin."
+      },
+      {
+        "question": "Oilalar birgalikda tashrif buyurishi mumkinmi?",
+        "answer": "Ha, oilalar xush kelibsiz. Har bir a’zo individual ro‘yxatdan o‘tishi kerak."
+      },
+      {
+        "question": "Ko‘rgazma ish vaqti qanday?",
+        "answer": "Ko‘rgazma tadbir kunlarida har kuni soat 10:00 dan 18:00 gacha ochiq."
+      },
+      {
+        "question": "Venue’da avtoulov to‘xtash joyi bormi?",
+        "answer": "Ha, ro‘yxatdan o‘tgan tashrifchilar uchun bepul to‘xtash joyi mavjud, birinchi kelganlarga birinchi xizmat ko‘rsatiladi."
+      },
+      {
+        "question": "Tarjima xizmatlari bo‘ladimi?",
+        "answer": "Ha, asosiy sessiyalar uchun ingliz, rus va o‘zbek tillarida sinxron tarjima ta’minlanadi."
+      },
+      {
+        "question": "Faqat sessiyalarga tashrif buyurish mumkinmi?",
+        "answer": "Ha, faqat sessiya chiptalari mavjud, ammo ro‘yxatdan o‘tish hali ham talab qilinadi."
+      }
+    ]
+  },
+  "error": {
+    "number": "404",
+    "title": "Sahifa topilmadi",
+    "subtitle": "Kechirasiz, qidirayotgan sahifangiz mavjud emas yoki ko‘chirilgan, iltimos, Bosh sahifaga qayting",
+    "back": "Bosh sahifaga qaytish"
+  },
+
+  "cookie": {
+    "title": "Cookie bo‘yicha maslahatlar",
+    "text": "Cookie fayllari — siz veb-saytga tashrif buyurganingizda qurilmangizda saqlanadigan kichik matnli fayllardir. Ular foydalanuvchi tajribasini yaxshilash, afzalliklaringizni eslab qolish, funksiyalarni yoqish va veb-saytning ishlashini tahlil qilish uchun keng qo‘llaniladi."
+  },
+  "terms-of-service": {
+    "title": "Foydalanish shartlari",
+    "subtitle": "Bank Expo veb-saytiga xush kelibsiz! Ushbu saytga kirish yoki undan foydalanish orqali siz quyidagi shartlar va qoidalarga rioya qilishga rozi bo‘lasiz. Agar siz ushbu shartlarga rozi bo‘lmasangiz, saytimizdan foydalanishdan tiyiling.",
+    "content": [
+      {
+        "title": "Veb-saytdan foydalanish",
+        "subtitle": "Sug‘urta Expo ko‘rgazmasi — O‘zbekiston va dunyoning moliya institutlarini birlashtirgan nufuzli xalqaro tadbir. Hamkorlik, innovatsiya va o‘sish uchun dinamik platforma sifatida ko‘rgazma bank va moliyaviy xizmatlar kelajagiga yo‘l ochadi.",
+        "texts": [
+          "Ushbu veb-saytdan foydalanish uchun siz kamida [Yoshni kiriting, masalan, 18 yosh] bo‘lishingiz kerak.",
+          "Siz veb-saytdan faqat qonuniy maqsadlarda va boshqa shaxslarning huquqlarini cheklamasdan yoki ularning saytni ishlatishini to‘sib qo‘ymaydigan tarzda foydalanishga rozi bo‘lasiz.",
+          "Ruxsatsiz foydalanish da’vo yoki jinoyat holatiga olib kelishi mumkin."
+        ]
+      },
+      {
+        "title": "Intellektual mulk huquqlari",
+        "subtitle": null,
+        "texts": [
+          "Ushbu saytning barcha tarkibi, jumladan matn, rasmlar, logotiplar va kod Bank Expoga tegishli yoki litsenziyalangan.",
+          "Saytdagi har qanday tarkibni bizning yozma ruxsatimizsiz nusxalash, tarqatish yoki boshqa yo‘l bilan ekspluatatsiya qilish mumkin emas."
+        ]
+      },
+      {
+        "title": "Foydalanuvchi hisob qaydnomasi",
+        "subtitle": null,
+        "texts": [
+          "Agar siz saytimizda hisob yaratgan bo‘lsangiz, hisob ma’lumotlaringizni maxfiy saqlash mas’uliyati sizga yuklanadi.",
+          "Har qanday ruxsatsiz foydalanish holatida darhol bizni xabardor qilishga rozisiz.",
+          "Ushbu shartlarni buzgan hisoblarni tugatish huquqini saqlab qolamiz."
+        ]
+      }
+    ]
+  },
+
+  "privacy-policy": {
+    "title": "Maxfiylik siyosati",
+    "subtitle": "Bank Expo veb-saytiga xush kelibsiz! Ushbu saytga kirish yoki undan foydalanish orqali siz quyidagi shartlar va qoidalarga rioya qilishga rozi bo‘lasiz. Agar siz ushbu shartlarga rozi bo‘lmasangiz, saytimizdan foydalanishdan tiyiling.",
+    "content": [
+      {
+        "title": "Veb-saytdan foydalanish",
+        "subtitle": "Sug‘urta Expo ko‘rgazmasi — O‘zbekiston va dunyo bank institutlarini birlashtirgan nufuzli xalqaro tadbir. Hamkorlik, innovatsiya va o‘sish uchun dinamik platforma sifatida ko‘rgazma bank va moliyaviy xizmatlar kelajagiga yo‘l ochadi.",
+        "texts": [
+          "Ushbu veb-saytdan foydalanish uchun siz kamida [Yoshni kiriting, masalan, 18 yosh] bo‘lishingiz kerak.",
+          "Siz veb-saytdan faqat qonuniy maqsadlarda va boshqa shaxslarning huquqlarini cheklamasdan yoki ularning saytni ishlatishini to‘sib qo‘ymaydigan tarzda foydalanishga rozi bo‘lasiz.",
+          "Ruxsatsiz foydalanish da’vo yoki jinoyat holatiga olib kelishi mumkin."
+        ]
+      },
+      {
+        "title": "Intellektual mulk huquqlari",
+        "subtitle": null,
+        "texts": [
+          "Ushbu saytning barcha tarkibi, jumladan matn, rasmlar, logotiplar va kod Bank Expoga tegishli yoki litsenziyalangan.",
+          "Saytdagi har qanday tarkibni bizning yozma ruxsatimizsiz nusxalash, tarqatish yoki boshqa yo‘l bilan ekspluatatsiya qilish mumkin emas."
+        ]
+      },
+      {
+        "title": "Foydalanuvchi hisob qaydnomasi",
+        "subtitle": null,
+        "texts": [
+          "Agar siz saytimizda hisob yaratgan bo‘lsangiz, hisob ma’lumotlaringizni maxfiy saqlash mas’uliyati sizga yuklanadi.",
+          "Har qanday ruxsatsiz foydalanish holatida darhol bizni xabardor qilishga rozisiz.",
+          "Ushbu shartlarni buzgan hisoblarni tugatish huquqini saqlab qolamiz."
+        ]
+      }
+    ]
+  },
+  "form-modal": {
+    "title": "Biz bilan bog‘laning",
+    "subtitle": "Sohadagi yetakchi banklar va moliya institutlarini kashf qiling. Ularning logotiplari innovatsiya va mukammallikni namoyish etadi"
+  },
+  "success-modal": {
+    "title": "Sizning arizangiz muvaffaqiyatli yuborildi!",
+    "subtitle": "Bizning administrator 24 soat ichida siz bilan bog‘lanadi. Qiziqishingiz va arizangizni yuborganingiz uchun rahmat!"
+  },
+
+  "footer": {
+    "title": "Bank texnologiyasining kelajakini bir joyda kashf qiling!"
   }
 }

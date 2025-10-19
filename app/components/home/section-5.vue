@@ -53,6 +53,7 @@ const banks = [
   @media only screen and (max-width: $bp-lg) {
     grid-template-columns: 1fr;
     align-self: flex-start;
+    grid-auto-rows: max-content;
   }
   &__item {
     @include flex-center;

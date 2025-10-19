@@ -44,6 +44,12 @@ const breadcrumbs = computed(() => [
     label: 'speaker name'
   }
 ]);
+
+useGSAPAnimate({
+  selector: '.hero>*',
+  base: { x: -35 },
+  mode: 'group'
+});
 </script>
 
 <style lang="scss" scoped></style>

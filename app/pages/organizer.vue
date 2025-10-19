@@ -40,6 +40,16 @@
 <script setup>
 const { t } = useI18n();
 
+useGSAPAnimate({
+  selector: '.hero__container',
+  base: { scale: 0.95 },
+  initialDelay: 0.2
+});
+useGSAPAnimate({
+  selector: '.vision__item',
+  base: { y: 30 }
+});
+
 const breadcrumbs = computed(() => [
   {
     to: '/',

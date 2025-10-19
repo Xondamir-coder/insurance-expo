@@ -2,19 +2,17 @@
   <Transition name="slide">
     <div v-if="isActive" class="cookie">
       <div class="cookie__content">
-        <h2 class="title-charcoal-gray-32">Cookies advice</h2>
+        <h2 class="title-charcoal-gray-32">{{ $t('cookie.title') }}</h2>
         <p>
-          Cookies are small text files stored on your device when you visit a website. They are
-          widely used to enhance user experience by remembering your preferences, enabling
-          functionalities, and providing insights into website performance.
+          {{ $t('cookie.text') }}
         </p>
       </div>
       <div class="cookie__buttons">
         <button class="cookie__button cookie__button--reject" @click="acceptCookie('reject')">
-          Reject
+          {{ $t('reject') }}
         </button>
         <button class="cookie__button cookie__button--accept" @click="acceptCookie('accept')">
-          Accept
+          {{ $t('accept') }}
         </button>
       </div>
     </div>

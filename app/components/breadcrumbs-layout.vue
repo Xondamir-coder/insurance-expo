@@ -23,6 +23,7 @@ defineProps({
   gap: max(4.5rem, 20px);
   padding-inline: $inline-spacing;
   overflow: hidden;
+  opacity: 0;
   &__content {
     display: flex;
     flex-direction: column;

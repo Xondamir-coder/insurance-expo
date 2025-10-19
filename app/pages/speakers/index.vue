@@ -5,8 +5,8 @@
       :subtitle="$t('speakers.subtitle')"
       class="speakers__header"
     />
-    <ClientOnly>
-      <div class="carousel">
+    <div class="carousel">
+      <ClientOnly>
         <swiper-container
           class="carousel__slider"
           grab-cursor="true"
@@ -51,8 +51,8 @@
             </NuxtLink>
           </swiper-slide>
         </swiper-container>
-      </div>
-    </ClientOnly>
+      </ClientOnly>
+    </div>
   </BreadcrumbsLayout>
 </template>
 
@@ -136,6 +136,12 @@ const breadcrumbs = computed(() => [
     label: t('nav.speakers')
   }
 ]);
+
+useGSAPAnimate({
+  selector: '.carousel',
+  base: { y: -20 },
+  initialDelay: 0.1
+});
 </script>
 
 <style lang="scss" scoped>

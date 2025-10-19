@@ -70,6 +70,7 @@ import IconsTrain from '~/components/icons/train.vue';
 import IconsPin from '~/components/icons/pin.vue';
 
 const { t, tm } = useI18n();
+const { $gsap } = useNuxtApp();
 
 const bulletIcons = [[IconsCalendar], [IconsTaxi, IconsTrain], [IconsPin, IconsPin]];
 
@@ -92,6 +93,43 @@ const breadcrumbs = computed(() => [
     label: t('nav.venue')
   }
 ]);
+
+useGSAPAnimate({
+  selector: '.hero__image',
+  base: { scale: 0.95 }
+});
+useGSAPAnimate({
+  selector: '.texts>*',
+  base: { x: -25 },
+  initialDelay: 0.2
+});
+useGSAPAnimate({
+  selector: '.visit__map',
+  base: { scale: 0.95 }
+});
+
+onMounted(() => {
+  initAnimations(
+    () => {
+      $gsap.from('.visit__item', {
+        x: 25,
+        y: 25,
+        ...defaultAnimProps,
+        ...getDefaultScrollTrigger('.visit__item')
+      });
+    },
+    () => {
+      $gsap.utils.toArray('.visit__item').forEach(item => {
+        $gsap.from(item, {
+          x: 25,
+          y: 25,
+          ...defaultAnimProps,
+          ...getDefaultScrollTrigger(item)
+        });
+      });
+    }
+  );
+});
 </script>
 
 <style lang="scss" scoped>
@@ -109,6 +147,7 @@ const breadcrumbs = computed(() => [
       aspect-ratio: 328/280;
     }
     &-container {
+      z-index: 2;
       display: flex;
       flex-direction: column;
       gap: 4px;
@@ -227,6 +266,7 @@ const breadcrumbs = computed(() => [
   display: flex;
   justify-content: center;
   @media screen and (max-width: $bp-md) {
+    aspect-ratio: initial;
     flex-direction: column;
     justify-content: stretch;
     gap: 20px;

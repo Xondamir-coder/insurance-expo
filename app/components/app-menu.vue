@@ -7,6 +7,7 @@
           :key="link.to"
           :to="$localePath(link.to)"
           class="nav__link"
+          @click="showMenu = false"
         >
           {{ link.label }}
         </NuxtLink>

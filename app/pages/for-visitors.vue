@@ -68,10 +68,89 @@ import IconsPin from '~/components/icons/pin.vue';
 import IconsTime from '~/components/icons/time.vue';
 import IconsTaxi from '~/components/icons/taxi.vue';
 import IconsTrain from '~/components/icons/train.vue';
-// import gsap from 'gsap';
 
 const { t, tm } = useI18n();
-// const { $gsap } = useNuxtApp();
+const { $gsap } = useNuxtApp();
+
+useGSAPAnimate({
+  selector: '.hero__image',
+  base: { scale: 0.95 }
+});
+useGSAPAnimate({
+  selector: '.hero__item',
+  mode: 'group',
+  base: { y: 30, stagger: 0.2 }
+});
+useGSAPAnimate({
+  selector: '.visit__card',
+  base: { x: -20, stagger: 0.2 }
+});
+useGSAPAnimate({
+  selector: '.visit__banner',
+  base: { filter: 'blur(5px)', scale: 1.05 }
+});
+
+onMounted(() => {
+  const tl = $gsap.timeline({
+    scrollTrigger: {
+      trigger: '.leaders',
+      pin: true,
+      scrub: 1,
+      start: 'center center+=80',
+      end: '+=100%',
+      pinSpacing: true
+    }
+  });
+
+  const cards = $gsap.utils.toArray('.leaders__card');
+  const numbers = $gsap.utils.toArray('.leaders__number');
+
+  // Loop through both arrays in parallel
+  cards.forEach((card, i) => {
+    const number = numbers[i];
+
+    tl.to(
+      card,
+      {
+        rotate: i === 2 ? 0 : i % 2 === 0 ? -15 : 15,
+        opacity: 1,
+        scale: i === cards.length - 1 ? 1 : undefined,
+        duration: 0.5
+      },
+      `pair${i}`
+    ); // label keeps them grouped
+
+    tl.to(
+      number,
+      {
+        background: '#008b5f',
+        color: '#fff',
+        duration: 0.3
+      },
+      `pair${i}`
+    ); // same label = same moment
+  });
+
+  // Enter animation
+  $gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: '.leaders',
+        start: 'top 90%'
+      },
+      defaults: {
+        opacity: 0
+      }
+    })
+    .from('.leaders__left-content>*', {
+      x: -50,
+      stagger: 0.15
+    })
+    .from('.leaders__numbers>*', {
+      y: 10,
+      stagger: 0.15
+    });
+});
 
 const icons = [[IconsTime], [IconsTaxi, IconsTrain], [IconsPin, IconsPin, IconsPin]];
 const images = ['leaders-1.jpg', 'leaders-2.jpg', 'leaders-3.jpg'];
@@ -108,26 +187,56 @@ const breadcrumbs = computed(() => [
   color: #323b49;
   display: grid;
   grid-template-columns: 1fr 1.13fr;
-  gap: 6.7rem;
+  gap: max(23.5rem, 84px);
+  @media screen and (max-width: $bp-md) {
+    grid-template-columns: 1fr;
+  }
   &__right {
     position: relative;
     display: grid;
+    padding-right: 17.6rem;
+    @media screen and (max-width: $bp-md) {
+      padding-inline: 20%;
+    }
+    @media screen and (max-width: $bp-sm) {
+      padding-inline: 40px;
+    }
     & > * {
       grid-area: 1/1/2/2;
+      opacity: 0;
+      &:first-child {
+        place-self: flex-start;
+        max-width: 87.6%;
+        transform-origin: bottom left;
+        transform: translate(10%, -10%) rotate(-30deg);
+        @media screen and (max-width: $bp-md) {
+          max-width: 80%;
+          transform: translate(10%, 0%) rotate(-30deg);
+        }
+      }
+      &:nth-child(2) {
+        place-self: flex-end;
+        max-width: 78.3%;
+        transform: translate(5%, -15%) rotate(30deg);
+        transform-origin: bottom right;
+        @media screen and (max-width: $bp-md) {
+          max-width: 70%;
+          transform: translate(-10%, -5%) rotate(30deg);
+        }
+      }
+      &:last-child {
+        place-self: center;
+        transform: scale(0.85) rotate(5deg);
+      }
     }
   }
   &__card {
-    width: 65.2%;
     background-color: #f3f4f5;
     padding: max(0.8rem, 4px);
     border-radius: max(2.2rem, 8px);
     display: flex;
     flex-direction: column;
     gap: max(1rem, 4px);
-    opacity: 0;
-    &:first-child {
-      opacity: 1;
-    }
     &-content {
       display: flex;
       flex-direction: column;
@@ -162,10 +271,6 @@ const breadcrumbs = computed(() => [
     padding-block: 4.5px;
     font-size: max(2rem, 16px);
     font-weight: 500;
-    &:first-child {
-      background-color: $clr-dark-teal;
-      color: #fff;
-    }
   }
   &__numbers {
     display: grid;
@@ -288,6 +393,7 @@ const breadcrumbs = computed(() => [
     display: grid;
     gap: max(2.4rem, 12px);
     grid-template-columns: repeat(auto-fit, minmax(54.7rem, 1fr));
+    z-index: 2;
     @media screen and (min-width: $bp-md) {
       margin-inline: 3.2rem;
       grid-row: 2 / 4;

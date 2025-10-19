@@ -71,6 +71,18 @@ const breadcrumbs = computed(() => [
     label: t('nav.sponsors')
   }
 ]);
+
+useGSAPAnimate({
+  selector: '.sponsors__item',
+  base: {
+    scale: 0.85,
+    stagger: {
+      each: 0.02,
+      from: 'random'
+    }
+  },
+  mode: 'group'
+});
 </script>
 
 <style lang="scss" scoped>

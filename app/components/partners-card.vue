@@ -34,6 +34,10 @@ defineProps({
   gap: max(2rem, 16px);
   overflow: hidden;
   background-color: #fff;
+  transition: all 0.4s;
+  &:hover {
+    background-color: #e9eaec;
+  }
   &__content {
     display: flex;
     flex-direction: column;
@@ -50,6 +54,9 @@ defineProps({
     top: -1px;
     left: 50%;
     translate: -50% 0;
+    @media screen and (max-width: $bp-sm) {
+      display: none;
+    }
   }
   &__logo {
     width: 86%;

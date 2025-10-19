@@ -71,7 +71,9 @@
           </div>
         </Transition>
       </div>
-      <button class="btn-green header__button">{{ $t('contact-us') }}</button>
+      <button class="btn-green header__button" @click="showFormModal = true">
+        {{ $t('contact-us') }}
+      </button>
     </div>
   </header>
 </template>
@@ -81,6 +83,7 @@ import IconsRus from '~/components/icons/rus.vue';
 import IconsUzb from '~/components/icons/uzb.vue';
 import IconsUsa from '~/components/icons/usa.vue';
 
+const showFormModal = useState('showFormModal');
 const { locales, setLocale, t } = useI18n();
 const { aboutLinks, mediaLinks } = useLinks();
 
@@ -152,49 +155,25 @@ onMounted(() => {
     }
   });
 });
+
+useGSAPAnimate({
+  selector: '.header__left',
+  base: { x: -20 }
+});
+useGSAPAnimate({
+  selector: '.header__right>*',
+  base: { y: 5 },
+  staggerStep: 0.2,
+  initialDelay: 0.8
+});
+useGSAPAnimate({
+  selector: '.header__nav-item',
+  base: { y: 5 },
+  staggerStep: 0.1
+});
 </script>
 
 <style lang="scss" scoped>
-@keyframes slide-from-top {
-  from {
-    transform: translateY(-5px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes slide-from-bottom {
-  from {
-    transform: translateY(5px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes slide-from-left {
-  from {
-    transform: translateX(-20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes slide-from-right {
-  from {
-    transform: translateX(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
 .header {
   padding-block: max(16px, 2rem);
   display: flex;
@@ -308,15 +287,7 @@ onMounted(() => {
     display: flex;
     gap: max(10px, 2rem);
     & > * {
-      animation: 0.5s 0.3s backwards;
-      &:first-child {
-        animation-name: slide-from-left;
-      }
-      &:last-child {
-        animation-name: slide-from-right;
-      }
       @media only screen and (max-width: 1260px) {
-        animation-delay: 0s;
         height: auto;
       }
     }
@@ -352,21 +323,7 @@ onMounted(() => {
       color: $clr-charcoal-gray;
       font-weight: 500;
       font-size: max(14px, 1.7rem);
-      transition: color 0.3s, background-color 0.3s;
-      animation-duration: 0.5s;
-      animation-fill-mode: backwards;
       display: flex;
-
-      @for $i from 1 through 10 {
-        &:nth-child(#{$i}) {
-          @if ($i % 2 == 0) {
-            animation-name: slide-from-top;
-          } @else {
-            animation-name: slide-from-bottom;
-          }
-          animation-delay: $i * 0.1s;
-        }
-      }
     }
     &-container {
       position: relative;
@@ -416,15 +373,9 @@ onMounted(() => {
     display: flex;
     align-items: center;
     gap: max(10px, 3.2rem);
-    @media only screen and (max-width: 1260px) {
-      animation: slide-from-left 0.5s;
-    }
   }
   &__logo {
     width: max(110px, 12.8rem);
-    @media only screen and (max-width: 1260px) {
-      animation: none;
-    }
   }
 }
 .slide-enter-active,

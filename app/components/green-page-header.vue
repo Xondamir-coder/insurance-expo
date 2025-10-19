@@ -1,5 +1,5 @@
 <template>
-  <div class="green-page-header">
+  <div ref="headerRef" class="green-page-header">
     <h1 class="green-page-header__title">{{ title }}</h1>
     <p class="green-page-header__subtitle">{{ subtitle }}</p>
   </div>
@@ -15,6 +15,19 @@ defineProps({
     required: true,
     type: String
   }
+});
+
+const { $gsap } = useNuxtApp();
+const headerRef = ref();
+const showPreloader = useState('showPreloader');
+
+onMounted(() => {
+  $gsap.from(headerRef.value?.children, {
+    y: 25,
+    stagger: 0.1,
+    delay: showPreloader.value ? 3.25 : 0,
+    ...defaultAnimProps
+  });
 });
 </script>
 

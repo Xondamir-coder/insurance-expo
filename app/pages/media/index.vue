@@ -1,36 +1,34 @@
 <template>
   <BreadcrumbsLayout :breadcrumbs>
     <GreenPageHeader :title="$t('media.title')" :subtitle="$t('media.subtitle')" />
-    <section class="list">
-      <NuxtLink
-        v-for="(item, index) in data"
-        :key="index"
-        :to="$localePath(`/media/${index}`)"
-        class="list__item"
-      >
-        <div class="list__item-left">
-          <MyPicture
-            v-for="image in item.images"
-            :key="image"
-            :src="image"
-            alt="media banner"
-            class="list__item-image"
-          />
-        </div>
-        <div class="list__item-content">
-          <div class="list__item-content-top">
-            <p class="text-medium">{{ item.date }}</p>
-            <h2 class="list__item-title">{{ item.title }}</h2>
+    <ul class="list">
+      <li v-for="(item, index) in data" :key="index">
+        <NuxtLink :to="$localePath(`/media/${index}`)" class="list__item">
+          <div class="list__item-left">
+            <MyPicture
+              v-for="image in item.images"
+              :key="image"
+              :src="image"
+              alt="media banner"
+              class="list__item-image"
+            />
           </div>
-          <p class="text-medium">{{ item.text }}</p>
-        </div>
-      </NuxtLink>
-    </section>
+          <div class="list__item-content">
+            <div class="list__item-content-top">
+              <p class="text-medium">{{ item.date }}</p>
+              <h2 class="list__item-title">{{ item.title }}</h2>
+            </div>
+            <p class="text-medium">{{ item.text }}</p>
+          </div>
+        </NuxtLink>
+      </li>
+    </ul>
   </BreadcrumbsLayout>
 </template>
 
 <script setup>
 const { t } = useI18n();
+const { $gsap } = useNuxtApp();
 
 const data = [
   {
@@ -68,36 +66,60 @@ const breadcrumbs = computed(() => [
     label: t('nav.media-library')
   }
 ]);
+
+useGSAPAnimate({
+  selector: '.list li',
+  custom: ({ el, i }) => {
+    $gsap.from(el, {
+      x: i % 2 === 0 ? 50 : -50,
+      ...defaultAnimProps,
+      ...getDefaultScrollTrigger(el)
+    });
+  }
+});
 </script>
 
 <style lang="scss" scoped>
 .list {
   display: flex;
   flex-direction: column;
+  li {
+    display: flex;
+    &:first-child > * {
+      padding-top: 0;
+    }
+    &:last-child > * {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  }
   &__item {
-    color: #687588;
     padding-block: max(3.2rem, 20px);
-    border-block: 1px solid #e9eaec;
+    color: #687588;
     display: grid;
     gap: max(3.3rem, 16px);
+    transition: all 0.5s;
+    border-bottom: 1px solid #e9eaec;
+    &:hover {
+      background-color: #e9eaec;
+      .list__item-image > * {
+        transform: scale(1.2);
+      }
+    }
     @media screen and (min-width: $bp-md) {
       align-items: flex-start;
       grid-template-columns: 1fr 1.42fr;
     }
-    &:first-child {
-      padding-top: 0;
-      border-top: none;
-    }
-    &:last-child {
-      padding-bottom: 0;
-      border-bottom: none;
-    }
+
     &-left {
       position: relative;
       padding-bottom: max(6rem, 10px);
     }
     &-image {
       border-radius: max(1.2rem, 6px);
+      & > * {
+        transition: all 0.7s;
+      }
       &:first-child {
         max-width: 79.224%;
         @media screen and (max-width: $bp-sm) {

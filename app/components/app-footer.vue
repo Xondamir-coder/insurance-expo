@@ -3,9 +3,9 @@
     <SvgLogo class="footer__logo" />
     <div class="footer__middle">
       <div class="footer__middle-cta">
-        <h2 class="footer__title">Discover the future of banking technology in one place!</h2>
+        <h2 class="footer__title">{{ $t('footer.title') }}</h2>
         <button to="/contact" class="footer__button">
-          Get started
+          {{ $t('get-started') }}
           <IconsCircleNoArrow class="footer__arrow" />
         </button>
       </div>
@@ -24,15 +24,15 @@
           </div>
         </div>
         <div class="footer__col">
-          <h4 class="footer__col-label">Contacts</h4>
+          <h4 class="footer__col-label">{{ $t('contacts') }}</h4>
           <div class="footer__contacts">
-            <a class="footer__contact" href="mailto:Example@gmail.com">
+            <a class="footer__contact" :href="`mailto:${GMAIL}`">
               <IconsMail class="footer__icon" />
-              Example@gmail.com
+              {{ GMAIL }}
             </a>
-            <a class="footer__contact" href="tel:+777 123 88 71">
+            <a class="footer__contact" :href="`tel:${TEL_NUMBER}`">
               <IconsTel class="footer__icon" />
-              +777 123 88 71
+              {{ TEL_NUMBER }}
             </a>
           </div>
           <div class="footer__social">
@@ -48,14 +48,14 @@
     </div>
     <div class="footer__bottom">
       <p class="footer__copyright">
-        &copy; {{ new Date().getFullYear() }} Expo - All rights reserved
+        &copy; {{ new Date().getFullYear() }} Expo - {{ $t('all-rights-reserved') }}
       </p>
       <div class="footer__bottom-links">
         <NuxtLink :to="$localePath('/terms-of-service')" class="footer__bottom-link">
-          <span>Terms of service</span>
+          <span>{{ $t('nav.terms-of-service') }}</span>
         </NuxtLink>
         <NuxtLink :to="$localePath('/privacy-policy')" class="footer__bottom-link">
-          <span>Privacy policy</span>
+          <span>{{ $t('nav.privacy-policy') }}</span>
         </NuxtLink>
       </div>
     </div>
@@ -64,6 +64,11 @@
 
 <script setup>
 const { allLinks } = useLinks();
+useGSAPAnimate({
+  selector: '.footer>*',
+  mode: 'group',
+  base: { y: 25 }
+});
 </script>
 
 <style lang="scss" scoped>
@@ -116,13 +121,15 @@ const { allLinks } = useLinks();
   }
   &__contact {
     display: grid;
-    grid-template-columns: max(20px, 2.4rem) 1fr;
+    grid-template-columns: auto 1fr;
     align-items: center;
     gap: 8px;
     transition: color 0.3s;
     svg {
       transition: fill 0.3s;
       fill: #fff;
+      width: max(20px, 2.4rem);
+      height: max(20px, 2.4rem);
     }
     &:hover {
       color: $clr-dark-teal;

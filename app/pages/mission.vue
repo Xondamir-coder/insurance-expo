@@ -53,6 +53,7 @@ import IconsGlobe from '~/components/icons/globe.vue';
 import IconsUsers from '~/components/icons/users.vue';
 import IconsChat from '~/components/icons/chat.vue';
 
+const { $gsap } = useNuxtApp();
 const { tm, t } = useI18n();
 
 const breadcrumbs = computed(() => [
@@ -81,6 +82,62 @@ const teamList = computed(() =>
     ...tm('mission.team.list')[index]
   }))
 );
+
+useGSAPAnimate({
+  selector: '.hero__image',
+  mode: 'group',
+  initialDelay: 0.2,
+  base: { scale: 0.85, stagger: 0.1 }
+});
+useGSAPAnimate({
+  selector: '.texts>*',
+  initialDelay: 0.3,
+  base: {
+    x: -25
+  }
+});
+useGSAPAnimate({
+  selector: '.info__banner',
+  initialDelay: 0.4,
+  staggerStep: 1,
+  mode: 'group',
+  base: { scale: 1.05 }
+});
+
+onMounted(() => {
+  initAnimations(
+    () => {
+      $gsap.from('.info__item', {
+        x: i => (i % 2 === 0 ? -25 : 25),
+        y: i => (i % 2 === 0 ? -25 : 25),
+        ...defaultAnimProps,
+        ...getDefaultScrollTrigger('.info__item')
+      });
+      $gsap.from('.team__item', {
+        y: 25,
+        ...defaultAnimProps,
+        ...getDefaultScrollTrigger('.team__item')
+      });
+    },
+    () => {
+      $gsap.utils.toArray('.info__item').forEach((item, index) => {
+        $gsap.from(item, {
+          x: index % 2 === 0 ? -25 : 25,
+          y: index % 2 === 0 ? -25 : 25,
+          ...defaultAnimProps,
+          ...getDefaultScrollTrigger(item)
+        });
+      });
+      $gsap.utils.toArray('.team__item').forEach(item => {
+        $gsap.from(item, {
+          y: 25,
+          ...defaultAnimProps,
+          ...getDefaultScrollTrigger(item)
+        });
+      });
+    }
+  );
+});
 </script>
 
 <style lang="scss" scoped>

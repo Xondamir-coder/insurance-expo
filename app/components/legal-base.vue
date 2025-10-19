@@ -7,11 +7,11 @@
       {{ subtitle }}
     </p>
     <div v-for="(row, i) in content" :key="i" class="legal__box">
-      <h2 class="legal__subtitle">{{ row.title }}</h2>
-      <p v-if="row.subtitle" class="legal__text">{{ row.subtitle }}</p>
+      <h2 class="legal__subtitle">{{ $rt(row.title) }}</h2>
+      <p v-if="row.subtitle" class="legal__text">{{ $rt(row.subtitle) }}</p>
       <ul v-if="row.texts" class="legal__list">
         <li v-for="text in row.texts" :key="text" class="legal__text">
-          {{ text }}
+          {{ $rt(text) }}
         </li>
       </ul>
     </div>
@@ -19,6 +19,11 @@
 </template>
 
 <script setup>
+useGSAPAnimate({
+  selector: '.legal>*',
+  mode: 'group',
+  base: { x: -50 }
+});
 defineProps({
   title: {
     required: true,
@@ -36,30 +41,12 @@ defineProps({
 </script>
 
 <style lang="scss" scoped>
-@keyframes slide-from-left {
-  from {
-    transform: translateX(-70px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
 .legal {
   align-self: center;
   display: flex;
   flex-direction: column;
   gap: clamp(16px, 1.5vw, 30px);
   max-width: max(900px, 32vw);
-  & > * {
-    animation: slide-from-left 0.7s backwards;
-    @for $i from 1 through 10 {
-      &:nth-child(#{$i}) {
-        animation-delay: $i * 0.1s;
-      }
-    }
-  }
   &__subtitle,
   &__title {
     color: $clr-dark-charcoal;

@@ -78,18 +78,24 @@
         </ul>
       </div>
     </section>
-    <ClientOnly>
-      <swiper-container
-        class="carousel"
-        space-between="12"
-        slides-per-view="auto"
-        grab-cursor="true"
-      >
-        <swiper-slide v-for="(image, index) in carouselImages" :key="index" class="carousel__slide">
-          <MyPicture :src="image" alt="carousel image" />
-        </swiper-slide>
-      </swiper-container>
-    </ClientOnly>
+    <div class="carousel__container">
+      <ClientOnly>
+        <swiper-container
+          class="carousel"
+          space-between="12"
+          slides-per-view="auto"
+          grab-cursor="true"
+        >
+          <swiper-slide
+            v-for="(image, index) in carouselImages"
+            :key="index"
+            class="carousel__slide"
+          >
+            <MyPicture :src="image" alt="carousel image" />
+          </swiper-slide>
+        </swiper-container>
+      </ClientOnly>
+    </div>
   </BreadcrumbsLayout>
 </template>
 
@@ -126,6 +132,20 @@ const breadcrumbs = computed(() => [
     label: 'participant name'
   }
 ]);
+
+useGSAPAnimate({
+  selector: '.hero>*',
+  mode: 'group',
+  base: { y: 25 }
+});
+useGSAPAnimate({
+  selector: '.info>*',
+  base: { y: 20 }
+});
+useGSAPAnimate({
+  selector: '.carousel__container',
+  base: { y: 20 }
+});
 </script>
 
 <style lang="scss" scoped>
