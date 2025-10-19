@@ -130,6 +130,8 @@ onMounted(() => {
     }
   );
 });
+
+useMySEO('venue');
 </script>
 
 <style lang="scss" scoped>

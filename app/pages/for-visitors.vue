@@ -180,6 +180,8 @@ const breadcrumbs = computed(() => [
     label: t('nav.for-visitors')
   }
 ]);
+
+useMySEO('visitors');
 </script>
 
 <style lang="scss" scoped>

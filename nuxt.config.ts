@@ -15,7 +15,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      titleTemplate: '%s - Insurance Expo',
+      titleTemplate: '%s | Insurance Expo',
       script: [
         {
           src: 'https://www.googletagmanager.com/gtag/js?id=G-VSCY8WYK39',

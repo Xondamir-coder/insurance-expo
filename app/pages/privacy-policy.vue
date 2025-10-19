@@ -20,4 +20,6 @@ const breadcrumbs = computed(() => [
     label: t('nav.privacy-policy')
   }
 ]);
+
+useMySEO('privacy-policy');
 </script>

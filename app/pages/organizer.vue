@@ -60,6 +60,8 @@ const breadcrumbs = computed(() => [
     label: t('nav.organizer')
   }
 ]);
+
+useMySEO('organizer');
 </script>
 
 <style lang="scss" scoped>

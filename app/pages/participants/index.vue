@@ -109,6 +109,8 @@ useGSAPAnimate({
   selector: '.content__list-item',
   base: { y: 20 }
 });
+
+useMySEO('participants');
 </script>
 
 <style lang="scss" scoped>

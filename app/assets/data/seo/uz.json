@@ -1,0 +1,58 @@
+{
+  "home": {
+    "title": "Sug'urta sohasida innovatsiya va imkoniyatlar",
+    "description": "Insurance Expo 2025da yetakchi kompaniyalar va innovatsion xizmatlarni kashf eting."
+  },
+  "mission": {
+    "title": "Missiyamiz – Innovatsiya va mukammallik",
+    "description": "Innovatsiya, ishonch va barqaror o'sish orqali sug'urta kelajagini shakllantirish."
+  },
+  "organizer": {
+    "title": "Tashkilotchilar bilan tanishing",
+    "description": "Expo Insuranceni boshqarayotgan tashkilotchilar va sanoat yetakchilari bilan bog'laning."
+  },
+  "venue": {
+    "title": "Ekspo joyi va imkoniyatlari",
+    "description": "Expo Insurance joyini kashf eting – tarmoq, innovatsiya va sanoat tajribasi uchun zamonaviy joy."
+  },
+  "participants": {
+    "title": "Ishtirok etuvchi banklar va liderlar",
+    "description": "Expo Insurancega ishtirok etayotgan banklar ro'yxatini o'rganing va yetakchilar bilan bog'laning."
+  },
+  "speakers": {
+    "title": "Mutaxassislar va liderlar",
+    "description": "Expo Insurancedagi ma'ruzachilarni kashf eting – innovatsiyalar va tendentsiyalar bilan bo'lishadi."
+  },
+  "partners": {
+    "title": "Hamkorlarimiz bilan tanishing",
+    "description": "Expo Insurancedagi hamkorlarimizni o'rganing, innovatsiya va o'sishni boshqarayotgan kompaniyalar bilan."
+  },
+  "sponsors": {
+    "title": "Innovatsiyani qo'llab-quvvatlovchilar",
+    "description": "Expo Insurance homiylari bilan tanishing – innovatsiya va o'sishni qo'llab-quvvatlovchi tashkilotlar."
+  },
+  "media": {
+    "title": "Yangiliklar va yangilanishlar",
+    "description": "Expo Insurancening so'nggi yangiliklari va maqolalarini o'rganing, innovatsiya va tendentsiyalardan xabardor bo'ling."
+  },
+  "media-accreditation": {
+    "title": "Ommaviy axborot akkreditatsiyasi",
+    "description": "Expo Insuranceni yoritish uchun akkreditatsiya arizasini topshiring va rasmiy kirish oling."
+  },
+  "terms-of-service": {
+    "title": "Xizmat shartlari va foydalanish qoidalari",
+    "description": "Veb-saytdan foydalanish, intellektual mulk va mas'uliyat chegaralari bo'yicha shartlarni o'qing."
+  },
+  "privacy-policy": {
+    "title": "Maxfiylik va ma'lumotlarni himoya qilish",
+    "description": "Shaxsiy ma'lumotlaringizni qanday to'plashimiz, foydalanishimiz va himoya qilishimizni bilib oling."
+  },
+  "visitors": {
+    "title": "Tashrifchilar – Ekspoga tashrif",
+    "description": "Expo Insurancega tashrifchi sifatida qo'shiling va innovatsion xizmatlar va tarmoq imkoniyatlarini kashf eting."
+  },
+  "error": {
+    "title": "Sahifa topilmadi",
+    "description": "Siz qidirayotgan sahifa mavjud emas. Insurance Expoga qayting va tadbirlar, ma'ruzachilar va hamkorlarni o'rganing."
+  }
+}

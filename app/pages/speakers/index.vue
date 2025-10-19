@@ -142,6 +142,8 @@ useGSAPAnimate({
   base: { y: -20 },
   initialDelay: 0.1
 });
+
+useMySEO('speakers');
 </script>
 
 <style lang="scss" scoped>

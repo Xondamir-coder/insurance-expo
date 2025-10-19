@@ -21,4 +21,6 @@ const breadcrumbs = computed(() => [
     label: t('nav.terms-of-service')
   }
 ]);
+
+useMySEO('terms-of-service');
 </script>

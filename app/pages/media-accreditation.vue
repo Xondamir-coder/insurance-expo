@@ -56,6 +56,7 @@ useGSAPAnimate({
   mode: 'group',
   base: { y: 20 }
 });
+useMySEO('media-accreditation');
 </script>
 
 <style lang="scss" scoped>

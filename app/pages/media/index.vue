@@ -77,6 +77,8 @@ useGSAPAnimate({
     });
   }
 });
+
+useMySEO('media');
 </script>
 
 <style lang="scss" scoped>

@@ -20,6 +20,8 @@ const breadcrumbs = computed(() => [
     label: t('nav.partners')
   }
 ]);
+
+useMySEO('partners');
 </script>
 
 <style lang="scss" scoped>
