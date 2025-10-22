@@ -2,7 +2,7 @@
   <Transition name="slide">
     <div v-if="isActive" class="cookie">
       <div class="cookie__content">
-        <h2 class="title-charcoal-gray-32">{{ $t('cookie.title') }}</h2>
+        <h2 class="cookie__title">{{ $t('cookie.title') }}</h2>
         <p>
           {{ $t('cookie.text') }}
         </p>
@@ -46,32 +46,45 @@ onMounted(() => {
 }
 .cookie {
   position: fixed;
-  bottom: clamp(16px, 1.6vw, 30px);
+  bottom: max(16px, 3rem);
   background: $clr-almost-white;
   box-shadow: 0px 114px 60px 20px #0000001a;
   border: 1px solid #e9eaec;
   margin-inline: $inline-spacing;
-  z-index: 10;
-  padding: clamp(16px, 1.6vw, 30px);
-  border-radius: clamp(12px, 1.6vw, 30px);
+  z-index: 50;
+  padding: max(16px, 3rem);
+  border-radius: max(12px, 3rem);
   display: flex;
   justify-content: space-between;
-  gap: clamp(16px, 1.7vw, 30px);
+  gap: max(16px, 3rem);
+  @media screen and (max-width: $bp-md) {
+    flex-direction: column;
+  }
+  p {
+    font-size: max(1.6rem, 12px);
+  }
+  &__title {
+    font-weight: bold;
+    font-size: max(3.2rem, 17px);
+  }
   &__content {
     display: flex;
     flex-direction: column;
-    gap: clamp(12px, 0.9vw, 16px);
+    gap: max(12px, 1.6rem);
   }
   &__button {
-    font-size: clamp(14px, 0.9vw, 16px);
+    font-size: max(14px, 1.6rem);
     font-weight: 500;
-    padding-block: clamp(11px, 0.9vw, 16.5px);
-    padding-inline: clamp(47px, 2.7vw, 51px);
+    padding-block: max(11px, 1.6rem);
+    padding-inline: max(47px, 5.1rem);
     border-radius: 42px;
     transition: color 0.3s, background-color 0.3s;
+    @media screen and (max-width: $bp-sm) {
+      flex: 1;
+    }
     &--reject {
-      background: $clr-light-white;
-      border: 1px solid #f1f2f4;
+      background: #eaebed3d;
+      border: 1px solid #eaebed;
       &:hover {
         background-color: $clr-charcoal-gray;
         color: $clr-light-white;
@@ -87,9 +100,11 @@ onMounted(() => {
     }
   }
   &__buttons {
-    align-self: flex-end;
     display: flex;
-    gap: clamp(16px, 1.1vw, 20px);
+    gap: max(16px, 2rem);
+    @media screen and (min-width: $bp-sm) {
+      align-self: flex-end;
+    }
   }
   h2 {
     text-transform: none;

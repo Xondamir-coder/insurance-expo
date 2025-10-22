@@ -23,7 +23,7 @@ const showFormModal = useState('showFormModal', () => false);
 
 <style lang="scss" scoped>
 .form-modal {
-  max-width: max(66.8rem, 400px);
+  max-width: max(66.8rem, 570px);
   border-radius: 2.4rem;
   background-color: #fff;
   padding: max(2.4rem, 16px);
@@ -31,6 +31,9 @@ const showFormModal = useState('showFormModal', () => false);
   display: flex;
   flex-direction: column;
   gap: 25px;
+  &__title {
+    font-size: max(3.6rem, 20px);
+  }
   &__form {
     & > *:last-child {
       flex-direction: column;
@@ -71,6 +74,10 @@ const showFormModal = useState('showFormModal', () => false);
     z-index: 50;
     background-color: rgba(0, 0, 0, 0.7);
     @include flex-center;
+
+    @media screen and (max-width: $bp-sm) {
+      align-items: stretch;
+    }
   }
 }
 .appear-enter-active,

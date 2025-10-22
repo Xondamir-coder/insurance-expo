@@ -7,7 +7,7 @@
       :texts="$tm('home.section-2.content.texts').map(text => $rt(text))"
     />
     <div class="section__container">
-      <video ref="videoRef" class="section__video" muted @click="toggleVideo">
+      <video ref="videoRef" class="section__video" playsinline muted @click="toggleVideo">
         <source src="/videos/home.mp4" type="video/mp4" />
       </video>
       <button class="section__play" :class="{ hidden: isVideoPlaying }" @click="toggleVideo">
