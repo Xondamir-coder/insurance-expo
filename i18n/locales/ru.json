@@ -21,10 +21,15 @@
   "okay": "Ок",
   "get-started": "Начать",
   "all-rights-reserved": "Все права защищены",
+  "links": "Ссылки",
+  "become-partner": "Стать партнёром",
+  "become-sponsor": "Стать спонсором",
+  "become-visitor": "Стать посетителем",
+  "become-speaker": "Стать спикером",
 
   "nav": {
     "home": "Главная",
-    "about": "О выставке",
+    "about": "О Expo",
     "organizer": "Организатор",
     "venue": "Место проведения",
     "mission": "Миссия",

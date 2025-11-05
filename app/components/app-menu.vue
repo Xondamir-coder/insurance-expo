@@ -3,7 +3,7 @@
     <div v-if="showMenu" class="menu">
       <nav class="nav" data-lenis-prevent>
         <NuxtLink
-          v-for="link in allLinks.flatMap(l => l.links)"
+          v-for="link in allLinks"
           :key="link.to"
           :to="$localePath(link.to)"
           class="nav__link"

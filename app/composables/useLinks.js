@@ -1,5 +1,6 @@
 export default () => {
   const { t } = useI18n();
+
   const links = computed(() => [
     {
       to: '/',
@@ -20,6 +21,10 @@ export default () => {
     {
       to: '/sponsors',
       label: t('nav.sponsors')
+    },
+    {
+      to: '/for-visitors',
+      label: t('nav.for-visitors')
     }
   ]);
   const aboutLinks = computed(() => [
@@ -46,9 +51,39 @@ export default () => {
       label: t('nav.media-accreditation')
     }
   ]);
-  const allLinks = computed(() => [
+  const headerLinks = computed(() => [
     {
-      label: t('link'),
+      label: t('nav.about'),
+      sublinks: aboutLinks.value
+    },
+    {
+      to: '/participants',
+      label: t('nav.participants')
+    },
+    {
+      to: '/speakers',
+      label: t('nav.speakers')
+    },
+    {
+      to: '/partners',
+      label: t('nav.partners')
+    },
+    {
+      to: '/sponsors',
+      label: t('nav.sponsors')
+    },
+    {
+      label: t('nav.media'),
+      sublinks: mediaLinks.value
+    },
+    {
+      to: '/for-visitors',
+      label: t('nav.for-visitors')
+    }
+  ]);
+  const footerLinks = computed(() => [
+    {
+      label: t('links'),
       links: links.value
     },
     {
@@ -60,11 +95,14 @@ export default () => {
       links: mediaLinks.value
     }
   ]);
+  const allLinks = computed(() => [...links.value, ...aboutLinks.value, ...mediaLinks.value]);
 
   return {
-    allLinks,
     links,
     aboutLinks,
-    mediaLinks
+    mediaLinks,
+    headerLinks,
+    footerLinks,
+    allLinks
   };
 };

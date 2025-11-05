@@ -3,7 +3,7 @@
     <div class="partners__title">100</div>
     <GreenPageHeader :title="$t('partners.title')" :subtitle="$t('partners.subtitle')" />
     <PartnersList />
-    <FormSection />
+    <FormSection :title="$t('become-partner')" />
   </BreadcrumbsLayout>
 </template>
 

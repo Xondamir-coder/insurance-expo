@@ -12,7 +12,7 @@
     </div>
     <div class="section__wrapper">
       <div class="section__details">
-        <div v-for="item in allLinks" :key="item.label" class="section__detail">
+        <div v-for="item in footerLinks" :key="item.label" class="section__detail">
           <h4 class="section__label">{{ item.label }}</h4>
           <div class="section__links">
             <NuxtLink
@@ -66,7 +66,7 @@
 </template>
 
 <script setup>
-const { allLinks } = useLinks();
+const { footerLinks } = useLinks();
 </script>
 
 <style lang="scss" scoped>

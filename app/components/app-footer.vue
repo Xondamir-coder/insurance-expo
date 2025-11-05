@@ -4,13 +4,13 @@
     <div class="footer__middle">
       <div class="footer__middle-cta">
         <h2 class="footer__title">{{ $t('footer.title') }}</h2>
-        <button to="/contact" class="footer__button">
+        <button class="footer__button" @click="showFormModal = true">
           {{ $t('get-started') }}
           <IconsCircleNoArrow class="footer__arrow" />
         </button>
       </div>
       <div class="footer__cols">
-        <div v-for="item in allLinks" :key="item.label" class="footer__col">
+        <div v-for="item in footerLinks" :key="item.label" class="footer__col">
           <h4 class="footer__col-label">{{ item.label }}</h4>
           <div class="footer__links">
             <NuxtLink
@@ -63,7 +63,8 @@
 </template>
 
 <script setup>
-const { allLinks } = useLinks();
+const { footerLinks } = useLinks();
+const showFormModal = useState('showFormModal');
 useGSAPAnimate({
   selector: '.footer>*',
   mode: 'group',

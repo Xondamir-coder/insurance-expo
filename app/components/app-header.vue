@@ -9,7 +9,7 @@
         <SvgLogo class="header__logo" />
       </NuxtLink>
       <nav class="header__nav">
-        <div v-for="(link, index) in links" :key="index" class="header__nav-item">
+        <div v-for="(link, index) in headerLinks" :key="index" class="header__nav-item">
           <NuxtLink
             v-if="link.to"
             :to="$localePath(link.to)"
@@ -29,9 +29,6 @@
               @click="handleSublinkDropdowns(index)"
             >
               <span>{{ link.label }}</span>
-              <div class="dots">
-                <div v-for="i in 3" :key="i" class="dot" />
-              </div>
             </button>
             <Transition name="slide">
               <div v-if="activeSublinkDropdowns.includes(index)" class="header__nav-dropdown">
@@ -84,8 +81,8 @@ import IconsUzb from '~/components/icons/uzb.vue';
 import IconsUsa from '~/components/icons/usa.vue';
 
 const showFormModal = useState('showFormModal');
-const { locales, setLocale, t } = useI18n();
-const { aboutLinks, mediaLinks } = useLinks();
+const { locales, setLocale } = useI18n();
+const { headerLinks } = useLinks();
 
 const showLangDropdown = ref(false);
 const activeSublinkDropdowns = ref([]);
@@ -99,36 +96,6 @@ const langs = computed(
       icon: icons[index]
     })) ?? []
 );
-const links = computed(() => [
-  {
-    label: t('nav.about'),
-    sublinks: aboutLinks.value
-  },
-  {
-    to: '/participants',
-    label: t('nav.participants')
-  },
-  {
-    to: '/speakers',
-    label: t('nav.speakers')
-  },
-  {
-    to: '/partners',
-    label: t('nav.partners')
-  },
-  {
-    to: '/sponsors',
-    label: t('nav.sponsors')
-  },
-  {
-    label: t('nav.media'),
-    sublinks: mediaLinks.value
-  },
-  {
-    to: '/for-visitors',
-    label: t('nav.for-visitors')
-  }
-]);
 
 const changeLang = newLang => {
   setLocale(newLang.code);

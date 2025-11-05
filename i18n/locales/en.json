@@ -21,10 +21,15 @@
   "okay": "Okay",
   "get-started": "Get started",
   "all-rights-reserved": "All rights reserved",
+  "links": "Links",
+  "become-partner": "Become a partner",
+  "become-sponsor": "Become a sponsor",
+  "become-visitor": "Become a visitor",
+  "become-speaker": "Become a speaker",
 
   "nav": {
     "home": "Home",
-    "about": "About",
+    "about": "About Expo",
     "organizer": "Organizer",
     "venue": "Venue",
     "mission": "Mission",

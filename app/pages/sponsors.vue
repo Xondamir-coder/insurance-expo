@@ -7,7 +7,7 @@
         <component :is="sponsor" class="sponsors__item-logo" />
       </li>
     </ul>
-    <FormSection />
+    <FormSection :title="$t('become-sponsor')" />
   </BreadcrumbsLayout>
 </template>
 
