@@ -1,6 +1,6 @@
 <template>
   <main class="container">
-    <AppBreadcrumbs :breadcrumbs />
+    <UiBreadcrumbs :breadcrumbs />
     <div class="container__content">
       <slot />
     </div>

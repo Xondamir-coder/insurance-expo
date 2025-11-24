@@ -14,7 +14,7 @@
             {{ $rt(card.text) }}
           </p>
         </div>
-        <MyPicture
+        <UiPicture
           v-if="index === 0"
           src="home-section-3.png"
           alt="security banner"

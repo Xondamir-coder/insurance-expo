@@ -44,6 +44,7 @@
             <IconsTelegram class="icon menu__icon" />
           </a>
         </div>
+        <UiLangChanger />
       </div>
     </div>
   </Transition>
@@ -68,12 +69,11 @@ watchEffect(() => {
 .nav {
   display: flex;
   flex-direction: column;
-  gap: 10px;
   background: #eaebed40;
   border: 1px solid #eaebed;
   padding: 6px;
   border-radius: 16px;
-  max-height: 50vh;
+  max-height: 300px;
   overflow-y: auto;
   scrollbar-width: 0;
   &::-webkit-scrollbar {
@@ -151,8 +151,12 @@ watchEffect(() => {
   }
   &__content {
     display: flex;
+    align-items: flex-start;
     flex-direction: column;
     gap: 24px;
+    & > *:last-child {
+      animation: slide-from-bottom-10 0.5s backwards 0.8s;
+    }
   }
   &__icon {
     fill: $clr-deep-green;

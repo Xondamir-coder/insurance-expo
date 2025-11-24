@@ -1,11 +1,11 @@
 <template>
-  <BreadcrumbsLayout :breadcrumbs>
-    <GreenPageHeader :title="$t('media.title')" :subtitle="$t('media.subtitle')" />
+  <LayoutBreadcrumbs :breadcrumbs>
+    <UiGreenPageHeader :title="$t('media.title')" :subtitle="$t('media.subtitle')" />
     <ul class="list">
       <li v-for="(item, index) in data" :key="index">
         <NuxtLink :to="$localePath(`/media/${index}`)" class="list__item">
           <div class="list__item-left">
-            <MyPicture
+            <UiPicture
               v-for="image in item.images"
               :key="image"
               :src="image"
@@ -23,7 +23,7 @@
         </NuxtLink>
       </li>
     </ul>
-  </BreadcrumbsLayout>
+  </LayoutBreadcrumbs>
 </template>
 
 <script setup>

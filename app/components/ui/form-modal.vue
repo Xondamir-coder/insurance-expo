@@ -11,7 +11,7 @@
           </div>
           <p>{{ $t('form-modal.subtitle') }}</p>
         </div>
-        <AppForm class="form-modal__form" />
+        <UiForm class="form-modal__form" />
       </div>
     </div>
   </Transition>

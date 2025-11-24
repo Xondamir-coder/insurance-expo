@@ -1,14 +1,14 @@
 <template>
-  <BreadcrumbsLayout :breadcrumbs class="sponsors">
+  <LayoutBreadcrumbs :breadcrumbs class="sponsors">
     <div class="sponsors__title">100</div>
-    <GreenPageHeader :title="$t('sponsors.title')" :subtitle="$t('sponsors.subtitle')" />
+    <UiGreenPageHeader :title="$t('sponsors.title')" :subtitle="$t('sponsors.subtitle')" />
     <ul class="sponsors__list">
       <li v-for="(sponsor, index) in sponsors" :key="index" class="sponsors__item">
         <component :is="sponsor" class="sponsors__item-logo" />
       </li>
     </ul>
-    <FormSection :title="$t('become-sponsor')" />
-  </BreadcrumbsLayout>
+    <UiFormSection :title="$t('become-sponsor')" />
+  </LayoutBreadcrumbs>
 </template>
 
 <script setup>

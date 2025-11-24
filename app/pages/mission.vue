@@ -1,11 +1,11 @@
 <template>
-  <BreadcrumbsLayout :breadcrumbs>
+  <LayoutBreadcrumbs :breadcrumbs>
     <section class="hero">
-      <PageHeader :title="$t('mission.title')" :subtitle="$t('mission.subtitle')" />
+      <UiPageHeader :title="$t('mission.title')" :subtitle="$t('mission.subtitle')" />
       <div class="hero__images">
-        <MyPicture src="mission-1.png" alt="buying car" class="hero__image" />
-        <MyPicture src="mission-2.png" alt="ai image" class="hero__image" />
-        <MyPicture src="mission-3.png" alt="teaching" class="hero__image" />
+        <UiPicture src="mission-1.png" alt="buying car" class="hero__image" />
+        <UiPicture src="mission-2.png" alt="ai image" class="hero__image" />
+        <UiPicture src="mission-3.png" alt="teaching" class="hero__image" />
       </div>
     </section>
     <section class="texts">
@@ -19,7 +19,7 @@
         <p class="info__banner-subtitle">
           {{ $t('mission.info.subtitle') }}
         </p>
-        <MyPicture src="mission-banner.jpg" alt="banner" class="info__banner-image" />
+        <UiPicture src="mission-banner.jpg" alt="banner" class="info__banner-image" />
       </div>
       <ul class="info__list">
         <li v-for="(card, index) in infoCards" :key="index" class="info__item">
@@ -34,10 +34,10 @@
       </ul>
     </section>
     <section class="team">
-      <SectionHeader :title="$t('mission.team.title')" :subtitle="$t('mission.team.subtitle')" />
+      <UiSectionHeader :title="$t('mission.team.title')" :subtitle="$t('mission.team.subtitle')" />
       <ul class="team__list">
         <li v-for="(teammate, index) in teamList" :key="index" class="team__item">
-          <MyPicture :src="teammate.image" :alt="$rt(teammate.title)" class="team__item-image" />
+          <UiPicture :src="teammate.image" :alt="$rt(teammate.title)" class="team__item-image" />
           <div class="team__item-content">
             <h4 class="team__item-title">{{ $rt(teammate.title) }}</h4>
             <p class="text-medium clr-dark-slate-blue">{{ $rt(teammate.text) }}</p>
@@ -45,7 +45,7 @@
         </li>
       </ul>
     </section>
-  </BreadcrumbsLayout>
+  </LayoutBreadcrumbs>
 </template>
 
 <script setup>

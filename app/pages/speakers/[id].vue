@@ -1,6 +1,6 @@
 <template>
-  <BreadcrumbsLayout :breadcrumbs>
-    <DetailedHero
+  <LayoutBreadcrumbs :breadcrumbs>
+    <UiDetailedHero
       title="Ahmadjon Rahmatjonov"
       subtitle="Founder and CEO at Samsung"
       :about="{
@@ -13,7 +13,7 @@
         text: '“Our goal is to make technology serve to make human life more comfortable and efficient.” — Ahmadjon Rahmatjonov, CEO of Samsung Uzbekistan'
       }"
     />
-  </BreadcrumbsLayout>
+  </LayoutBreadcrumbs>
 </template>
 
 <script setup>

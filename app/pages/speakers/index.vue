@@ -1,6 +1,6 @@
 <template>
-  <BreadcrumbsLayout :breadcrumbs class="speakers">
-    <GreenPageHeader
+  <LayoutBreadcrumbs :breadcrumbs class="speakers">
+    <UiGreenPageHeader
       :title="$t('speakers.title')"
       :subtitle="$t('speakers.subtitle')"
       class="speakers__header"
@@ -19,7 +19,7 @@
         >
           <swiper-slide v-for="(speaker, index) in speakers" :key="index" class="carousel__slide">
             <NuxtLink :to="$localePath(`/speakers/${index}`)" class="carousel__slide-wrapper">
-              <MyPicture :alt="speaker.name" :src="speaker.image" class="carousel__slide-box" />
+              <UiPicture :alt="speaker.name" :src="speaker.image" class="carousel__slide-box" />
               <div class="carousel__slide-content">
                 <h3 class="carousel__slide-name">{{ speaker.name }}</h3>
                 <p class="carousel__slide-job">{{ speaker.job }}</p>
@@ -43,7 +43,7 @@
         >
           <swiper-slide v-for="(speaker, index) in speakers" :key="index" class="carousel__slide">
             <NuxtLink :to="$localePath(`/speakers/${index}`)" class="carousel__slide-wrapper">
-              <MyPicture :alt="speaker.name" :src="speaker.image" class="carousel__slide-box" />
+              <UiPicture :alt="speaker.name" :src="speaker.image" class="carousel__slide-box" />
               <div class="carousel__slide-content">
                 <h3 class="carousel__slide-name">{{ speaker.name }}</h3>
                 <p class="carousel__slide-job">{{ speaker.job }}</p>
@@ -53,7 +53,7 @@
         </swiper-container>
       </ClientOnly>
     </div>
-  </BreadcrumbsLayout>
+  </LayoutBreadcrumbs>
 </template>
 
 <script setup>

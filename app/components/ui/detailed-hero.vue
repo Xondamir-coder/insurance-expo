@@ -1,8 +1,8 @@
 <template>
   <div class="hero">
-    <MyPicture v-if="banner" :src="banner" alt="person" class="hero__banner" />
+    <UiPicture v-if="banner" :src="banner" alt="person" class="hero__banner" />
     <div v-if="quote" class="hero__right">
-      <MyPicture :src="quote.image" alt="person" class="hero__right-banner" />
+      <UiPicture :src="quote.image" alt="person" class="hero__right-banner" />
       <div class="hero__right-content">
         <h4>{{ $t('quote') }}</h4>
         <p class="text-medium">{{ quote.text }}</p>

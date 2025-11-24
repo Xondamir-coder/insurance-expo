@@ -1,5 +1,5 @@
 <template>
-  <BreadcrumbsLayout :breadcrumbs>
+  <LayoutBreadcrumbs :breadcrumbs>
     <div class="media-accreditation">
       <h1 class="media-accreditation__title">{{ $t('media-accreditation.title') }}</h1>
       <div class="card">
@@ -36,7 +36,7 @@
         </div>
       </div>
     </div>
-  </BreadcrumbsLayout>
+  </LayoutBreadcrumbs>
 </template>
 
 <script setup>

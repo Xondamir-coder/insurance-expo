@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="card__top">
-      <MyPicture :src="data.img" alt="banner" class="card__image" />
+      <UiPicture :src="data.img" alt="banner" class="card__image" />
       <div class="card__date">
         <IconsCalendar class="icon" />
         <span>{{ data.date }}</span>

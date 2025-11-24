@@ -1,8 +1,8 @@
 <template>
-  <BreadcrumbsLayout :breadcrumbs>
-    <GreenPageHeader :title="$t('for-visitors.title')" :subtitle="$t('for-visitors.subtitle')" />
+  <LayoutBreadcrumbs :breadcrumbs>
+    <UiGreenPageHeader :title="$t('for-visitors.title')" :subtitle="$t('for-visitors.subtitle')" />
     <section class="hero">
-      <MyPicture src="visitors-hero.jpg" alt="museum" class="hero__image" />
+      <UiPicture src="visitors-hero.jpg" alt="museum" class="hero__image" />
       <ul class="hero__list">
         <li v-for="(item, index) in $tm('for-visitors.hero-items')" :key="index" class="hero__item">
           <h3 class="hero__item-label">{{ $rt(item.label) }}</h3>
@@ -24,7 +24,7 @@
       </div>
       <div class="leaders__right">
         <div v-for="(card, index) in leadersCards" :key="index" class="leaders__card">
-          <MyPicture :src="card.image" alt="banner" class="leaders__card-image" />
+          <UiPicture :src="card.image" alt="banner" class="leaders__card-image" />
           <div class="leaders__card-content">
             <ul class="leaders__card-content-labels">
               <li v-for="label in card.labels" :key="label" class="leaders__card-content-label">
@@ -41,9 +41,9 @@
         </div>
       </div>
     </section>
-    <FormSection class="visitors__form" :title="$t('become-visitor')" />
+    <UiFormSection class="visitors__form" :title="$t('become-visitor')" />
     <section class="visit">
-      <MyPicture src="visitors-plan.jpeg" alt="banner" class="visit__banner" />
+      <UiPicture src="visitors-plan.jpeg" alt="banner" class="visit__banner" />
       <div class="visit__container">
         <h2 class="visit__title">{{ $t('for-visitors.visit.title') }}</h2>
         <div v-for="(card, index) in cards" :key="index" class="visit__card">
@@ -59,8 +59,8 @@
         </div>
       </div>
     </section>
-    <FaqSection />
-  </BreadcrumbsLayout>
+    <UiFaqSection />
+  </LayoutBreadcrumbs>
 </template>
 
 <script setup>

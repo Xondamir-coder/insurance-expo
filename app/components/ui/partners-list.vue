@@ -1,13 +1,17 @@
 <template>
   <div class="container">
     <div class="list">
-      <PartnersCard v-for="(item, index) in partnersList.slice(0, 4)" :key="index" :data="item" />
+      <UiPartnersCard v-for="(item, index) in partnersList.slice(0, 4)" :key="index" :data="item" />
     </div>
     <div class="list">
-      <PartnersCard v-for="(item, index) in partnersList.slice(4, 8)" :key="index" :data="item" />
+      <UiPartnersCard v-for="(item, index) in partnersList.slice(4, 8)" :key="index" :data="item" />
     </div>
     <div class="list">
-      <PartnersCard v-for="(item, index) in partnersList.slice(8, 12)" :key="index" :data="item" />
+      <UiPartnersCard
+        v-for="(item, index) in partnersList.slice(8, 12)"
+        :key="index"
+        :data="item"
+      />
     </div>
   </div>
 </template>

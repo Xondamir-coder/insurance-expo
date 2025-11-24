@@ -1,7 +1,7 @@
 <template>
   <div class="image-card-carousel">
     <Transition name="picture">
-      <MyPicture
+      <UiPicture
         :key="currentIndex"
         :src="content[currentIndex].image"
         alt="banner"

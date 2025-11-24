@@ -9,10 +9,10 @@
           {{ $t('form-section.text') }}
         </p>
       </div>
-      <AppForm />
+      <UiForm />
     </div>
     <div class="form-section__right">
-      <MyPicture src="folder.png" alt="folder" class="form-section__image" />
+      <UiPicture src="folder.png" alt="folder" class="form-section__image" />
       <svg
         class="form-section__pattern"
         viewBox="0 0 844 490"

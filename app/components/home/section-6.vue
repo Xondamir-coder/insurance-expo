@@ -60,7 +60,7 @@
       </div>
     </div>
     <div class="section__right">
-      <MyPicture src="map.jpg" alt="map" class="section__image" />
+      <UiPicture src="map.jpg" alt="map" class="section__image" />
     </div>
   </section>
 </template>

@@ -1,9 +1,9 @@
 <template>
-  <BreadcrumbsLayout :breadcrumbs>
+  <LayoutBreadcrumbs :breadcrumbs>
     <section class="hero">
-      <MyPicture src="participants-hero-big.png" alt="people" class="hero__image" />
-      <MyPicture src="participants-hero-small.png" alt="people" class="hero__image" />
-      <PageHeader
+      <UiPicture src="participants-hero-big.png" alt="people" class="hero__image" />
+      <UiPicture src="participants-hero-small.png" alt="people" class="hero__image" />
+      <UiPageHeader
         :title="$t('participants.title')"
         :subtitle="$t('participants.subtitle')"
         class="hero__content"
@@ -52,13 +52,13 @@
           </NuxtLink>
         </li>
       </ul>
-      <AppPagination
+      <UiPagination
         :pages-count="list.length"
         :current-page="currentPage"
         @change-page="changePage"
       />
     </section>
-  </BreadcrumbsLayout>
+  </LayoutBreadcrumbs>
 </template>
 
 <script setup>

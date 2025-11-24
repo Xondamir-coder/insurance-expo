@@ -1,11 +1,11 @@
 <template>
-  <BreadcrumbsLayout :breadcrumbs>
-    <LegalBase
+  <LayoutBreadcrumbs :breadcrumbs>
+    <UiLegalBase
       :title="$t('privacy-policy.title')"
       :subtitle="$t('privacy-policy.subtitle')"
       :content="$tm('privacy-policy.content')"
     />
-  </BreadcrumbsLayout>
+  </LayoutBreadcrumbs>
 </template>
 
 <script setup>

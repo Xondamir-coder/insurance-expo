@@ -1,10 +1,10 @@
 <template>
-  <BreadcrumbsLayout :breadcrumbs class="partners">
+  <LayoutBreadcrumbs :breadcrumbs class="partners">
     <div class="partners__title">100</div>
-    <GreenPageHeader :title="$t('partners.title')" :subtitle="$t('partners.subtitle')" />
-    <PartnersList />
-    <FormSection :title="$t('become-partner')" />
-  </BreadcrumbsLayout>
+    <UiGreenPageHeader :title="$t('partners.title')" :subtitle="$t('partners.subtitle')" />
+    <UiPartnersList />
+    <UiFormSection :title="$t('become-partner')" />
+  </LayoutBreadcrumbs>
 </template>
 
 <script setup>

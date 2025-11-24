@@ -48,26 +48,7 @@
       </nav>
     </div>
     <div class="header__right">
-      <div class="header__lang-container">
-        <button class="header__lang" @click="toggleDropdown">
-          <IconsGlobe class="icon-globe" />
-          <span>{{ $i18n.locale }}</span>
-        </button>
-        <Transition name="slide">
-          <div v-if="showLangDropdown" class="header__dropdown">
-            <button
-              v-for="lang in langs"
-              :key="lang"
-              class="header__item"
-              :class="{ active: lang.code === $i18n.locale }"
-              @click="changeLang(lang)"
-            >
-              <component :is="lang.icon" class="header__item-icon" />
-              <span>{{ lang.name }}</span>
-            </button>
-          </div>
-        </Transition>
-      </div>
+      <UiLangChanger class="header__right-lang" />
       <button class="btn-green header__button" @click="showFormModal = true">
         {{ $t('contact-us') }}
       </button>
@@ -76,34 +57,12 @@
 </template>
 
 <script setup>
-import IconsRus from '~/components/icons/rus.vue';
-import IconsUzb from '~/components/icons/uzb.vue';
-import IconsUsa from '~/components/icons/usa.vue';
-
 const showFormModal = useState('showFormModal');
-const { locales, setLocale } = useI18n();
 const { headerLinks } = useLinks();
 
-const showLangDropdown = ref(false);
 const activeSublinkDropdowns = ref([]);
 const showMenu = useState('showMenu');
-const icons = [IconsUsa, IconsRus, IconsUzb];
 
-const langs = computed(
-  () =>
-    locales.value?.map((locale, index) => ({
-      ...locale,
-      icon: icons[index]
-    })) ?? []
-);
-
-const changeLang = newLang => {
-  setLocale(newLang.code);
-  toggleDropdown();
-};
-const toggleDropdown = () => {
-  showLangDropdown.value = !showLangDropdown.value;
-};
 const handleSublinkDropdowns = index => {
   if (activeSublinkDropdowns.value.includes(index)) {
     activeSublinkDropdowns.value = activeSublinkDropdowns.value.filter(i => i !== index);
@@ -114,9 +73,6 @@ const handleSublinkDropdowns = index => {
 
 onMounted(() => {
   document.addEventListener('click', e => {
-    if (!e.target.closest('.header__lang-container') && showLangDropdown.value) {
-      showLangDropdown.value = false;
-    }
     if (!e.target.closest('.header__nav') && activeSublinkDropdowns.value.length) {
       activeSublinkDropdowns.value = [];
     }
@@ -196,53 +152,6 @@ useGSAPAnimate({
       color: $clr-deep-green;
     }
   }
-  &__dropdown {
-    padding: 6px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    position: absolute;
-    top: calc(100% + 16px);
-    right: 0;
-    width: 196px;
-    border-radius: 10px;
-    background: #ffffff;
-    border: 1px solid #f1f2f4;
-    box-shadow: 0px 10px 80px -3px #0000001a;
-    z-index: 10;
-  }
-  &__lang {
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: max(12px, 1.7rem);
-    color: $clr-charcoal-gray;
-    display: flex;
-    align-items: center;
-    gap: max(8px, 1.2rem);
-    background: #eaebed3d;
-    border: 1px solid #eaebed;
-    padding: 1.4rem;
-    border-radius: 4.2rem;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-    &:hover {
-      background-color: #eaebed;
-    }
-    &.active {
-      background: $clr-dark-teal;
-      border-color: $clr-dark-teal;
-      color: #fff;
-      .icon-globe {
-        fill: #fff;
-      }
-    }
-    @media only screen and (max-width: 1260px) {
-      display: none;
-    }
-    &-container {
-      display: flex;
-      position: relative;
-    }
-  }
   &__button {
     border-radius: 40px;
     padding-inline: max(12px, 2.4rem);
@@ -253,6 +162,11 @@ useGSAPAnimate({
     align-self: center;
     display: flex;
     gap: max(10px, 2rem);
+    &-lang {
+      @media only screen and (max-width: 1260px) {
+        display: none;
+      }
+    }
     & > * {
       @media only screen and (max-width: 1260px) {
         height: auto;

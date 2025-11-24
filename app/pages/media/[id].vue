@@ -1,16 +1,16 @@
 <template>
-  <BreadcrumbsLayout :breadcrumbs>
-    <PageHeader
+  <LayoutBreadcrumbs :breadcrumbs>
+    <UiPageHeader
       class="media__header"
       title="Bank va moliya tashkilotlarining Expo doirasida namoyish etgan xizmatlari"
       subtitle="Innovatsion yechimlar va raqamli xizmatlar taqdimoti"
     />
     <ul class="media__list">
       <li v-for="(image, index) in data" :key="index">
-        <MyPicture :src="image" alt="media banner" class="media__list-item" />
+        <UiPicture :src="image" alt="media banner" class="media__list-item" />
       </li>
     </ul>
-  </BreadcrumbsLayout>
+  </LayoutBreadcrumbs>
 </template>
 
 <script setup>

@@ -1,6 +1,6 @@
 <template>
-  <BreadcrumbsLayout :breadcrumbs class="participant">
-    <DetailedHero
+  <LayoutBreadcrumbs :breadcrumbs class="participant">
+    <UiDetailedHero
       :logo="SvgBanksKapital"
       title="Kapital Sug‘urta"
       subtitle="Insurance services"
@@ -18,98 +18,59 @@
       }"
     />
     <section class="info">
-      <div class="info__card">
-        <h2 class="hero__label">{{ $t('contact-information') }}</h2>
-        <ul class="info__list">
-          <li class="info__item">
-            <div class="info__item-box">
-              <IconsPin class="info__item-icon" />
-            </div>
-            <div class="text-medium fill-dark-slate-blue">
-              {{ $t('address') }}:
-              <a href="https://google.com" target="_blank" rel="noopener noreferrer">
-                {{ infoListData.address }}
-              </a>
-            </div>
-          </li>
-          <li class="info__item">
-            <div class="info__item-box">
-              <IconsCalling class="info__item-icon" />
-            </div>
-            <div class="text-medium fill-dark-slate-blue">
-              {{ $t('phone') }}:
-              <a :href="`tel:${infoListData.phone}`">
-                {{ infoListData.phone }}
-              </a>
-            </div>
-          </li>
-          <li class="info__item">
-            <div class="info__item-box">
-              <IconsMail class="info__item-icon" />
-            </div>
-            <div class="text-medium fill-dark-slate-blue">
-              {{ $t('email') }}:
-              <a :href="`mailto:${infoListData.email}`">
-                {{ infoListData.email }}
-              </a>
-            </div>
-          </li>
-          <li class="info__item">
-            <div class="info__item-box">
-              <IconsPin class="info__item-icon" />
-            </div>
-            <div class="text-medium fill-dark-slate-blue">
-              {{ $t('website') }}:
-              <a :href="`https://${infoListData.website}`" target="_blank">
-                {{ infoListData.website }}
-              </a>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="info__card">
-        <h2 class="hero__label">{{ $t('participant.info.services') }}</h2>
-        <ul class="info__list">
-          <li>New “Online Insurance” platform</li>
-          <li>Instant insurance processing via mobile app</li>
-          <li>Insurance solutions for startups and small businesses</li>
-          <li>Digital insurance services (remote contract signing)</li>
-          <li>Insurance products integrated with fintech solutions</li>
-        </ul>
-      </div>
+      <UiInfoCard v-for="(card, index) in infoCards" :key="index" :data="card" />
     </section>
-    <div class="carousel__container">
-      <ClientOnly>
-        <swiper-container
-          class="carousel"
-          space-between="12"
-          slides-per-view="auto"
-          grab-cursor="true"
-        >
-          <swiper-slide
-            v-for="(image, index) in carouselImages"
-            :key="index"
-            class="carousel__slide"
-          >
-            <MyPicture :src="image" alt="carousel image" />
-          </swiper-slide>
-        </swiper-container>
-      </ClientOnly>
-    </div>
-  </BreadcrumbsLayout>
+    <UiImageSlider :images="carouselImages" />
+  </LayoutBreadcrumbs>
 </template>
 
 <script setup>
 import SvgBanksKapital from '~/components/svg/banks/kapital.vue';
+import { IconsPin, IconsCalling, IconsMail, IconsLocation } from '#components';
 
 const { t } = useI18n();
 
-const infoListData = {
-  address: '15 Mustaqillik Avenue, Tashkent City',
-  phone: '+998 (71) 233 45 67',
-  email: 'info@kapitalsugurta.uz',
-  website: 'www.kapitalsugurta.uz'
-};
+const infoCards = [
+  {
+    title: t('contact-information'),
+    content: [
+      {
+        icon: IconsPin,
+        label: t('address'),
+        href: 'https://google.com',
+        text: '15 Mustaqillik Avenue, Tashkent City'
+      },
+      {
+        icon: IconsCalling,
+        label: t('phone'),
+        href: 'tel:+998 (71) 233 45 67',
+        text: '+998 (71) 233 45 67'
+      },
+      {
+        icon: IconsMail,
+        label: t('email'),
+        href: 'mailto:info@kapitalsugurta.uz',
+        text: 'info@kapitalsugurta.uz'
+      },
+      {
+        icon: IconsLocation,
+        label: t('website'),
+        href: 'https://www.kapitalsugurta.uz',
+        text: 'www.kapitalsugurta.uz'
+      }
+    ]
+  },
+  {
+    title: t('participant.info.services'),
+    content: [
+      'New “Online Insurance” platform',
+      'Instant insurance processing via mobile app',
+      'Insurance solutions for startups and small businesses',
+      'Digital insurance services (remote contract signing)',
+      'Insurance products integrated with fintech solutions'
+    ]
+  }
+];
 const carouselImages = [
   'participant-1.jpg',
   'participant-2.jpg',
@@ -142,10 +103,6 @@ useGSAPAnimate({
   selector: '.info>*',
   base: { y: 20 }
 });
-useGSAPAnimate({
-  selector: '.carousel__container',
-  base: { y: 20 }
-});
 </script>
 
 <style lang="scss" scoped>
@@ -160,52 +117,6 @@ useGSAPAnimate({
   gap: max(3.4rem, 32px);
   @media screen and (max-width: $bp-lg) {
     flex-direction: column;
-  }
-  &__item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    a {
-      transition: color 0.3s;
-    }
-    a:hover {
-      color: $clr-bright-teal-alt;
-    }
-    &-box {
-      @include flex-center;
-      background-color: $clr-dark-teal;
-      width: max(4.4rem, 36px);
-      height: max(4.4rem, 36px);
-      border-radius: max(1.2rem, 8px);
-      fill: #fff;
-    }
-    &-icon {
-      width: 54.5454%;
-    }
-  }
-  &__card {
-    padding: max(3.2rem, 16px);
-    border-radius: max(2.4rem, 16px);
-    display: flex;
-    flex-direction: column;
-    gap: max(2.4rem, 16px);
-    color: $clr-dark-slate-blue;
-    font-size: max(2rem, 14px);
-    font-weight: 500;
-    background: #eaebed4d;
-    border: 1px solid #eaebed;
-    &:last-child {
-      flex: 1;
-      .info__list {
-        list-style: disc;
-        margin-left: 20px;
-      }
-    }
-  }
-  &__list {
-    display: flex;
-    flex-direction: column;
-    gap: max(2rem, 12px);
   }
 }
 .participant > *:last-child {

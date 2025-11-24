@@ -1,8 +1,8 @@
 <template>
-  <BreadcrumbsLayout :breadcrumbs>
+  <LayoutBreadcrumbs :breadcrumbs>
     <section class="hero">
-      <MyPicture src="venue-hero.png" alt="people" class="hero__image" />
-      <PageHeader
+      <UiPicture src="venue-hero.png" alt="people" class="hero__image" />
+      <UiPageHeader
         :title="$t('venue.hero.title')"
         :subtitle="$t('venue.hero.subtitle')"
         class="hero__content"
@@ -47,7 +47,7 @@
         </li>
       </ul>
       <div class="visit__map">
-        <MyPicture src="visit-map.jpg" alt="map" class="visit__map-image" />
+        <UiPicture src="visit-map.jpg" alt="map" class="visit__map-image" />
         <div class="visit__map-container">
           <div class="visit__map-box">
             <SvgLogoSmall class="visit__map-box-logo" />
@@ -60,7 +60,7 @@
         <span>{{ $t('view-maps') }}</span>
       </button>
     </section>
-  </BreadcrumbsLayout>
+  </LayoutBreadcrumbs>
 </template>
 
 <script setup>

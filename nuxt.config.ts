@@ -33,7 +33,7 @@ export default defineNuxtConfig({
       ]
     }
   },
-  modules: ['nuxt-swiper', '@nuxtjs/seo', '@nuxtjs/i18n', '@nuxt/eslint'],
+  modules: ['nuxt-swiper', '@nuxtjs/seo', '@nuxtjs/i18n', '@nuxt/eslint', '@pinia/nuxt'],
   i18n: {
     defaultLocale: 'en',
     baseUrl: 'https://insurexpo.uz',

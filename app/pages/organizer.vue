@@ -1,21 +1,21 @@
 <template>
-  <BreadcrumbsLayout :breadcrumbs>
+  <LayoutBreadcrumbs :breadcrumbs>
     <section class="hero">
-      <PageHeader :title="$t('organizer.title')" :subtitle="$t('organizer.subtitle')" />
+      <UiPageHeader :title="$t('organizer.title')" :subtitle="$t('organizer.subtitle')" />
       <div class="hero__container">
-        <MyPicture src="organizer-hero-big.png" alt="banner" class="hero__banner" />
-        <MyPicture src="organizer-hero-small.png" alt="banner" class="hero__banner" />
+        <UiPicture src="organizer-hero-big.png" alt="banner" class="hero__banner" />
+        <UiPicture src="organizer-hero-small.png" alt="banner" class="hero__banner" />
         <div class="hero__wrapper">
           <div class="hero__content">
             <h2 class="hero__content-title">{{ $t('organizer.hero.title') }}</h2>
             <p class="hero__content-text">{{ $t('organizer.hero.text') }}</p>
           </div>
-          <MyPicture src="shield.png" alt="shield" class="hero__shield" />
+          <UiPicture src="shield.png" alt="shield" class="hero__shield" />
         </div>
       </div>
     </section>
     <section class="vision">
-      <SectionHeader
+      <UiSectionHeader
         :title="$t('organizer.vision.title')"
         :subtitle="$t('organizer.vision.subtitle')"
         class="vision__header"
@@ -28,13 +28,13 @@
       </ul>
     </section>
     <section class="partners">
-      <SectionHeader
+      <UiSectionHeader
         :title="$t('organizer.partners.title')"
         :subtitle="$t('organizer.partners.subtitle')"
       />
-      <PartnersList />
+      <UiPartnersList />
     </section>
-  </BreadcrumbsLayout>
+  </LayoutBreadcrumbs>
 </template>
 
 <script setup>

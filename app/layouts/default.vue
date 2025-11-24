@@ -1,13 +1,13 @@
 <template>
   <div class="layout" :class="{ 'almost-white': isAlmostWhite }">
-    <AppPreloader />
-    <AppCookie />
-    <AppHeader />
-    <AppMenu />
+    <UiPreloader />
+    <UiCookie />
+    <LayoutHeader />
+    <UiMenu />
     <slot />
-    <AppFooter />
-    <FormModal />
-    <SuccessModal />
+    <LayoutFooter />
+    <UiFormModal />
+    <UiSuccessModal />
   </div>
 </template>
 

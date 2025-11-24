@@ -19,7 +19,7 @@
             <span>{{ $t('tashkent') }}</span>
           </div>
         </div>
-        <MyPicture src="umbrella.png" alt="umbrella" class="section__umbrella" />
+        <UiPicture src="umbrella.png" alt="umbrella" class="section__umbrella" />
       </div>
     </div>
     <HomeDeadlineBanner :deadline />
