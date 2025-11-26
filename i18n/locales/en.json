@@ -26,6 +26,9 @@
   "become-sponsor": "Become a sponsor",
   "become-visitor": "Become a visitor",
   "become-speaker": "Become a speaker",
+  "insurance-services": "Insurance services",
+  "about-company": "About company",
+  "about-speaker": "About speaker",
 
   "nav": {
     "home": "Home",
@@ -275,48 +278,14 @@
 
   "participants": {
     "title": "Meet Our Trusted Insurance Providers",
-    "subtitle": "Expo Insurance 2025 is proud to showcase a diverse range of leading insurance providers from around the globe. Discover innovative solutions tailored to your personal and business needs",
-    "list": [
-      {
-        "name": "Kapital sug’urta",
-        "exp": "20",
-        "networks": "200",
-        "service": "Life insurance"
-      },
-      {
-        "name": "Kapital sug’urta",
-        "exp": "20",
-        "networks": "200",
-        "service": "Life insurance"
-      },
-      {
-        "name": "Kapital sug’urta",
-        "exp": "20",
-        "networks": "200",
-        "service": "Life insurance"
-      },
-      {
-        "name": "Kapital sug’urta",
-        "exp": "20",
-        "networks": "200",
-        "service": "Life insurance"
-      },
-      {
-        "name": "Kapital sug’urta",
-        "exp": "20",
-        "networks": "200",
-        "service": "Life insurance"
-      },
-      {
-        "name": "Kapital sug’urta",
-        "exp": "20",
-        "networks": "200",
-        "service": "Life insurance"
-      }
-    ]
+    "subtitle": "Expo Insurance 2025 is proud to showcase a diverse range of leading insurance providers from around the globe. Discover innovative solutions tailored to your personal and business needs"
   },
 
   "participant": {
+    "clients": "Clients who have used our services",
+    "partners": "Corporate partner organizations",
+    "products": "Insurance products and solutions",
+    "experiences": "Market experience and history of trust",
     "info": {
       "services": "Services presented at the exhibition"
     }

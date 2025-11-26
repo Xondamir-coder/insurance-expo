@@ -13,6 +13,12 @@ const seo = { en, ru, uz };
 export default (pageName, props = {}) => {
   const { locale } = useI18n();
   const seoData = seo[locale.value][pageName];
+
+  if (!seoData) {
+    console.warn(`SEO data not found for page: ${pageName}`);
+    return;
+  }
+
   useSeoMeta({
     ogSiteName: 'Insurance Expo',
     // ogImage: '/og-banner.jpg',

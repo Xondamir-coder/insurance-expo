@@ -26,7 +26,7 @@
 definePageMeta({
   layout: false
 });
-useMySEO('error');
+usePageSEO('error');
 </script>
 
 <style lang="scss" scoped>

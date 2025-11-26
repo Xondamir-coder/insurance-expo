@@ -54,5 +54,18 @@
   "error": {
     "title": "Sahifa topilmadi",
     "description": "Siz qidirayotgan sahifa mavjud emas. Insurance Expoga qayting va tadbirlar, ma'ruzachilar va hamkorlarni o'rganing."
+  },
+
+  "participant": {
+    "title": "{companyName} — O‘zbekistondagi yetakchi {industry}",
+    "description": "{companyName} {clientsCount}+ mijozga xizmat ko‘rsatib, {experienceYears} yillik tajriba va {productsCount} sug‘urta mahsuloti asosida {industry} taqdim etadi."
+  },
+  "speaker": {
+    "title": "{speakerName} — {speakerRole}",
+    "description": "{speakerName} {experienceYears} yillik tajribaga ega bo‘lib, {productsCount} mahsulot ustida ishlagan va {clientsCount}+ foydalanuvchiga xizmat ko‘rsatgan"
+  },
+  "currentMedia": {
+    "title": "{mediaTitle}",
+    "description": "{mediaBody} va Expo davomida olingan {galleryCount} ta asosiy lahzani o‘z ichiga oladi."
   }
 }

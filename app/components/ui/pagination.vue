@@ -1,5 +1,5 @@
 <template>
-  <div class="pagination">
+  <div v-if="pagesCount > 1" class="pagination">
     <!-- arrow left -->
     <button
       class="pagination__button"
@@ -36,7 +36,7 @@
     <button
       class="pagination__button pagination__button--number"
       :class="{
-        'pagination__button--active': pagesCount === currentPage
+        active: pagesCount === currentPage
       }"
       @click="changePage(pagesCount)"
     >
@@ -55,16 +55,17 @@
 </template>
 
 <script setup>
+const router = useRouter();
+const route = useRoute();
+
+const currentPage = computed(() => +route.query.page || 1);
+
 //  reactive state
 const shownButtonsCount = ref(3);
 
 //  props
 const props = defineProps({
   pagesCount: {
-    required: true,
-    type: Number
-  },
-  currentPage: {
     required: true,
     type: Number
   }
@@ -74,9 +75,15 @@ const props = defineProps({
 const emits = defineEmits(['changePage']);
 
 //  methods
-const changePage = newPage => {
-  emits('changePage', newPage);
-  if (props.currentPage !== props.pagesCount && props.currentPage >= shownButtonsCount.value) {
+const changePage = async newPage => {
+  await router.replace({
+    path: '/participants',
+    query: { page: newPage }
+  });
+
+  emits('changePage', currentPage.value);
+
+  if (currentPage.value !== props.pagesCount && currentPage.value >= shownButtonsCount.value) {
     shownButtonsCount.value++;
   }
 };

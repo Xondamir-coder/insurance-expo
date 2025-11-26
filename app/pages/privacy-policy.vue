@@ -21,5 +21,5 @@ const breadcrumbs = computed(() => [
   }
 ]);
 
-useMySEO('privacy-policy');
+usePageSEO('privacy-policy');
 </script>

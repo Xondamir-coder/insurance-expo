@@ -32,11 +32,16 @@ const { locale } = useI18n();
 
 const deadline = new Date('March 16, 2026');
 const formattedDate = computed(() =>
-  Intl.DateTimeFormat(locale.value, {
-    month: 'short',
-    day: '2-digit',
-    year: 'numeric'
-  }).format(deadline)
+  formatDate(
+    deadline,
+    locale.value,
+    {
+      month: 'short',
+      day: '2-digit',
+      year: 'numeric'
+    },
+    'short'
+  )
 );
 </script>
 

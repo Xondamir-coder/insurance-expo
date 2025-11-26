@@ -21,7 +21,7 @@ const breadcrumbs = computed(() => [
   }
 ]);
 
-useMySEO('partners');
+usePageSEO('partners');
 </script>
 
 <style lang="scss" scoped>

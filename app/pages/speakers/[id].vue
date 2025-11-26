@@ -1,33 +1,44 @@
 <template>
   <LayoutBreadcrumbs :breadcrumbs>
     <UiDetailedHero
-      title="Ahmadjon Rahmatjonov"
-      subtitle="Founder and CEO at Samsung"
+      :title="speaker[`name_${$i18n.locale}`]"
+      :subtitle="speaker[`role_${$i18n.locale}`]"
       :about="{
-        label: 'About',
-        text: 'Samsung is one of the world’s leading technology companies, recognized as a global leader in smartphones, televisions, home appliances, and the semiconductor industry. The company operates in more than 80 countries, offering innovative products and services.'
+        label: $t('about-speaker'),
+        text: speaker[`info_${$i18n.locale}`]
       }"
-      :focus="heroFocus"
+      :highlights="speaker.highlights"
       :quote="{
-        image: 'team-4.jpg',
-        text: '“Our goal is to make technology serve to make human life more comfortable and efficient.” — Ahmadjon Rahmatjonov, CEO of Samsung Uzbekistan'
+        image: `${DOMAIN_URL}${speaker.image}`,
+        text: speaker[`quote_${$i18n.locale}`]
       }"
+      :cards
     />
   </LayoutBreadcrumbs>
 </template>
 
 <script setup>
-const { t } = useI18n();
+const { t, locale } = useI18n();
+const route = useRoute();
+const { speakers } = useApiStore();
 
-const heroFocus = computed(() => [
+const speaker = speakers.find(s => s.id === +route.params.id);
+const cards = computed(() => [
   {
-    text: 'Life and health insurance services'
+    title: speaker.clients,
+    text: t('participant.clients')
   },
   {
-    text: 'Car insurance (OSAGO, KASKO)'
+    title: speaker.partners,
+    text: t('participant.partners')
   },
   {
-    text: 'Travel insurance'
+    title: speaker.products,
+    text: t('participant.products')
+  },
+  {
+    title: speaker.experiences,
+    text: t('participant.experiences')
   }
 ]);
 const breadcrumbs = computed(() => [
@@ -41,9 +52,17 @@ const breadcrumbs = computed(() => [
   },
   {
     to: '/speakers/1',
-    label: 'speaker name'
+    label: speaker[`name_${locale.value}`]
   }
 ]);
+
+useDynamicSEO('speaker', {
+  speakerName: speaker[`name_${locale.value}`],
+  speakerRole: speaker[`role_${locale.value}`],
+  clientsCount: speaker.clients,
+  experienceYears: speaker.experiences,
+  productsCount: speaker.products
+});
 
 useGSAPAnimate({
   selector: '.hero>*',

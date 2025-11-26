@@ -181,7 +181,7 @@ const breadcrumbs = computed(() => [
   }
 ]);
 
-useMySEO('visitors');
+usePageSEO('visitors');
 </script>
 
 <style lang="scss" scoped>

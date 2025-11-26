@@ -139,7 +139,7 @@ onMounted(() => {
   );
 });
 
-useMySEO('mission');
+usePageSEO('mission');
 </script>
 
 <style lang="scss" scoped>

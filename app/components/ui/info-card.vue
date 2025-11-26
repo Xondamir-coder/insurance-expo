@@ -8,12 +8,9 @@
           <div class="info-card__item-box">
             <component :is="item.icon" class="info-card__item-icon" />
           </div>
-          <div class="text-medium fill-dark-slate-blue">
-            {{ item.label }}:
-            <a :href="item.href" target="_blank" rel="noopener noreferrer">
-              {{ item.text }}
-            </a>
-          </div>
+          <a class="text-medium fill-dark-slate-blue" :href="item.href">
+            {{ item.label }}
+          </a>
         </div>
       </li>
     </ul>

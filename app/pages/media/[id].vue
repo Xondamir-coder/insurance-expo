@@ -2,39 +2,25 @@
   <LayoutBreadcrumbs :breadcrumbs>
     <UiPageHeader
       class="media__header"
-      title="Bank va moliya tashkilotlarining Expo doirasida namoyish etgan xizmatlari"
-      subtitle="Innovatsion yechimlar va raqamli xizmatlar taqdimoti"
+      :title="currentMedia[`title_${$i18n.locale}`]"
+      :subtitle="currentMedia[`body_${$i18n.locale}`]"
     />
     <ul class="media__list">
-      <li v-for="(image, index) in data" :key="index">
-        <UiPicture :src="image" alt="media banner" class="media__list-item" />
+      <li v-for="(image, index) in gallery" :key="index">
+        <img :src="`${DOMAIN_URL}${image}`" alt="media banner" class="media__list-item" />
       </li>
     </ul>
   </LayoutBreadcrumbs>
 </template>
 
 <script setup>
-const { t } = useI18n();
+const { t, locale } = useI18n();
 const route = useRoute();
+const { media } = useApiStore();
 
-const data = [
-  'media-1.jpg',
-  'media-2.jpg',
-  'media-3.jpg',
-  'media-4.jpg',
-  'media-2.jpg',
-  'media-4.jpg',
-  'media-3.jpg',
-  'media-1.jpg',
-  'media-4.jpg',
-  'media-3.jpg',
-  'media-1.jpg',
-  'media-2.jpg',
-  'media-3.jpg',
-  'media-4.jpg',
-  'media-2.jpg',
-  'media-1.jpg'
-];
+const currentMedia = media.data.find(m => m.id === +route.params.id);
+const gallery = currentMedia ? JSON.parse(currentMedia.gallery) : [];
+
 const breadcrumbs = computed(() => [
   {
     to: '/',
@@ -46,9 +32,16 @@ const breadcrumbs = computed(() => [
   },
   {
     to: `/media/${route.params.id}`,
-    label: 'media name'
+    label: route.params.id
   }
 ]);
+
+useDynamicSEO('currentMedia', {
+  mediaTitle: currentMedia[`title_${locale.value}`],
+  mediaBody: currentMedia[`body_${locale.value}`],
+  mediaDate: Intl.DateTimeFormat().format(new Date(currentMedia.updated_at)),
+  galleryCount: JSON.parse(currentMedia.gallery)?.length || 0
+});
 
 useGSAPAnimate({
   selector: '.media__list li',

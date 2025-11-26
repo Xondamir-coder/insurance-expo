@@ -26,6 +26,9 @@
   "become-sponsor": "Sponsor bo'lish",
   "become-visitor": "Mehmon bo'lish",
   "become-speaker": "Ma'ruzachi bo'lish",
+  "insurance-services": "Sug'urta xizmatlari",
+  "about-company": "Kompaniya haqida",
+  "about-speaker": "Ma'ruzachi haqida",
 
   "nav": {
     "home": "Bosh sahifa",
@@ -273,47 +276,13 @@
   },
   "participants": {
     "title": "Ishonchli sug‘urta provayderlarimiz bilan tanishing",
-    "subtitle": "Expo Insurance 2025 dunyo bo‘ylab yetakchi sug‘urta provayderlarini namoyish etishdan faxrlanadi. Shaxsiy va biznes ehtiyojlaringizga mos innovatsion yechimlarni kashf eting.",
-    "list": [
-      {
-        "name": "Kapital sug’urta",
-        "exp": "20",
-        "networks": "200",
-        "service": "Hayot sug‘urtasi"
-      },
-      {
-        "name": "Kapital sug’urta",
-        "exp": "20",
-        "networks": "200",
-        "service": "Hayot sug‘urtasi"
-      },
-      {
-        "name": "Kapital sug’urta",
-        "exp": "20",
-        "networks": "200",
-        "service": "Hayot sug‘urtasi"
-      },
-      {
-        "name": "Kapital sug’urta",
-        "exp": "20",
-        "networks": "200",
-        "service": "Hayot sug‘urtasi"
-      },
-      {
-        "name": "Kapital sug’urta",
-        "exp": "20",
-        "networks": "200",
-        "service": "Hayot sug‘urtasi"
-      },
-      {
-        "name": "Kapital sug’urta",
-        "exp": "20",
-        "networks": "200",
-        "service": "Hayot sug‘urtasi"
-      }
-    ]
+    "subtitle": "Expo Insurance 2025 dunyo bo‘ylab yetakchi sug‘urta provayderlarini namoyish etishdan faxrlanadi. Shaxsiy va biznes ehtiyojlaringizga mos innovatsion yechimlarni kashf eting."
   },
   "participant": {
+    "clients": "Xizmatlarimizdan foydalangan mijozlar",
+    "partners": "Korporativ hamkorlik tashkilotlari",
+    "products": "Sug'urta mahsulotlari va yechimlari",
+    "experiences": "Bozorda tajribasi va ishonch tarixi",
     "info": {
       "services": "Ko‘rgazmada taqdim etilgan xizmatlar"
     }

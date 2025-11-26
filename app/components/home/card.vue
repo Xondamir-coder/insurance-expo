@@ -1,18 +1,18 @@
 <template>
   <div class="card">
     <div class="card__top">
-      <UiPicture :src="data.img" alt="banner" class="card__image" />
+      <img :src="`${DOMAIN_URL}${data.poster}`" alt="banner" class="card__image" />
       <div class="card__date">
         <IconsCalendar class="icon" />
-        <span>{{ data.date }}</span>
+        <span>{{ formatDateRange(data.start_at, data.end_at) }}</span>
       </div>
     </div>
     <div class="card__content">
       <h3 class="card__content-title">
-        {{ data.title }}
+        {{ data[`name_${$i18n.locale}`] }}
       </h3>
       <p class="card__content-text">
-        {{ data.text }}
+        {{ data[`body_${$i18n.locale}`] }}
       </p>
     </div>
   </div>
@@ -25,13 +25,40 @@ defineProps({
     type: Object
   }
 });
+const formatDateRange = (startAt, endAt) => {
+  const { locale } = useI18n();
+  const lang = locale.value;
+
+  const start = new Date(startAt);
+  const end = new Date(endAt);
+
+  const month =
+    lang === 'uz'
+      ? [
+          'Yanvar',
+          'Fevral',
+          'Mart',
+          'Aprel',
+          'May',
+          'Iyun',
+          'Iyul',
+          'Avgust',
+          'Sentabr',
+          'Oktabr',
+          'Noyabr',
+          'Dekabr'
+        ][start.getMonth()]
+      : start.toLocaleDateString(lang, { month: 'long' });
+
+  return `${start.getDate()}-${end.getDate()} ${month} ${start.getFullYear()}`;
+};
 </script>
 
 <style lang="scss" scoped>
 .card {
+  display: flex;
+  flex-direction: column;
   gap: max(10px, 1.2rem);
-  display: grid;
-  grid-auto-rows: 1fr;
   &:hover &__content {
     border-color: $clr-dark-green;
   }
@@ -55,7 +82,6 @@ defineProps({
   }
   &__content {
     @include flex-gap(12px);
-    flex-basis: 70%;
     border-radius: max(16px, 2rem);
     padding: max(14px, 2rem);
     background: $clr-almost-white;
@@ -76,7 +102,6 @@ defineProps({
     }
   }
   &__top {
-    flex-basis: 50%;
     display: grid;
     border-radius: max(16px, 2rem);
     overflow: hidden;
@@ -88,6 +113,7 @@ defineProps({
   &__image {
     width: 100%;
     object-fit: cover;
+    aspect-ratio: 421/280;
   }
 }
 </style>

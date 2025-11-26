@@ -5,127 +5,46 @@
       :subtitle="$t('speakers.subtitle')"
       class="speakers__header"
     />
-    <div class="carousel">
-      <ClientOnly>
-        <swiper-container
-          class="carousel__slider"
-          grab-cursor="true"
-          slides-per-view="auto"
-          :free-mode="true"
-          :autoplay="{ delay: 0, disableOnInteraction: false }"
-          :speed="15000"
-          :loop="true"
-          :breakpoints
-        >
-          <swiper-slide v-for="(speaker, index) in speakers" :key="index" class="carousel__slide">
-            <NuxtLink :to="$localePath(`/speakers/${index}`)" class="carousel__slide-wrapper">
-              <UiPicture :alt="speaker.name" :src="speaker.image" class="carousel__slide-box" />
-              <div class="carousel__slide-content">
-                <h3 class="carousel__slide-name">{{ speaker.name }}</h3>
-                <p class="carousel__slide-job">{{ speaker.job }}</p>
-              </div>
-            </NuxtLink>
-          </swiper-slide>
-        </swiper-container>
-        <swiper-container
-          class="carousel__slider"
-          grab-cursor="true"
-          slides-per-view="auto"
-          :free-mode="true"
-          :autoplay="{
-            delay: 0,
-            disableOnInteraction: false,
-            reverseDirection: true
-          }"
-          :speed="10000"
-          :loop="true"
-          :breakpoints
-        >
-          <swiper-slide v-for="(speaker, index) in speakers" :key="index" class="carousel__slide">
-            <NuxtLink :to="$localePath(`/speakers/${index}`)" class="carousel__slide-wrapper">
-              <UiPicture :alt="speaker.name" :src="speaker.image" class="carousel__slide-box" />
-              <div class="carousel__slide-content">
-                <h3 class="carousel__slide-name">{{ speaker.name }}</h3>
-                <p class="carousel__slide-job">{{ speaker.job }}</p>
-              </div>
-            </NuxtLink>
-          </swiper-slide>
-        </swiper-container>
-      </ClientOnly>
+    <div class="carousel" :style="`--items-count: ${speakers.length}`">
+      <div v-for="i in 2" :key="i" class="carousel__slider" :class="{ reverse: i === 2 }">
+        <div class="carousel__track">
+          <NuxtLink
+            v-for="(speaker, index) in infiniteSpeakers"
+            :key="index"
+            :to="$localePath(`/speakers/${speaker.id}`)"
+            class="carousel__slide"
+          >
+            <img
+              :alt="speaker[`name_${$i18n.locale}`]"
+              :src="`${DOMAIN_URL}${speaker.image}`"
+              class="carousel__slide-box"
+            />
+            <div class="carousel__slide-content">
+              <h3 class="carousel__slide-name">{{ speaker[`name_${$i18n.locale}`] }}</h3>
+              <p class="carousel__slide-job">{{ speaker[`role_${$i18n.locale}`] }}</p>
+            </div>
+          </NuxtLink>
+        </div>
+      </div>
     </div>
   </LayoutBreadcrumbs>
 </template>
 
 <script setup>
 const { t } = useI18n();
+const apiStore = useApiStore();
+const { speakers } = storeToRefs(apiStore);
 
-const breakpoints = {
-  0: { spaceBetween: 12 },
-  768: { spaceBetween: 22 },
-  1360: { spaceBetween: 32 }
-};
-const speakers = computed(() => [
-  {
-    image: 'team-1.jpg',
-    name: 'Kuchiki Byakuya',
-    job: 'Founder and CEO'
-  },
-  {
-    image: 'team-2.jpg',
-    name: 'Kuchiki Byakuya',
-    job: 'Founder and CEO'
-  },
-  {
-    image: 'team-3.jpg',
-    name: 'Kuchiki Byakuya',
-    job: 'Founder and CEO'
-  },
-  {
-    image: 'team-4.jpg',
-    name: 'Kuchiki Byakuya',
-    job: 'Founder and CEO'
-  },
-  {
-    image: 'team-1.jpg',
-    name: 'Kuchiki Byakuya',
-    job: 'Founder and CEO'
-  },
-  {
-    image: 'team-2.jpg',
-    name: 'Kuchiki Byakuya',
-    job: 'Founder and CEO'
-  },
-  {
-    image: 'team-3.jpg',
-    name: 'Kuchiki Byakuya',
-    job: 'Founder and CEO'
-  },
-  {
-    image: 'team-4.jpg',
-    name: 'Kuchiki Byakuya',
-    job: 'Founder and CEO'
-  },
-  {
-    image: 'team-1.jpg',
-    name: 'Kuchiki Byakuya',
-    job: 'Founder and CEO'
-  },
-  {
-    image: 'team-2.jpg',
-    name: 'Kuchiki Byakuya',
-    job: 'Founder and CEO'
-  },
-  {
-    image: 'team-3.jpg',
-    name: 'Kuchiki Byakuya',
-    job: 'Founder and CEO'
-  },
-  {
-    image: 'team-4.jpg',
-    name: 'Kuchiki Byakuya',
-    job: 'Founder and CEO'
-  }
-]);
+const infiniteSpeakers = computed(() => {
+  const MIN_ITEMS = 12;
+  const original = speakers.value;
+
+  if (original.length === 0) return [];
+
+  const timesToRepeat = Math.ceil(MIN_ITEMS / original.length);
+  return Array.from({ length: timesToRepeat }, () => original).flat();
+});
+
 const breadcrumbs = computed(() => [
   {
     to: '/',
@@ -143,23 +62,44 @@ useGSAPAnimate({
   initialDelay: 0.1
 });
 
-useMySEO('speakers');
+usePageSEO('speakers');
 </script>
 
 <style lang="scss" scoped>
+$item-width: max(27rem, 200px);
+$item-gap: max(3.2rem, 16px);
+$animation-speed: 40s;
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    // Move exactly by the width of original items (half of the track)
+    transform: translateX(calc(-1 * (#{$item-width} + #{$item-gap}) * var(--items-count)));
+  }
+}
+
+@keyframes scroll-reverse {
+  0% {
+    transform: translateX(calc(-1 * (#{$item-width} + #{$item-gap}) * var(--items-count)));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .carousel {
+  --items-count: 0;
   display: flex;
   flex-direction: column;
   gap: 32px;
-
   &__slide {
-    max-width: 30rem;
-    min-width: 216px;
-    &-wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
+    width: $item-width;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     &-name {
       color: $clr-dark-charcoal;
       font-weight: bold;
@@ -174,6 +114,42 @@ useMySEO('speakers');
       border-radius: 50%;
       aspect-ratio: 1;
     }
+  }
+  &__slider {
+    position: relative;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 100px;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    &::before {
+      left: 0;
+      background: linear-gradient(to right, var(--bg-color, white) 0%, transparent 100%);
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(to left, var(--bg-color, white) 0%, transparent 100%);
+    }
+
+    &.reverse .carousel__track {
+      animation-name: scroll-reverse;
+    }
+  }
+
+  &__track {
+    display: flex;
+    gap: $item-gap;
+    animation: scroll $animation-speed linear infinite;
+    will-change: transform;
   }
 }
 .hero {

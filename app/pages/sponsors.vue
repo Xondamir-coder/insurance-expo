@@ -84,7 +84,7 @@ useGSAPAnimate({
   mode: 'group'
 });
 
-useMySEO('sponsors');
+usePageSEO('sponsors');
 </script>
 
 <style lang="scss" scoped>

@@ -54,5 +54,18 @@
   "error": {
     "title": "Страница не найдена",
     "description": "Страница не существует. Вернитесь на Insurance Expo, чтобы узнать о событиях, спикерах и партнерах."
+  },
+
+  "participant": {
+    "title": "{companyName} — лидер в сфере {industry} Узбекистана",
+    "description": "{companyName} обслуживает более {clientsCount} клиентов, предлагая {industry} с {experienceYears}-летним опытом и {productsCount} страховыми продуктами."
+  },
+  "speaker": {
+    "title": "{speakerName} — {speakerRole}",
+    "description": "{speakerName} делится опытом, основанным на {experienceYears} годах работы, создании {productsCount} ключевых продуктов и поддержке {clientsCount}+ пользователей"
+  },
+  "currentMedia": {
+    "title": "{mediaTitle}",
+    "description": "{mediaBody}, сопровождаемая {galleryCount} ключевыми моментами, запечатлёнными на выставке."
   }
 }

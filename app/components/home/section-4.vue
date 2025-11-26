@@ -17,8 +17,8 @@
     </div>
     <ClientOnly>
       <swiper-container ref="listRef" class="section__slider" init="false">
-        <swiper-slide v-for="item in items" :key="item.title" class="section__slide">
-          <HomeCard :data="item" />
+        <swiper-slide v-for="event in events" :key="event.id" class="section__slide">
+          <HomeCard :data="event" />
         </swiper-slide>
       </swiper-container>
     </ClientOnly>
@@ -34,15 +34,8 @@
 </template>
 
 <script setup>
-const PROTO_OBJ = {
-  title: 'Insurance Expo 2025: A Space for New Opportunities',
-  text: 'Discover leading companies and innovative services at the international insurance exhibition. Explore the latest updates and opportunities in the insurance industry all in one place. Insurance Expo 2025 ',
-  img: 'home-section-4.jpg',
-  date: '12-16 March 2025'
-};
-const PROTO_COUNT = 12;
-const items = Array(PROTO_COUNT).fill(PROTO_OBJ);
 const listRef = ref();
+const { events } = useApiStore();
 
 useSwiper(listRef, {
   spaceBetween: 22,

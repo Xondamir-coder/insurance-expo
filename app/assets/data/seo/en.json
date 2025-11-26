@@ -54,5 +54,18 @@
   "error": {
     "title": "Page Not Found – Explore",
     "description": "Oops! The page you’re looking for doesn’t exist. Navigate back to Insurance Expo to discover events, speakers, partners, and industry insights."
+  },
+
+  "participant": {
+    "title": "{companyName} — Leading {industry} in Uzbekistan",
+    "description": "{companyName} serves over {clientsCount} clients, offering {industry} backed by {experienceYears} years of expertise and {productsCount} insurance products."
+  },
+  "speaker": {
+    "title": "{speakerName} — {speakerRole}",
+    "description": "{speakerName} shares insights shaped by {experienceYears} years of experience, working on {productsCount} major products and serving over {clientsCount} users"
+  },
+  "currentMedia": {
+    "title": "{mediaTitle}",
+    "description": "{mediaBody} featuring {galleryCount} event highlights captured during the Expo."
   }
 }

@@ -15,6 +15,9 @@
 const route = useRoute();
 const pages = ['partners', 'participants-id', 'sponsors', 'speakers', 'media'];
 const isAlmostWhite = computed(() => pages.some(p => route.path.includes(p)));
+
+const { fetchData } = useApiStore();
+fetchData();
 </script>
 
 <style lang="scss" scoped>

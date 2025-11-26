@@ -1,8 +1,9 @@
+<!-- eslint-disable vue/no-v-html -->
 <template>
   <div class="hero">
     <UiPicture v-if="banner" :src="banner" alt="person" class="hero__banner" />
     <div v-if="quote" class="hero__right">
-      <UiPicture :src="quote.image" alt="person" class="hero__right-banner" />
+      <img :src="quote.image" alt="person" class="hero__right-banner" />
       <div class="hero__right-content">
         <h4>{{ $t('quote') }}</h4>
         <p class="text-medium">{{ quote.text }}</p>
@@ -10,14 +11,14 @@
     </div>
     <div class="hero__top">
       <div v-if="logo" class="hero__top-box">
-        <component :is="logo" class="hero__top-logo" />
+        <img :src="`${DOMAIN_URL}${logo}`" class="hero__top-logo" />
       </div>
       <div class="hero__top-content">
         <h1 class="hero__title">{{ title }}</h1>
         <p class="text-medium">{{ subtitle }}</p>
       </div>
     </div>
-    <div class="hero__info">
+    <div v-if="about.text" class="hero__info">
       <h2 class="hero__label">{{ about.label }}</h2>
       <p class="text-medium">
         {{ about.text }}
@@ -29,21 +30,19 @@
         {{ info.text }}
       </p>
     </div>
-    <div v-if="focus" class="hero__focus">
+    <div v-if="highlights" class="hero__focus">
       <h2 class="hero__label">{{ $t('detailed-hero.focus-label') }}</h2>
       <ul class="hero__focus-list">
-        <li v-for="(item, index) in focus" :key="index" class="hero__focus-item">
-          <div class="hero__focus-box">
-            <IconsGameHeart class="hero__focus-icon" />
-          </div>
+        <li v-for="(highlight, index) in highlights" :key="index" class="hero__focus-item">
+          <div class="hero__focus-box" v-html="highlight.svg" />
           <p class="hero__text">
-            {{ item.text }}
+            {{ highlight[`title_${$i18n.locale}`] }}
           </p>
         </li>
       </ul>
     </div>
     <ul class="hero__cards">
-      <li v-for="(item, index) in heroCards" :key="index" class="hero__card">
+      <li v-for="(item, index) in cards" :key="index" class="hero__card">
         <span class="hero__title">{{ item.title }}</span>
         <p class="hero__text">{{ item.text }}</p>
       </li>
@@ -52,33 +51,14 @@
 </template>
 
 <script setup>
-const heroCards = computed(() => [
-  {
-    title: '123 000+',
-    text: 'Clients who have used our services'
-  },
-  {
-    title: '250+',
-    text: 'Corporate partner organizations'
-  },
-  {
-    title: '70+',
-    text: 'Insurance products and solutions'
-  },
-  {
-    title: '25 years',
-    text: 'Market experience and history of trust'
-  }
-]);
-
 defineProps({
   banner: {
     type: String,
     default: null
   },
   logo: {
-    type: Object,
-    default: null
+    type: String,
+    default: ''
   },
   title: {
     type: String,
@@ -100,7 +80,11 @@ defineProps({
     type: Object,
     default: null
   },
-  focus: {
+  highlights: {
+    type: Array,
+    default: null
+  },
+  cards: {
     type: Array,
     default: null
   }
@@ -238,6 +222,9 @@ defineProps({
       background-color: $clr-bright-teal-alt;
       border-radius: max(1.2rem, 8px);
       fill: #fff;
+      & > * {
+        width: 54.5454545%;
+      }
     }
     &-icon {
       width: 56%;

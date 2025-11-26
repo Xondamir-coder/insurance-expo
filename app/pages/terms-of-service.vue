@@ -22,5 +22,5 @@ const breadcrumbs = computed(() => [
   }
 ]);
 
-useMySEO('terms-of-service');
+usePageSEO('terms-of-service');
 </script>

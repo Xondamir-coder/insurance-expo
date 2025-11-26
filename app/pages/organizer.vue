@@ -61,7 +61,7 @@ const breadcrumbs = computed(() => [
   }
 ]);
 
-useMySEO('organizer');
+usePageSEO('organizer');
 </script>
 
 <style lang="scss" scoped>

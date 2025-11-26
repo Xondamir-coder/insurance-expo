@@ -1,97 +1,79 @@
 <template>
   <LayoutBreadcrumbs :breadcrumbs class="participant">
     <UiDetailedHero
-      :logo="SvgBanksKapital"
-      title="Kapital Sug‘urta"
-      subtitle="Insurance services"
+      :logo="participant.logo"
+      :title="participant[`name_${$i18n.locale}`]"
+      :subtitle="$t('insurance-services')"
       :about="{
-        label: 'About company',
-        text: 'Kapital Sug’urta is one of Uzbekistan’s leading insurance companies, offering a wide range of insurance services for both individuals and legal entities. The company provides innovative solutions aimed at ensuring clients’ financial security and minimizing risks. Kapital Sug’urta’s services include life insurance, property protection, health insurance, and vehicle insurance.'
+        label: $t('about-company'),
+        text: participant[`body_${$i18n.locale}`]
       }"
-      :focus="heroFocus"
+      :highlights="participant.highlights"
+      :cards
       banner="participants-index.png"
     />
     <section class="info">
-      <UiInfoCard v-for="(card, index) in infoCards" :key="index" :data="card" />
+      <UiInfoCard v-for="(card, index) in [contactsCard, servicesCard]" :key="index" :data="card" />
     </section>
-    <UiImageSlider :images="carouselImages" />
+    <UiImageSlider :images="JSON.parse(participant.gallery).map(img => `${DOMAIN_URL}${img}`)" />
   </LayoutBreadcrumbs>
 </template>
 
 <script setup>
-import SvgBanksKapital from '~/components/svg/banks/kapital.vue';
-import { IconsPin, IconsCalling, IconsMail, IconsLocation } from '#components';
+import { IconsPin, IconsCalling, IconsMail, IconsGlobe } from '#components';
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
+const route = useRoute();
+const { participants } = useApiStore();
 
-const infoCards = [
+const participant = participants.data.find(p => p.id === +route.params.id);
+const cards = computed(() => [
   {
-    title: t('contact-information'),
-    content: [
-      {
-        icon: IconsPin,
-        label: t('address'),
-        href: 'https://google.com',
-        text: '15 Mustaqillik Avenue, Tashkent City'
-      },
-      {
-        icon: IconsCalling,
-        label: t('phone'),
-        href: 'tel:+998 (71) 233 45 67',
-        text: '+998 (71) 233 45 67'
-      },
-      {
-        icon: IconsMail,
-        label: t('email'),
-        href: 'mailto:info@kapitalsugurta.uz',
-        text: 'info@kapitalsugurta.uz'
-      },
-      {
-        icon: IconsLocation,
-        label: t('website'),
-        href: 'https://www.kapitalsugurta.uz',
-        text: 'www.kapitalsugurta.uz'
-      }
-    ]
+    title: participant.clients,
+    text: t('participant.clients')
   },
   {
-    title: t('participant.info.services'),
-    content: [
-      'New “Online Insurance” platform',
-      'Instant insurance processing via mobile app',
-      'Insurance solutions for startups and small businesses',
-      'Digital insurance services (remote contract signing)',
-      'Insurance products integrated with fintech solutions'
-    ]
-  }
-];
-const carouselImages = [
-  'participant-1.jpg',
-  'participant-2.jpg',
-  'participant-3.jpg',
-  'participant-4.jpg',
-  'participant-1.jpg'
-];
-const heroFocus = computed(() => [
-  {
-    text: 'Life and health insurance services'
+    title: participant.partners,
+    text: t('participant.partners')
   },
   {
-    text: 'Car insurance (OSAGO, KASKO)'
+    title: participant.products,
+    text: t('participant.products')
   },
   {
-    text: 'Travel insurance'
-  },
-  {
-    text: 'Travel insurance'
-  },
-  {
-    text: 'Property and real estate insurance'
-  },
-  {
-    text: 'Corporate insurance packages'
+    title: participant.experiences,
+    text: t('participant.experiences')
   }
 ]);
+const contactsCard = computed(() => ({
+  title: t('contact-information'),
+  content: [
+    {
+      icon: IconsPin,
+      href: participant.address_map,
+      label: participant[`address_${locale.value}`]
+    },
+    {
+      icon: IconsCalling,
+      href: `tel:${participant.phone}`,
+      label: participant.phone
+    },
+    {
+      icon: IconsMail,
+      href: `mailto:${participant.email}`,
+      label: participant.email
+    },
+    {
+      icon: IconsGlobe,
+      href: participant.link,
+      label: participant.link.replace('http://', '').replace('https://', '')
+    }
+  ]
+}));
+const servicesCard = computed(() => ({
+  title: t('participant.info.services'),
+  content: participant.services.map(el => el[`title_${locale.value}`])
+}));
 const breadcrumbs = computed(() => [
   {
     to: '/',
@@ -103,9 +85,16 @@ const breadcrumbs = computed(() => [
   },
   {
     to: '/participants/1',
-    label: 'participant name'
+    label: participant[`name_${locale.value}`]
   }
 ]);
+
+useDynamicSEO('participant', {
+  companyName: participant[`name_${locale.value}`],
+  clientsCount: participant.clients,
+  experienceYears: participant.experiences,
+  productsCount: participant.products
+});
 
 useGSAPAnimate({
   selector: '.hero>*',

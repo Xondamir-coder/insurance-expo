@@ -46,7 +46,7 @@ const changeIndex = newIndex => {
   currentIndex.value = newIndex;
 };
 
-useMySEO('home');
+usePageSEO('home');
 </script>
 
 <style lang="scss" scoped>

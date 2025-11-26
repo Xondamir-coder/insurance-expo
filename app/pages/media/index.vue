@@ -2,23 +2,25 @@
   <LayoutBreadcrumbs :breadcrumbs>
     <UiGreenPageHeader :title="$t('media.title')" :subtitle="$t('media.subtitle')" />
     <ul class="list">
-      <li v-for="(item, index) in data" :key="index">
-        <NuxtLink :to="$localePath(`/media/${index}`)" class="list__item">
+      <li v-for="item in media.data" :key="item.id">
+        <NuxtLink :to="$localePath(`/media/${item.id}`)" class="list__item">
           <div class="list__item-left">
-            <UiPicture
-              v-for="image in item.images"
-              :key="image"
-              :src="image"
+            <img
+              v-for="(image, index) in JSON.parse(item.gallery).slice(0, 2)"
+              :key="index"
+              :src="`${DOMAIN_URL}${image}`"
               alt="media banner"
               class="list__item-image"
             />
           </div>
           <div class="list__item-content">
             <div class="list__item-content-top">
-              <p class="text-medium">{{ item.date }}</p>
-              <h2 class="list__item-title">{{ item.title }}</h2>
+              <p class="text-medium">
+                {{ formatDate(item.date, $i18n.locale, { dateStyle: 'long' }) }}
+              </p>
+              <h2 class="list__item-title">{{ item[`title_${$i18n.locale}`] }}</h2>
             </div>
-            <p class="text-medium">{{ item.text }}</p>
+            <p class="text-medium">{{ item[`body_${$i18n.locale}`] }}</p>
           </div>
         </NuxtLink>
       </li>
@@ -29,33 +31,8 @@
 <script setup>
 const { t } = useI18n();
 const { $gsap } = useNuxtApp();
+const { media } = useApiStore();
 
-const data = [
-  {
-    images: ['media-1.jpg', 'media-2.jpg'],
-    date: 'October 12, 2025',
-    title: 'Ceremony, ribbons, first impressions, and media shots from the hall',
-    text: 'Expo Insurance 2025 kicked off with a grand opening ceremony. The event was attended by insurance market leaders, partners, and media representatives. This album captures the first impressions, striking moments, and the inspiring atmosphere of the launch.'
-  },
-  {
-    images: ['media-3.jpg', 'media-4.jpg'],
-    date: 'October 12, 2025',
-    title: 'Ceremony, ribbons, first impressions, and media shots from the hall',
-    text: 'Expo Insurance 2025 kicked off with a grand opening ceremony. The event was attended by insurance market leaders, partners, and media representatives. This album captures the first impressions, striking moments, and the inspiring atmosphere of the launch.'
-  },
-  {
-    images: ['media-1.jpg', 'media-3.jpg'],
-    date: 'October 12, 2025',
-    title: 'Ceremony, ribbons, first impressions, and media shots from the hall',
-    text: 'Expo Insurance 2025 kicked off with a grand opening ceremony. The event was attended by insurance market leaders, partners, and media representatives. This album captures the first impressions, striking moments, and the inspiring atmosphere of the launch.'
-  },
-  {
-    images: ['media-3.jpg', 'media-2.jpg'],
-    date: 'October 12, 2025',
-    title: 'Ceremony, ribbons, first impressions, and media shots from the hall',
-    text: 'Expo Insurance 2025 kicked off with a grand opening ceremony. The event was attended by insurance market leaders, partners, and media representatives. This album captures the first impressions, striking moments, and the inspiring atmosphere of the launch.'
-  }
-];
 const breadcrumbs = computed(() => [
   {
     to: '/',
@@ -78,7 +55,7 @@ useGSAPAnimate({
   }
 });
 
-useMySEO('media');
+usePageSEO('media');
 </script>
 
 <style lang="scss" scoped>
