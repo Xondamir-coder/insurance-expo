@@ -1,9 +1,14 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <div class="hero">
-    <UiPicture v-if="banner" :src="banner" alt="person" class="hero__banner" />
+    <img v-if="banner" :src="`${DOMAIN_URL}${banner}`" alt="person" class="hero__banner" />
     <div v-if="quote" class="hero__right">
-      <img :src="quote.image" alt="person" class="hero__right-banner" />
+      <img
+        v-if="quote.image"
+        :src="`${DOMAIN_URL}${quote.image}`"
+        alt="banner"
+        class="hero__right-banner"
+      />
       <div class="hero__right-content">
         <h4>{{ $t('quote') }}</h4>
         <p class="text-medium">{{ quote.text }}</p>
@@ -11,7 +16,7 @@
     </div>
     <div class="hero__top">
       <div v-if="logo" class="hero__top-box">
-        <img :src="`${DOMAIN_URL}${logo}`" class="hero__top-logo" />
+        <img :src="`${DOMAIN_URL}${logo}`" alt="logo" class="hero__top-logo" />
       </div>
       <div class="hero__top-content">
         <h1 class="hero__title">{{ title }}</h1>

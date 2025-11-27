@@ -1,15 +1,11 @@
 <template>
-  <LayoutBreadcrumbs :breadcrumbs class="partners">
-    <div class="partners__title">100</div>
-    <UiGreenPageHeader :title="$t('partners.title')" :subtitle="$t('partners.subtitle')" />
-    <UiPartnersList />
-    <UiFormSection :title="$t('become-partner')" />
-  </LayoutBreadcrumbs>
+  <LayoutPartnersSponsorsBase :breadcrumbs :form-title="$t('become-partner')" page-name="partners">
+    <UiSponsorsList />
+  </LayoutPartnersSponsorsBase>
 </template>
 
 <script setup>
 const { t } = useI18n();
-
 const breadcrumbs = computed(() => [
   {
     to: '/',
@@ -20,7 +16,6 @@ const breadcrumbs = computed(() => [
     label: t('nav.partners')
   }
 ]);
-
 usePageSEO('partners');
 </script>
 

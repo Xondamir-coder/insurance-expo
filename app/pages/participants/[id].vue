@@ -10,7 +10,7 @@
       }"
       :highlights="participant.highlights"
       :cards
-      banner="participants-index.png"
+      :banner="participant.hero_image"
     />
     <section class="info">
       <UiInfoCard v-for="(card, index) in [contactsCard, servicesCard]" :key="index" :data="card" />

@@ -9,7 +9,7 @@
       }"
       :highlights="speaker.highlights"
       :quote="{
-        image: `${DOMAIN_URL}${speaker.image}`,
+        image: speaker.image,
         text: speaker[`quote_${$i18n.locale}`]
       }"
       :cards

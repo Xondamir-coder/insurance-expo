@@ -1,5 +1,5 @@
 <template>
-  <LayoutPartnersSponsorsDetailed :breadcrumbs page-name="partner" />
+  <LayoutPartnersSponsorsDetailed :breadcrumbs page-name="sponsor" />
 </template>
 
 <script setup>
@@ -15,11 +15,11 @@ const breadcrumbs = computed(() => [
     label: t('nav.home')
   },
   {
-    to: '/partners',
-    label: t('nav.partners')
+    to: '/sponsors',
+    label: t('nav.sponsors')
   },
   {
-    to: `/partners/${route.params.id}`,
+    to: `/sponsors/${route.params.id}`,
     label: currentDetailed[`name_${locale.value}`]
   }
 ]);

@@ -12,12 +12,23 @@
 </template>
 
 <script setup>
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 const route = useRoute();
-const pages = ['partners', 'participants-id', 'sponsors', 'speakers', 'media'];
-const isAlmostWhite = computed(() => pages.some(p => route.path.includes(p)));
+const router = useRouter();
 
 const { fetchData } = useApiStore();
 fetchData();
+
+if (import.meta.client) {
+  router.afterEach(() => {
+    nextTick(() => {
+      ScrollTrigger.refresh();
+    });
+  });
+}
+
+const pages = ['partners', 'participants-id', 'sponsors', 'speakers', 'media'];
+const isAlmostWhite = computed(() => pages.some(p => route.path.includes(p)));
 </script>
 
 <style lang="scss" scoped>

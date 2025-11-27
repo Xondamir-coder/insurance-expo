@@ -29,6 +29,9 @@
   "insurance-services": "Insurance services",
   "about-company": "About company",
   "about-speaker": "About speaker",
+  "about-partner": "About partner",
+  "about-sponsor": "About sponsor",
+  "why-partner-expo": "Why They Partner with Expo Insurance",
 
   "nav": {
     "home": "Home",
@@ -297,7 +300,7 @@
   },
 
   "partners": {
-    "title": "We are chosen by market leaders — over 100 partners",
+    "title": "We are chosen by market leaders — over {count} partners",
     "subtitle": "Insurance Expo — a space where partnerships turn into opportunities."
   },
 
@@ -328,7 +331,7 @@
   },
 
   "sponsors": {
-    "title": "Over 100 reliable partners across the country",
+    "title": "Over {count} reliable partners across the country",
     "subtitle": "At Expo Insurance 2025, we are proud to collaborate with industry leaders and innovators who share our vision of advancing the insurance sector."
   },
 

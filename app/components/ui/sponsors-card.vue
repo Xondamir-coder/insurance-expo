@@ -1,12 +1,12 @@
 <template>
-  <NuxtLink :to="$localePath(`/partners/2`)" class="card">
+  <NuxtLink :to="$localePath(`/partners/${data.id}`)" class="card">
     <SvgGrid class="card__grid" />
     <div class="card__container">
-      <component :is="data.logo" class="card__logo" />
+      <img :src="`${DOMAIN_URL}${data.logo}`" class="card__logo" />
     </div>
     <div class="card__content">
-      <h3 class="card__title">{{ data.name }}</h3>
-      <p class="text-small">{{ data.service }}</p>
+      <h3 class="card__title">{{ data[`name_${$i18n.locale}`].slice(0, 200) }}</h3>
+      <p class="text-small">{{ data[`short_info_${$i18n.locale}`] }}</p>
     </div>
   </NuxtLink>
 </template>
@@ -30,6 +30,7 @@ defineProps({
   text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: max(2rem, 16px);
   overflow: hidden;

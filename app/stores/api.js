@@ -7,7 +7,7 @@ export const useApiStore = defineStore('api', () => {
   const route = useRoute();
 
   // Data
-  const partners = ref();
+  const partnersAndSponsors = ref();
   const participants = ref();
   const speakers = ref();
   const media = ref();
@@ -36,7 +36,7 @@ export const useApiStore = defineStore('api', () => {
     const items = [
       {
         endpoint: 'sponsors',
-        ref: partners
+        ref: partnersAndSponsors
       },
       {
         endpoint: 'insurance',
@@ -72,5 +72,13 @@ export const useApiStore = defineStore('api', () => {
     }
   };
 
-  return { partners, participants, speakers, media, events, fetchParticipants, fetchData };
+  return {
+    partnersAndSponsors,
+    participants,
+    speakers,
+    media,
+    events,
+    fetchParticipants,
+    fetchData
+  };
 });

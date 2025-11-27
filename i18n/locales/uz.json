@@ -29,6 +29,9 @@
   "insurance-services": "Sug'urta xizmatlari",
   "about-company": "Kompaniya haqida",
   "about-speaker": "Ma'ruzachi haqida",
+  "about-partner": "Hamkor haqida",
+  "about-sponsor": "Homiy haqida",
+  "nima-uchun-expo-bilan-hamkor": "Nima uchun ular Expo Insurance bilan hamkor",
 
   "nav": {
     "home": "Bosh sahifa",
@@ -293,7 +296,7 @@
   },
 
   "partners": {
-    "title": "Bozor yetakchilari tanlagan — 100 dan ortiq hamkorlar",
+    "title": "Bozor yetakchilari tanlagan — {count} dan ortiq hamkorlar",
     "subtitle": "Insurance Expo — hamkorlik imkoniyatlarga aylanishadigan maydon."
   },
   "form-section": {
@@ -320,7 +323,7 @@
     "focus-label": "Ko‘rgazmaning e’tibori / Asosiy jihatlar"
   },
   "sponsors": {
-    "title": "Butun mamlakat bo‘ylab 100 dan ortiq ishonchli hamkorlar",
+    "title": "Butun mamlakat bo‘ylab {count} dan ortiq ishonchli hamkorlar",
     "subtitle": "Expo Insurance 2025da biz sug‘urta sohasini rivojlantirish vizyonini baham ko‘radigan sanoat yetakchilari va innovatorlar bilan hamkorlik qilishdan faxrlanamiz."
   },
 

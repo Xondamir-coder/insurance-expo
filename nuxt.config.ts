@@ -16,6 +16,13 @@ export default defineNuxtConfig({
   app: {
     head: {
       titleTemplate: '%s | Insurance Expo',
+      link: [
+        {
+          rel: 'icon',
+          type: 'image/svg+xml',
+          href: '/favicon.svg'
+        }
+      ],
       script: [
         {
           src: 'https://www.googletagmanager.com/gtag/js?id=G-VSCY8WYK39',
