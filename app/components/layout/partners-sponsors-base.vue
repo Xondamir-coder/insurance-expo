@@ -16,7 +16,6 @@
 
 <script setup>
 const { partnersAndSponsors } = useApiStore();
-usePageSEO('partners');
 defineProps({
   breadcrumbs: {
     required: true,

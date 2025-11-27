@@ -19,7 +19,7 @@
       :cards
     />
     <section class="info">
-      <UiInfoCard v-for="(card, index) in [contactsCard]" :key="index" :data="card" />
+      <UiInfoCard v-for="(card, index) in [contactsCard, servicesCard]" :key="index" :data="card" />
     </section>
     <UiImageSlider
       v-if="currentDetailed.gallery"
@@ -80,6 +80,20 @@ const contactsCard = computed(() => ({
     }
   ]
 }));
+const servicesCard = computed(() => ({
+  title: t('key-areas'),
+  content: currentDetailed.services.map(el => el[`title_${locale.value}`])
+}));
+
+useDynamicSEO('partnerSponsor', {
+  partnerName: currentDetailed[`name_${locale.value}`],
+  shortInfo: currentDetailed[`short_info_${locale.value}`],
+  about: currentDetailed[`about_${locale.value}`],
+  servicesCount: currentDetailed.services?.length || 0,
+  industry: currentDetailed[`short_info_${locale.value}`],
+  address: currentDetailed[`address_${locale.value}`],
+  ecosystemInfo: currentDetailed[`body_${locale.value}`]
+});
 
 defineProps({
   breadcrumbs: {

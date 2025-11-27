@@ -67,5 +67,9 @@
   "currentMedia": {
     "title": "{mediaTitle}",
     "description": "{mediaBody} featuring {galleryCount} event highlights captured during the Expo."
+  },
+  "partnerSponsor": {
+    "title": "{partnerName} — {shortInfo}",
+    "description": "{partnerName} offers {shortInfo} with modern digital solutions. Their work highlights innovation and collaboration showcased through {servicesCount} key services."
   }
 }

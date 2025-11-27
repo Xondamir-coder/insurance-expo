@@ -67,5 +67,9 @@
   "currentMedia": {
     "title": "{mediaTitle}",
     "description": "{mediaBody} va Expo davomida olingan {galleryCount} ta asosiy lahzani o‘z ichiga oladi."
+  },
+  "partnerSponsor": {
+    "title": "{partnerName} — {shortInfo}",
+    "description": "{partnerName} zamonaviy raqamli yechimlarga asoslangan {shortInfo} taqdim etadi. Kompaniyaning ishlari {servicesCount} ta asosiy xizmat orqali namoyish etilgan."
   }
 }

@@ -67,5 +67,9 @@
   "currentMedia": {
     "title": "{mediaTitle}",
     "description": "{mediaBody}, сопровождаемая {galleryCount} ключевыми моментами, запечатлёнными на выставке."
+  },
+  "partnerSponsor": {
+    "title": "{partnerName} — {shortInfo}",
+    "description": "{partnerName} предоставляет {shortInfo} с современными цифровыми решениями. Их деятельность отражает инновации и сотрудничество, представленное в {servicesCount} ключевых сервисах."
   }
 }
